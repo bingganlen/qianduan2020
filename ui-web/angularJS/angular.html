@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script> 
+<script>
+        var app=angular.module('myApp',[]); //定义了一个叫myApp的模块
+        //定义控制器
+        app.controller('myController',function($scope){
+            $scope.list= [100,192,203,434 ];//定义数组
+        });
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+<div ng-app="" ng-init="firstName='John'">
+
+<p>在输入框中尝试输入:</p>
+<p>姓名: <input type="text" ng-model="firstName"></p>
+<p>你输入的为: {{ firstName }}</p>
+
+</div>
+<br/><br/>
+
+
+
+<table>
+<tr ng-repeat="x in list">
+    <td>{{x}}</td>
+</tr>
+</table>
+
+<!-- <div data-ng-app="" ng-init="quantity=1;price=5">
+<h2>价格计算器</h2>
+
+数量: <input type="number" ng-model="quantity">
+价格: <input type="number" ng-model="price">
+
+<p><b>总价:</b> {{quantity * price}}</p>
+</div>
+<br/><br/>
+
+
+<div data-ng-app="" data-ng-init="names=['Jani','Hege','Kai']">
+  <p>使用 ng-repeat 来循环数组</p>
+  <ul>
+    <li data-ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+</div>
+<br/><br/>
+<div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<p>循环对象:</p>
+<ul>
+  <li ng-repeat="x in names">
+  {{ x.name + ', ' + x.country }}</li>
+</ul>
+
+</div><br/><br/> -->
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "id": "1383522",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2377694",
+      "name": "苹果",
+      "font_class": "pingguo",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "2977535",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "6612891",
+      "name": "显示器",
+      "font_class": "xianshiqi",
+      "unicode": "e70a",
+      "unicode_decimal": 59146
+    },
+    {
+      "icon_id": "606557",
+      "name": "曲线图",
+      "font_class": "quxiantu",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "4060484",
+      "name": "报告",
+      "font_class": "baogao",
+      "unicode": "e6d9",
+      "unicode_decimal": 59097
+    },
+    {
+      "icon_id": "1219638",
+      "name": "详细信息",
+      "font_class": "xiangxixinxi",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "3868272",
+      "name": "节点管理",
+      "font_class": "jiedianguanli",
+      "unicode": "eb64",
+      "unicode_decimal": 60260
+    }
+  ]
+}

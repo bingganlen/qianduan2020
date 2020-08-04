@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*缺省值begin*/
+html{ margin:0px; padding:0px;}
+body{ margin:0px; padding:0px; font-size:12px; font-family:Tahoma, Geneva, sans-serif; color:#fff;}
+a{ text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; outline:none;}
+a:active, a:visited{ outline:none;}
+p,ul,li,form,h1,h2,h3,h4,h5,h6,dl,dt,dd,img,div,table,td,th,input,textarea{ margin:0px; padding:0px;}
+input,textarea{font-family:Tahoma, Geneva, sans-serif;outline:none;font-size:12px;}
+table,td{ border-collapse:collapse;}
+ul,li,dl,dt,dd,ol{ list-style:none;}
+.yahei{font-family:微软雅黑,Microsoft YaHei,Arial,SimSun;}
+.wrap{width:1040px;margin-left:auto; margin-right:auto;}
+img{ border:0 none;overflow:hidden;}
+em,i{font-style:normal;font-weight:normal;}
+
+.dh-row:after,
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.dh-row,
+.clearfix{zoom:1;}
+
+/*“\5b8b\4f53″ 就是 “宋体”。用 unicode 表示，不用 SimSun, 是因为 Firefox 的某些版本和 Opera 不支持 SimSun 的写法。避免产生乱码，对页面造成影响。*/
+.fontlh{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+.fontNum{font:Arial,SimSun;}
+.red{color:#ee383e;}.blue{color:#1aadc0;}
+
+.html-data{ word-wrap:break-word; line-height:2; color:#333; font-size: 14px;}
+.html-data img{ max-width: 100%; vertical-align: text-bottom;}
+/*缺省值end*/

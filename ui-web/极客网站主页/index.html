@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>极客学院-课程库</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		<!-- 头部 -->
+		<header>
+			<div class="content w-1000">
+				<!-- logo -->
+				<a href="http://www.jikexueyuan.com/" class="logo">
+					<img src="img/logo.png" height="40" width="109">
+				</a>
+				<!-- 导航 -->
+				<nav>
+					<ul>
+						<li>
+							<a href="http://www.jikexueyuan.com">首页</a>
+						</li>
+						<li>
+							职业学院
+							<i class="arrow-icon"></i>
+							<div class="submenu school-list">
+								<h3>前端学院</h3>
+								<a href="">
+									<i class="web-icon"></i>
+									Web 前端工程师
+								</a>
+								<h3>后端学院</h3>
+								<a href="">
+									<i class="python-icon"></i>
+									Python Web工程师
+								</a>
+								<a href="">
+									<i class="go-icon"></i>
+									Go语言工程师
+								</a>
+								<h3>移动学院</h3>
+								<a href="">
+									<i class="ios-icon"></i>
+									iOS工程师
+								</a>
+							</div>
+						</li>
+						<li>
+							会员课程
+							<i class="arrow-icon"></i>
+							<div class="submenu vip-lesson">
+								<a href="">
+									<i class="kck-icon"></i>课程库
+									<span>2500+</span>
+								</a>
+								<a href="">
+									<i class="zyljt-icon"></i>职业路径图
+									<span>9</span>
+								</a>
+								<a href="">
+									<i class="zstxt-icon"></i>知识体系图
+									<span>24</span>
+								</a>
+								<a href="">
+									<i class="xlkc-icon"></i>系列课程
+									<span>101</span>
+								</a>
+								<a href="">
+									<i class="kcbq-icon"></i>课程标签
+									<span>4000+</span>
+								</a>
+								<a href="">
+									<i class="vip-icon"></i>VIP会员购买
+									<span>30/月  260/年</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							极客社区
+							<i class="arrow-icon"></i>
+							<div class="submenu vip-lesson">
+								<a href="">
+									<i class="jswd-icon"></i>技术问答
+									<span>20000+</span>
+								</a>
+								<a href="">
+									<i class="wiki-icon"></i>Wiki
+									<span>351</span>
+								</a>
+								<a href="">
+									<i class="sq-icon"></i>社群
+									<span>70000+</span>
+								</a>
+								<a href="">
+									<i class="zygx-icon"></i>资源下载
+									<span>30000+</span>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<!-- 图标 -->
+				<div class="icon-box">
+					<span class="search-icon" id="search-btn"></span> 
+					<span class="app-icon">  
+						<div class="submenu">
+							<i class="top-icon"></i>
+							<img src="img/heade-rwm.png" alt="">
+						</div>
+					</span>
+					<span class="user-icon"> 
+						<a href="">
+							<img src="img/1492zv4a2t2zf.jpeg" alt="">
+						</a>
+						<i class="uservip-icon"></i>
+						<dl class="submenu">
+							<i class="top-icon"></i>
+							<dd id="getUserLevel">
+								<a href="javascript:;" class="rzno-vip"></a>
+								<a href="javascript:;" class="year-vip"></a>
+							</dd>
+							<dd>
+								<a href="">
+									<i class="xxzx-icon"></i>
+									学习中心
+								</a>
+							</dd>
+							<dd>
+								<a href="">
+									<i class="grzy-icon"></i>
+									个人主页
+								</a>
+							</dd>
+							<dd>
+								<a href="">
+									<i class="xxtz-icon"></i>
+									消息通知
+								</a>
+							</dd>
+							<dd>
+								<a href="">
+									<i class="zhsz-icon"></i>
+									账号设置
+								</a>
+							</dd>
+							<dd>
+								<a href="">
+									<i class="tc-icon"></i>
+									退出登录
+								</a>
+							</dd>
+						</dl>
+					</span>
+				</div> 
+				<!-- end icon-box -->
+				<!-- 搜索框 -->
+				<div class="search-box">
+					<i class="close-icon" id="close-btn"></i>
+					<i class="search-icon"></i>
+					<input id="web_search_header" placeholder="搜索课程、问答或Wiki" value="">
+					<div class="tag-box">
+						<a href="javascript:;">Android</a>
+						<a href="javascript:;">iOS</a>
+						<a href="javascript:;">HTML5</a>
+					</div>
+				</div>
+				<!-- end search-box -->
+			</div>
+		</header>
+		<!-- end 头部 -->
+
+		<!-- 中间主体 -->
+		<div class="container">
+			<div class="wrap w-1000 mar-t20">
+				<!-- 主要内容 -->
+				<div class="main">
+					<!-- 筛选条件 -->
+					<div class="sort">
+						<div class="sort-mode">
+							<h3>全部课程</h3>
+							<dl>
+								<dt>
+									<span class="type-title">最新</span>
+									<i class="arrow"></i>
+								</dt>
+								<dd>
+									<a href="">最新</a>
+									<a href="">最热</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<span class="type-title">课程类型</span>
+									<i class="arrow"></i>
+								</dt>
+								<dd>
+									<a href="">知识精讲</a>
+									<a href="">项目实战</a>
+									<a href="">全部</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<span class="type-title">难度等级</span>
+									<i class="arrow"></i>
+								</dt>
+								<dd>
+									<a href="">初级</a>
+									<a href="">中级</a>
+									<a href="">高级</a>
+									<a href="">全部</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="preview-mode">
+							<ul>
+								<li class="kuai-icon" id="show-kuai">
+									<i class="icon"></i>
+								</li>
+								<li class="list-icon" id="show-list">
+									<i class="icon"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- end sort -->
+					<!-- 课程列表 -->
+					<div class="lesson-list">
+						<ul>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/579fc9a46964e.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">LeMaker Guitar 官方 LeMuntu 系统体验</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="vip-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/579eae1e23f29.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">综合案例：使用Axure RP8.0 设计携程大型旅游网站原型</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>6课时 190分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/pm.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/57956e9d40cbe.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">登录到Guitar运行的 Linux系统</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>3课时 19分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/578c88628c2e6.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">LeMaker Guitar 系统安装</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/578c34a69dbc7.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">认识 LeMaker Guitar</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/572958f816d03.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/57848cca84ed1.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">综合案例：使用 Axure RP8.0 设计手机淘宝 App 高保真原型</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon2"></i>
+												<em>中级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="vip-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/577b14638e88b.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">综合案例：使用 Axure RP8.0 设计支付宝 App 低保真原型</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/pm.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/577219a265490.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Axure RP8.0 与 Axure RP7.0 的区别</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/576897c7192e4.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Cocos2d-x 引擎源码中的纹理优化</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/5767909d61b51.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">苹果 WWDC 2016 解读</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>1课时 14分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/5457df3530e14.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/575e71942e84e.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Gulp + Sass + Bootstrap 网页开发实战</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/5756235b692a3.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Android 快速开发框架之 xUtils3</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/574cf063488d1.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Microsoft SQL Server 数据库的查询优化器的运行方式</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/sql.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/574ce7dd60ce7.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">树莓派项目实践（一）——可用 web 控制的人体感应小夜灯</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/open.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/574b970177817.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">LeMaker Guitar 官方 LeMuntu 系统体验</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/cloudcompute.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/5743be6d173b2.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Cocos2d-x 引擎源码中的纹理</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/games.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/5743be5e25652.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Dubbo 使用入门（下）</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/5743adb3d4a3c.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">LeMaker Guitar 官方 LeMuntu 系统体验</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/575cbb2ff238d.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/5742b71557d06.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Google  I/O 2016 技术揭秘与前瞻</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/54578d8e652c3.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<a href="" target="_blank">
+										<img src="img/573a73565f0fe.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Docker 基础知识</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 9分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/cloudcompute.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/573584f9f2385.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">OSG人机交互</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>3课时 31分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/5731437213380.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Arduino 模拟鼠标键盘（二）</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>3课时 19分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="vip-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/572fedc688602.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">Flume 基础架构</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 45分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/bigdata.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lesson-img-box">
+									<i class="lesson-shoucang"></i>
+									<i class="rz-icon"></i>
+									<a href="" target="_blank">
+										<img src="img/572bfaea3adb8.jpg" alt="">
+										<div class="play-lesson">
+											<i class="player-icon"></i>
+										</div>
+									</a>
+								</div>
+								<div class="lesson-info-box">
+									<h2 class="lesson-title">一元线性回归</h2>
+									<p class="lesson-desc">
+										本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+									</p>
+									<div class="lesson-time">
+										<dl>
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>3课时 90分钟</em>
+											</dd>
+											<dd class="dengji">
+												<i class="xinhao-icon xinhao-icon1"></i>
+												<em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2522人学习</em>
+										<a href="" class="lesson-user-icon">
+											<img src="img/infosense.png" alt="">
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- end lesson-list -->
+					<!-- 分页条 -->
+					<div id="page-nav">
+						<ul class="pages">
+							<li class="w-50 pgEmpty">首页</li>
+							<li class="w-50 pgEmpty">上一页</li>
+							<li class="page-number pgCurrent">1</li>
+							<li class="page-number">2</li>
+							<li class="page-number">3</li>
+							<li class="page-number">4</li>
+							<li class="page-number">5</li>
+							<li class="thpoint">...</li>
+							<li class="w-50">下一页</li>
+							<li class="w-50">末页</li>
+							<li class="thpoint pagetotal" style="margin-top:3px;">共 94 页</li>
+							<li class="thpoint pagenow">
+								当前
+								<input type="text" value="1" maxlength="6" id="gotoval">页
+							</li>
+							<li class="go">确定</li>
+						</ul>
+					</div>
+					<!-- end page-nav -->
+				</div>
+				<!-- end main -->
+				<!-- 侧边栏 -->
+				<div class="aside">
+					<!-- 所有分类 -->
+					<div class="allCategory">
+						<div class="hd">
+							<h2>
+								<a href="">
+									<i class="icon-course-curr"></i>
+									课程库
+								</a>
+							</h2>
+						</div>
+						<div class="bd">
+							<ul class="lesson-list">
+								<li>
+									<a href="">移动开发</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="">应用开发</a>
+											</dt>
+											<dd>
+												<a href="">Android</a>
+												<a href="">iOS</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="">游戏开发</a>
+											</dt>
+											<dd>
+												<a href="">Cocos</a>
+												<a href="">Unity3D</a>
+												<a href="">SpriteKit 2D</a>
+												<a href="">Unreal</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="">常见框架</a>
+											</dt>
+											<dd>
+												<a href="">Cordova</a>
+												<a href="">React native</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">前端开发</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">前端基础</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">HTML</a>
+												<a href="" target="_blank">CSS</a>
+												<a href="" target="_blank">JavaScript</a>
+												<a href="" target="_blank">HTML5</a>
+												<a href="" target="_blank">CSS3</a>
+												<a href="" target="_blank">技术前瞻</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">前端进阶</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Typescript</a>
+												<a href="" target="_blank">前端安全</a>
+												<a href="" target="_blank">项目实战</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">前端框架</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">jQuery</a>
+												<a href="" target="_blank">jQuery UI</a>
+												<a href="" target="_blank">jQuery Mobile</a>
+												<a href="" target="_blank">Ext JS</a>
+												<a href="" target="_blank">AngularJS</a>
+												<a href="" target="_blank">ReactJS</a>
+												<a href="" target="_blank">Bootstrap</a>
+												<a href="" target="_blank">React Native</a>
+												<a href="" target="_blank">backbone</a>
+												<a href="" target="_blank">Three.js</a>
+												<a href="" target="_blank">MooTools</a>
+												<a href="" target="_blank">Compass</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">HTML5游戏</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Canvas</a>
+												<a href="" target="_blank">SVG</a>
+												<a href="" target="_blank">WebGL</a>
+												<a href="" target="_blank">Cocos2d-js</a>
+												<a href="" target="_blank">CreateJS</a>
+												<a href="" target="_blank">Flash</a>
+												<a href="" target="_blank">Unreal</a>
+												<a href="" target="_blank">Egret</a>
+												<a href="" target="_blank">Phaser</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">后端开发</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">Python</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Python 基础</a>
+												<a href="" target="_blank">web2py</a>
+												<a href="" target="_blank">Django</a>
+												<a href="" target="_blank">Flask</a>
+												<a href="" target="_blank">Gui</a>
+												<a href="" target="_blank">数据挖掘与分析</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">PHP基础</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">YII</a>
+												<a href="" target="_blank">ThinkPHP</a>
+												<a href="" target="_blank">Laravel</a>
+												<a href="" target="_blank">WordPress</a>
+												<a href="" target="_blank">PhaICon</a>
+												<a href="" target="_blank">Apache</a>
+												<a href="" target="_blank">Facebook Hack</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">Node.js</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Node.js基础</a>
+												<a href="" target="_blank">express</a>
+												<a href="" target="_blank">Meteor</a>
+												<a href="" target="_blank">Hexo</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">ASP.NET</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">C#</a>
+												<a href="" target="_blank">ASP.NET MVC</a>
+												<a href="" target="_blank">Entity Framework</a>
+												<a href="" target="_blank">WPF</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">J2EE</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">JSP</a>
+												<a href="" target="_blank">Maven</a>
+												<a href="" target="_blank">Spring</a>
+												<a href="" target="_blank">SpringMVC</a>
+												<a href="" target="_blank">Struts2</a>
+												<a href="" target="_blank">MyBatis</a>
+												<a href="" target="_blank">Hibernate</a>
+												<a href="" target="_blank">Lucene</a>
+												<a href="" target="_blank">常用框架</a>
+												<a href="" target="_blank">项目实战</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">Ruby</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Ruby 基础</a>
+												<a href="" target="_blank">Ruby on Rails</a>
+												<a href="" target="_blank">Grape</a>
+												<a href="" target="_blank">Ruby进阶</a>
+												<a href="" target="_blank">RubyMine</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">Go</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Go 基础</a>
+												<a href="" target="_blank">Revel</a>
+												<a href="" target="_blank">beego</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">Erlang</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Erlang基础</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">基础知识</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">基础语言</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">C</a>
+												<a href="" target="_blank">C++</a>
+												<a href="" target="_blank">Objective-C</a>
+												<a href="" target="_blank">Swift</a>
+												<a href="" target="_blank">C#</a>
+												<a href="" target="_blank">Java</a>
+												<a href="" target="_blank">Perl</a>
+												<a href="" target="_blank">Shell</a>
+												<a href="" target="_blank">Qt</a>
+												<a href="" target="_blank">Scala</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">计算机基础</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">计算机组成原理</a>
+												<a href="" target="_blank">网络工程</a>
+												<a href="" target="_blank">Word</a>
+												<a href="" target="_blank">Excel</a>
+												<a href="" target="_blank">PowerPoint</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">开发基础</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">算法基础</a>
+												<a href="" target="_blank">数据结构</a>
+												<a href="" target="_blank">设计模式</a>
+												<a href="" target="_blank">软件工程</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">开发工具</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Git/Github</a>
+												<a href="" target="_blank">SVN</a>
+												<a href="" target="_blank">VI</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">开放标准</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">OpenCL</a>
+												<a href="" target="_blank">Open XML</a>
+												<a href="" target="_blank">OpenGL/GLES</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">云计算&amp;大数据</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">云计算</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">OpenStack</a>
+												<a href="" target="_blank">Docker</a>
+												<a href="" target="_blank">CloudStack</a>
+												<a href="" target="_blank">Windows Azure</a>
+												<a href="" target="_blank">Iaas</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">大数据</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Hadoop</a>
+												<a href="" target="_blank">Storm</a>
+												<a href="" target="_blank">Hive</a>
+												<a href="" target="_blank">Flume</a>
+												<a href="" target="_blank">Kaffka</a>
+												<a href="" target="_blank">Zookeeper</a>
+												<a href="" target="_blank">Hbase</a>
+												<a href="" target="_blank">Spark</a>
+												<a href="" target="_blank">信息检索</a>
+												<a href="" target="_blank">数据分析</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">虚拟化</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">VMware</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">云平台</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">腾讯云</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">智能硬件&amp;物联网</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">硬件架构</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">CS1</a>
+												<a href="" target="_blank">ARM</a>
+												<a href="" target="_blank">Kell</a>
+												<a href="" target="_blank">Cortex-M</a>
+												<a href="" target="_blank">Cortex-A</a>
+												<a href="" target="_blank">AVR</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">物联网操作系统</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">RTOS</a>
+												<a href="" target="_blank">Android Wear</a>
+												<a href="" target="_blank">Apple Watchkit</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">开源硬件平台</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Arduino</a>
+												<a href="" target="_blank">树莓派</a>
+												<a href="" target="_blank">mbed</a>
+												<a href="" target="_blank">GoKit</a>
+												<a href="" target="_blank">LeMaker Guitar</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">通信连接技术</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">无线WiFi</a>
+												<a href="" target="_blank">移动通信</a>
+												<a href="" target="_blank">蓝牙</a>
+												<a href="" target="_blank">NFC</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">信息感知处理技术</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">传感器</a>
+												<a href="" target="_blank">数据挖掘</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">人机交互技术</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">语音识别</a>
+												<a href="" target="_blank">人脸识别</a>
+												<a href="" target="_blank">手势识别</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">数据库</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">SQL</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">MySQL</a>
+												<a href="" target="_blank">SQL Server</a>
+												<a href="" target="_blank">Oracle</a>
+												<a href="" target="_blank">SQLite</a>
+												<a href="" target="_blank">PostgreSQL</a>
+												<a href="" target="_blank">DB2</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">NoSQL</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Cassandra</a>
+												<a href="" target="_blank">Redis</a>
+												<a href="" target="_blank">MongoDB</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">认证考试</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">计算机等级考试</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">一级</a>
+												<a href="" target="_blank">二级C</a>
+												<a href="" target="_blank">二级Java</a>
+												<a href="" target="_blank">二级C++</a>
+												<a href="" target="_blank">网络工程师</a>
+												<a href="" target="_blank">数据库工程师</a>
+												<a href="" target="_blank">信息安全工程师</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">企业认证</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">思科认证</a>
+												<a href="" target="_blank">Oracle认证</a>
+												<a href="" target="_blank">Linux认证</a>
+												<a href="" target="_blank">ARM认证</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">企业 IT</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">运维管理</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Shell</a>
+												<a href="" target="_blank">自动化运维</a>
+												<a href="" target="_blank">Nginx</a>
+												<a href="" target="_blank">Apache</a>
+												<a href="" target="_blank">运维监控</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">商业智能</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">FileMaker</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">操作系统</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Linux</a>
+												<a href="" target="_blank">Windows</a>
+												<a href="" target="_blank">Mac OS</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">企业服务</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">B2C</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<a href="">设计&amp;产品&amp;测试</a>
+									<div class="lesson-list-show">
+										<dl>
+											<dt>
+												<a href="" target="_blank">设计基础</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">Photoshop</a>
+												<a href="" target="_blank">Flash</a>
+												<a href="" target="_blank">Illustrator</a>
+												<a href="" target="_blank">Sketch</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">游戏设计</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">界面设计</a>
+												<a href="" target="_blank">角色设计</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">产品经理</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">需求分析</a>
+												<a href="" target="_blank">Axure</a>
+												<a href="" target="_blank">项目实战</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">视觉设计</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">应用UI设计</a>
+												<a href="" target="_blank">网页UI设计</a>
+												<a href="" target="_blank">设计理论</a>
+												<a href="" target="_blank">图形设计</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt>
+												<a href="" target="_blank">测试工具</a>
+											</dt>
+											<dd>
+												<a href="" target="_blank">自动化测试</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- end allCategory -->
+					<!-- other-list -->
+					<div class="other-list">
+						<ul>
+							<li>
+								<a href="">
+									<i class="icon-zylj"></i>
+									职业路径图
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon-zstx"></i>
+									知识体系图
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon-xlkc"></i>
+									系列课程
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon-kcbq"></i>
+									课程标签
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end other-list -->
+				</div>
+				<!-- end aside -->
+			</div>
+		</div>
+		<!-- end 中间主体 -->
+
+		<!-- footer -->
+		<footer>
+			<div class="jkinfor-box w-1000">
+				<div class="jk-logo">
+					<img src="img//jk-logo-footer.png" alt="">
+					<p>极客学院，编程是一种信仰！</p>
+				</div>
+				<dl>
+					<dt>职业学院</dt>
+					<dd><a href="">Web前端工程师</a></dd>
+					<dd><a href="">Python Web工程师</a></dd>
+					<dd><a href="">Go语言工程师</a></dd>
+					<dd><a href="">iOS工程师</a></dd>
+				</dl>
+				<dl>
+					<dt>会员课程</dt>
+					<dd><a href="">课程库</a></dd>
+					<dd><a href="">知识体系图</a></dd>
+					<dd><a href="">职业路径图</a></dd>
+					<dd><a href="">系列课程</a></dd>
+					<dd><a href="">课程标签</a></dd>
+				</dl>
+				<dl>
+					<dt>极客社区</dt>
+					<dd><a href="">技术问答</a></dd>
+					<dd><a href="">Wiki</a></dd>
+					<dd><a href="">资源下载</a></dd>
+					<dd><a href="">社群</a></dd>
+				</dl>
+				<dl>
+					<dt>其他</dt>
+					<dd><a href="">关于我们</a></dd>
+					<dd><a href="">使用指南</a></dd>
+					<dd><a href="">加入我们</a></dd>
+					<dd><a href="">联系我们</a></dd>
+					<dd><a href="">友情链接</a></dd>
+				</dl>
+				<div class="jk-down">
+					<p class="hot-tel">服务热线:400-678-8266</p>
+					<div class="downCon down-ios">
+						<img src="img/app.png" alt="">
+						iPhone
+					</div>
+					<div class="downCon down-and">
+						<img src="img/app.png" alt="">
+						Android
+					</div>
+				</div>
+			</div>
+			<div class="copyright w-1000">
+				<p>
+					Copyright&nbsp;&copy;&nbsp;2013-2016
+					<a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a>
+					All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802020210
+					<a href="" target="_blank" class="down-wechat"></a>
+					<a href="" target="_blank" class="down-sina"></a>
+				</p>
+			</div>
+		</footer>
+		<!-- end footer -->
+		
+		<!-- 返回顶部 -->
+		<div class="gotop">
+			<span class="top"></span>
+			<a href="" alt="极客学院应用">
+				<span class="jk-app">
+					<div class="appewm"></div>
+				</span>
+			</a>
+			<a href="" alt="在线客服" class="online">
+				<span class="kefu">
+					在线客服<br>  工作日9:00-21:00在线<i></i>
+				</span>
+			</a>
+		</div>
+		<!-- end gotop -->
+	</div>
+	<!-- end wrapper -->
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

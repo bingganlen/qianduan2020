@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>高亮搜索</title>
+
+		<style>
+			.box {
+				width: 800px;
+				margin: 20px auto;
+				border: 1px solid #ddd;
+				padding: 20px;
+				text-align: center;
+			}
+			
+			.ser-input {
+				line-height: 24px;
+				border: 1px solid #DDDDDD;
+				padding: 6px 12px;
+			}
+			
+			.content {
+				padding: 20px;
+				width: 800px;
+				height: 500px;
+				margin: 0 auto;
+				border: 1px solid #dedede;
+			}
+			
+			.highlight {
+				background: green;
+				font-weight: bold;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<input type="text" id="searchInput" class="ser-input" />
+		</div>
+
+		<div class="content" id="content">
+			<p>js实现静态页面搜索并高亮显示功能完整示例_javascript技巧</p>
+			<ul>
+				<li>测试文本1：日照香炉生紫烟</li>
+				<li>测试文本2：什么样的文本才是好的呢。</li>
+				<li>测试文本3：博主有点飘；早晚要挨刀！</li>
+				<li>测试文本4：大江东去浪淘尽</li>
+			</ul>
+		</div>
+
+	</body>
+
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="hLight.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#searchInput").on("input propertychange", function() {
+				var s = $(this).val();
+				var regu = /^[ ]+$/;
+				if(!regu.test(s)) {
+					highlight(s,"content");
+				}
+			});
+		});
+	</script>
+
+</html>

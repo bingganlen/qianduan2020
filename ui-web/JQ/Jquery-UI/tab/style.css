@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body,ul,div,a,li{
+	margin: 0;
+	padding: 0;
+}
+#tab{
+	margin:20px auto;
+	width: 400px;
+}
+#tab ul{
+	list-style: none;
+	text-align: center;
+}
+#tab li{
+	float: left;
+}
+a{
+	display: inline-block;
+	height:30px;
+	width:100px;
+	margin-right: 5px;
+	border-radius: 2px;
+	text-decoration: none;
+	line-height: 30px;
+}
+.unSlected{
+	background-color: black;
+	color: white;
+}
+.isSlected{
+	background-color:gray;
+	color: black;
+}
+#tab div{
+	clear:both;
+	height:200px;
+	width:400px;
+	background-color:gray;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>操作成功提示框效果  找一个绿色打钩  有图片比较好看</title>
+	<style type="text/css">
+		.zeng_msgbox_layer_wrap{
+			left: 0;
+			position: fixed;
+			text-align: center;
+			top: 46%;
+			width: 100%;
+			z-index: 65533;
+			background-color: transparent;
+		}
+		.zeng_msgbox_layer,.zeng_msgbox_layer .gtl_ico_succ{
+			/*background-image: url("/images/gb_tip_layer.png");
+			background-repeat: no-repeat;*/
+			background-color: #ddd;
+			color: #606060;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: bold;
+			height: 54px;
+			line-height: 54px;
+		}
+		.zeng_msgbox_layer{
+			background-position: 0 -161px;
+			background-repeat: repeat-x;
+			margin: 0 auto;
+			padding:0 18px 0 9px;
+			position: relative;
+		}
+		.zeng_msgbox_layer .gtl_ico_succ{
+			background-position: -6px 0;
+			left: -45px;
+			position: absolute;
+			top: 0;
+			width: 45px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="zeng_msgbox_layer_wrap" id="q_Msgbox" style="top: 253px; display: none;">
+		<span id="mode_tips_v2" style="z-index: 10000;" class="zeng_msgbox_layer">
+			<span class="gtl_ico_succ"></span>提交成功！
+		</span>
+		<span class="gtl_end"></span>
+	</div>
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*$("#orderbtn").click(function(){   // 点击按钮  显示提示框
+			$("#q_Msgbox").slideDown(200);
+		});*/
+		$("#q_Msgbox").slideDown(200);
+		function orderbtn(){
+			$("#q_Msgbox").slide(200);
+		}
+		var ordertime= setInterval(orderbtn,2500);
+	</script>
+</body>
+</html>

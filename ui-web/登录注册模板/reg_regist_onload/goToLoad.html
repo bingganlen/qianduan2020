@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=“renderer” content=“webkit”>  <!--html打开强制为极速模式 -->
+    <meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”> <!--避免IE使用兼容模式-->
+    <title>验证码页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/load.css">
+    <script src="js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/goToLoad.js"></script>
+</head>
+
+<body>
+    <!--头部-->
+    <header>
+        <div class="head_cont">
+            <img src="images/logo.png" />
+            <img src="images/logo1.png" />
+        </div>
+    </header>
+    <!--内容-->
+    <div class="content">
+        <div class="con_head">
+            <img src="images/icon9_1.png" />
+            <h1>注册会员</h1>
+            <p>我已注册，现在就登录</p>
+            <a href="javascript:;"><span id="oLoad">登录</span></a>
+        </div>
+        <!--正文-->
+        <div class="con_cont">
+            <!--正文顶部小背景-->
+            <div class="con_he_bg">
+                <p>填写注册信息</p>
+                <p>接受并填写手机验证码</p>
+                <p>注册成功</p>
+                <div class="con_he_bg_two">
+                    <img src="images/regis1.png" />
+                    <img src="images/regis2.png" />
+                    <img src="images/regis5.png" />
+                </div>
+            </div>
+            <!--验证内容-->
+            <div class="reg">
+              <img src="images/icon34.png">
+              <h1>恭喜您,注册已成功!</h1>
+              <p>登录名为：<span id="load_name"></span></p>
+             <button id="oDoload">立即登录</button>
+             <img src="images/webchat.png" class="wechat">
+            </div>
+    </div>
+  </div>   
+    <!--底部-->
+    <footer>
+        <div class="first_foot">
+            <ul>
+                <li>关于我们</li>
+                <li>免责声明</li>
+                <li>常见问题</li>
+                <li>联系我们</li>
+                <li>人才招聘</li>
+            </ul>
+        </div>
+        <div class="second_foot">
+            <p><span>Copyright@2013-2016</span>|苏ICP备12063525号-4苏州乐卡网络科技有限公司</p>
+        </div>
+    </footer>
+<!-- 背景 -->
+    <div class="bg_div">
+        
+    </div>
+<!-- 登录窗口 -->
+<div class="alert">
+    <div class="header">
+        <div class="head_one"><h1>密码登录</h1></div>
+        <div class="head_two"><h1>手机验证码登录</h1></div>
+    </div>
+<div class="cont_one">
+
+   <!-- 输入框 -->
+   <input type="text" name="" id="phoneNumber" placeholder="手机号">
+   <p id="youError">账号或密码错误</p>
+    <input type="password" name="" id="passwords" placeholder="密码">
+    <input type="checkbox" name="" id="autoLoad">
+    <span class="span">自动登录</span>
+    <a href=""><h2>忘记密码?</h2></a>
+    <button id="goTo">登录</button>
+    <div class="block">
+        <p>还不是方便网会员?<span>免费注册</span></p>
+    </div>
+</div>
+  <!-- 验证码登录 -->
+<div class="cont_two">
+   <input type="text" name="" id="phoneNumber_two" placeholder="手机号">
+    <input type="password" name="" id="passwords_two" placeholder="验证码">
+    <input type="text" name="" id="photo_two" placeholder="手机验证码">
+    <img src="images/icon32.png" alt="">
+    <h1>看不清楚？<a href=""><span>换一张</span></a></h1>
+    <button>登录</button>
+    <input type="button" id="mybtn" value="获取手机验证码">
+    <div class="block_two">
+        <p>还不是方便网会员?<span>免费注册</span></p>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+.header{
+    width: 956px;
+    height: 133px;
+}
+.header .logo{
+    width: 193px;
+    height: 76px;
+    margin-top: 27px;
+    display: block;
+    float: left;
+}
+/*头部样式结束*/
+/*登录表单内容*/
+.login_form_con{
+    background-color: #518e17;
+}
+.login_form_con .login_form{
+    width: 956px;
+    height: 482px;
+}
+.login_form_con .login_banner{
+    width: 411px;
+    height: 343px;
+    margin-top: 86px;
+}
+.login_form_con .slogan{
+    width: 30px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    margin: 86px 0 0 70px;
+}
+.login_form_con .form_input_con{
+    border: 1px solid #c6c6c5;
+    width: 368px;
+    height: 380px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+.login_form_con .form_title{
+    width: 308px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+.login_form_con .form_title h1{
+    font-weight: bold;
+    font-size: 24px;
+    color: #a8a8a8;
+    line-height: 76px;
+    margin-left: 33px;
+    font-family: "微软雅黑";
+}
+.login_form_con .form_title .reg{
+    color:  #5fb42a;
+    font-size: 16px;
+    font-family: "微软雅黑" ;
+    margin: 30px 0 0 56px;
+    background:url("../img/icons.png") no-repeat 8px 4px;
+    padding-left: 30px;
+}
+.login_form_con form{
+    width: 308px;
+    margin: 20px auto 0;
+    height: 221px;
+}
+.login_form_con .form_group{
+    height: 68px;
+}
+.login_form_con .form_group .input_txt,.login_form_con .form_group .input_pwd{
+    width: 306px;
+    height: 38px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    text-indent: 10px;
+    background: url("../img/icons.png") no-repeat 283px -33px #f8f8f8;
+}
+.login_form_con .form_group .input_pwd{
+    background-position: 283px -85px;
+}
+.login_form_con .form_group .error{
+    color: red;
+    line-height: 25px;
+    display: none;
+}
+.login_form_con .form_group .input_check{
+    margin: 2px 5px 0 0;
+}
+.login_form_con  .input_sub{
+    width: 100%;
+    height: 40px;
+    background-color: #47aa34;
+    border: 0px;
+    font-size: 24px;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 30px;
+}
+.footer .link{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer .link span{
+    padding: 0 10px;
+}
+.footer p{
+    text-align: center;
+    line-height: 20px;
+}

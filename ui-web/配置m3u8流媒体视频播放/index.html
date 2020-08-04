@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ckplayer</title>
+    <script type="text/javascript" src="ckplayer/ckplayer.js"></script>
+    <style type="text/css">body{margin:0;padding:0px;font-family:"Microsoft YaHei",YaHei,"微软雅黑",SimHei,"黑体";font-size:14px}</style>
+
+</head>
+
+<body>
+<div id="a1" style="width: 600px; height: 400px;"></div>
+<!-- <script type="text/javascript">
+    var videoObject = {
+        container: '#video', //容器的ID或className
+        variable: 'player',//播放函数名称
+        //loaded: 'loadedHandler', //当播放器加载后执行的函数
+        flashplayer:true,
+        poster:'material/poster.jpg',//封面图片
+        video:[
+            ['video/stream.m3u8', 'video/m3u8', '中文标清', 0]/*http://www.streambox.fr/playlists/test_001/stream.m3u8*/
+        ]
+    };
+    var player = new ckplayer(videoObject);
+</script> -->
+<!-- <script type="text/javascript">
+   showPlayer('http://static.guojiang.tv/pc/video/sound/1/playlist.m3u8','videoWrap')
+    function showPlayer(src, id){
+         //player
+       var flashvars={
+            f : 'http://static.guojiang.tv/pc/js/ckplayer/m3u8.swf',
+            a : 'http://www.streambox.fr/playlists/test_001/stream.m3u8',
+            c : 0,
+            s:4,
+            lv:0//注意，如果是直播，需设置lv:1
+        };
+        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        var video=[src];
+        CKobject.embed('http://static.guojiang.tv/pc/js/ckplayer/ckplayer.swf',id ,'ck-video','100%','100%',false, flashvars ,video, params);
+ 
+} 
+</script>-->
+
+<!-- <script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+    var flashvars={
+        f:'m3u8.swf',
+        a:'http://ztest.qiniudn.com/sintel.m3u8',
+        s:4,
+        c:0
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['http://ztest.qiniudn.com/sintel.m3u8'];
+    CKobject.embed('ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',false,flashvars,video,params);
+</script>
+
+</body>
+
+</html>

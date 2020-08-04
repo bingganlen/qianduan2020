@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<link rel="stylesheet" href="css/step-dc-style2.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/step-jquery-dc.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="step_context test"></div>
+
+当前步骤：第<input type="text"  value="5" id="currentStepVal" />步 <button onclick="StepTool.drawStep(jQuery('#currentStepVal').val(),stepListJson);" type="button">重新生成</button>
+
+
+<script type="text/javascript">
+	//所有步骤的数据
+	var stepListJson=[{StepNum:1,StepText:"第一步"},
+    {StepNum:2,StepText:"第二步"},
+    {StepNum:3,StepText:"第三步"},
+    {StepNum:4,StepText:"第四步"},
+    {StepNum:5,StepText:"第五步"},
+    {StepNum:6,StepText:"第六步"},
+    {StepNum:7,StepText:"第七步"}];
+	
+	//当前进行到第几步
+	var currentStep=5;
+//new一个工具类
+var StepTool = new Step_Tool_dc("test","mycall");
+//使用工具对页面绘制相关流程步骤图形显示
+StepTool.drawStep(currentStep,stepListJson);
+//回调函数
+function mycall(restult){
+//	alert("mycall"+result.value+":"+result.text);
+	StepTool.drawStep(result.value,stepListJson);
+	//TODO...这里可以填充点击步骤的后加载相对应数据的代码
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--引入jquery-->
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<!--引入bootstrap.min.js-->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!--引入tableExport格式组件,用于导出xlsx格式-->
+		<script type="text/javascript" src="js/tableExport/xlsx.core.min.js"></script>
+		<!--引入tableExport组件,用于在客户端存储导出的文件-->
+		<script type="text/javascript" src="js/tableExport/FileSaver.min.js"></script>
+		<!--最后引入表格导出主文件tableExport.min.js-->
+		<script type="text/javascript" src="js/tableExport/tableExport.min.js"></script>
+		<!--引入表格排序主文件jquery.tablesorter.min.js-->
+		<script type="text/javascript" src="js/tableSorter/jquery.tablesorter.min.js"></script>
+		<!--引入自定义的模拟数据dataset.js-->
+		<script type="text/javascript" src="js/dataset.js"></script>
+		<!--引入自定义js文件index.js-->
+		<script type="text/javascript" src="js/index.js"></script>
+		<!--引入bootsrap.min.css用于页面样式,与表格导出和表格排序功能无关-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<!--引入tableSorter的blue主题样式-->
+		<link rel="stylesheet" href="css/tableSorter/theme.blue.min.css" type="text/css" media="print, projection, screen" />
+		<!--引入自定义样式style.css,对页面样式的微调-->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="panel panel-primary">
+			<!-- Default panel contents -->
+			<div class="panel-heading clearfix">
+				<span><big>图书信息</big></span>
+				<button id="export" class="btn btn-primary pull-right" style="margin: 2px;">
+					<span class="glyphicon glyphicon-cloud-download"></span>
+					<span>&nbsp&nbsp导出</span>
+				</button>
+			</div>
+			<table class="table tablesorter tablesorter-blue">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>书名</th>
+						<th>作者</th>
+						<th>出版日期</th>
+						<th>页码</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>

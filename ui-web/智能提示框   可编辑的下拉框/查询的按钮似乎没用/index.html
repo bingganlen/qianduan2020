@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>面向对象(下拉框 与 模糊搜索)</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./public/index.css">
+</head>
+<body >
+	<div class="box">
+		<h4>下拉模糊查询</h4>
+		
+		<div class="dropdown custom1">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+				<em>请选择</em>
+				<i class="caret"></i>
+			</button>
+			<ul class="dropdown-menu">
+				<li >
+					<input class="form-control seach_name" placeholder="请输入搜索内容"/>
+					<i class="glyphicon glyphicon-search"></i>
+				</li>
+				<li data = "red"><a>red</a></li>
+				<li data = "blue"><a>blue</a></li>
+				<li data = "gray"><a>gray</a></li>
+				<li data = "green"><a>green</a></li>
+			</ul>
+	    </div>
+
+    </div>
+    <script src="./public/index.js"></script>
+    <script>
+    	$(function(){
+    		//new一个实例
+    		new DropdownSearch('.custom1');
+    		//new DropdownSearch('.custom2')
+            
+    	})
+    </script>
+
+</body>
+</html>

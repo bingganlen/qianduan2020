@@ -1,0 +1,49 @@
+.controls {
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(82, 120, 169, 0.35);
+  color: white;
+  font: 12px arial, sans-serif;
+  user-select: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.zoom {
+  flex: auto;
+  padding: 10px;
+}
+
+.zoom input {
+  display: block;
+  margin: auto;
+  width: 65%;
+  transform: scale(1.5) rotate(180deg);
+}
+
+.input-show-borders,
+.input-show-grid {
+  height: 30px;
+  width: auto;
+  padding: 10px;
+}
+
+.input-show-borders,
+.input-show-grid,
+.zoom input {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.input-show-borders:hover,
+.input-show-grid:hover,
+.zoom input:hover {
+  opacity: 1;
+}

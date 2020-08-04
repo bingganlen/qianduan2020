@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -->
+	<meta charset="utf-8">
+	<title>searchable</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/selectivity-jquery.css">
+	<!-- <link rel="stylesheet" type="text/css" href="selectivity.css"> -->
+	<script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<!--<script type="text/javascript" src="selectivity.js"></script>-->
+	<script type="text/javascript" src="javascripts/selectivity-jquery.js"></script>
+	<style>
+		.we{
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="we">
+		
+		<div id="aaa" name="name"></div>
+		<div id="bbb" name="name"></div>
+		<div id="ccc" name="name"></div>
+	</div>
+	<script>
+		$('#aaa').selectivity({
+		    /*allowClear: true,*/
+		    // multiple:true,
+		    items: ['Amsterdam', 'Antwerp','Amsterdam1', 'Antwerp1', 'Antwerp2','Amsterdam2', 'Antwerp3'],
+		    placeholder: '请选择'
+		});
+		$('#bbb').selectivity({
+		    /*allowClear: true,*/
+		    // multiple:true,
+		    items: ['Amsterdam', 'Antwerp','Amsterdam1', 'Antwerp1', 'Antwerp2','Amsterdam2', 'Antwerp3'],
+		    placeholder: '请选择'
+		});
+		$('#ccc').selectivity({
+		    /*allowClear: true,*/
+		    // multiple:true,
+		    items: ['Amsterdam', 'Antwerp','Amsterdam1', 'Antwerp1', 'Antwerp2','Amsterdam2', 'Antwerp3'],
+		    placeholder: '请选择'
+		});
+	</script>
+
+	<!-- <script>
+		$('#inputa').val($('#aaa').val());
+	</script> -->
+</body>
+</html>

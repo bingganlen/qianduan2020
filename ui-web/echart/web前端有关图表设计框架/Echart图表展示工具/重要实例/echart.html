@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+  <meta charset="utf-8">
+  <title>ECharts</title>
+  <!-- 引入 echarts.js -->
+  <script src="js/echarts.min.js"></script>
+  </head>
+
+  <body>
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main" style="width: 600px;height:400px;"></div>
+
+  <div id="main2" style="width: 600px;height:400px;left: 700px;top: 0px;position: absolute;"></div>
+
+  <div id="main3" style="width: 600px;height:400px;left: 0px;top: 400px;position: absolute;"></div>
+
+  <div id="main4" style="width: 600px;height:400px;left: 700px;top: 400px;position: absolute;"></div>
+
+  <script type="text/javascript">
+      //模拟后台传来的json
+      var jsondata =
+          '{"sales":[{"name":"衬衫","num":"70"},{"name":"羊毛衫","num":"27"},{"name":"裤子","num":"36"},{"name":"高跟鞋","num":"18"},{"name":"袜子","num":"85"},{"name":"棉袄","num":"105"}]}';
+      var jsonobj = JSON.parse(jsondata);
+
+      //获取json中的数值    
+      var dataName = [];
+      var dataNum = [];
+      var temp = jsonobj;
+
+      //匿名函数解析json串中的数值，关键点
+      (function() {
+          for(var i = 0; i < temp.sales.length; i++) {
+              dataName.push(temp.sales[i].name);
+              dataNum.push(temp.sales[i].num);
+          }
+      })();
+
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+      var myChart2 = echarts.init(document.getElementById('main2'));
+
+      //折线图
+      var option = {
+          title: {
+              text: '衣物销量统计'
+          },
+          tooltip: {},
+          legend: {
+              data: ['销量']
+          },
+
+          xAxis: {
+              //x轴字体颜色
+              /*axisLine: {
+                  lineStyle: {
+                      color: '#C50023'
+                  }
+              },*/
+
+              data: dataName,
+          },
+          yAxis: [{
+              //定义y轴最大与最小值
+              min: 0,
+              max: 120,
+              type: 'value',
+              name: '日销量（万）',
+              splitNumber: 5
+          }],
+
+          series: [{
+
+              //折线上数字
+              /* label: {
+                   normal: {
+                       show: true,
+                       position: 'top',
+                       formatter:100
+                   }
+               },*/
+
+              // 折线颜色
+              /*itemStyle: {
+                  normal: {
+                      //线上。的颜色
+                      color: '#33CCFF',
+                      lineStyle: {
+                          //线的颜色
+                          color: '#33CCFF'
+                      }
+                  }
+              },*/
+
+              //顶上小图标名称
+              name: '销量',
+              type: 'line',
+              data: dataNum,
+
+              //平均值
+              markLine: {
+                  data: [{
+                      type: 'average',
+                      name: '平均值'
+                  }]
+              },
+
+          }]
+      };
+
+      myChart.setOption(option);
+
+      //柱状图
+      // 指定图表的配置项和数据
+      var option2 = {
+          title: {
+              text: '衣物销量统计'
+          },
+          tooltip: {},
+          legend: {
+              data: ['销量']
+          },
+          xAxis: {
+              data: dataName,
+          },
+          yAxis: {
+              type: 'value',
+              name: '日销量（万）',
+              splitNumber: 5
+          },
+          series: [{
+              name: '销量',
+              type: 'bar',
+              //柱状宽度
+              barWidth: 20,
+              data: dataNum,
+          }]
+      };
+      // 使用刚指定的配置项和数据显示图表。
+      myChart2.setOption(option2);
+
+      //饼状图
+      echarts.init(document.getElementById('main3')).setOption({
+          title: {
+              text: '衣物销量统计',
+              subtext: '日销量（万）',
+              x: 'center',
+              //背景色
+              //backgroundColor:'rgba(12,121,123,0.1)'
+          },
+          series: [{
+              name: '详情',
+              type: 'pie',
+
+              //饼状图的大小
+              //radius : '55%',
+
+              center: ['50%', '60%'],
+              data: (function() { //饼状图需要函数解析数字内的值
+                  var res = [];
+                  var len = dataName.length;
+                  while(len--) {
+                      res.push({
+                          name: dataName[len],
+                          value: dataNum[len]
+                      });
+                  }
+                  return res;
+              })()
+          }]
+      })
+
+      echarts.init(document.getElementById('main4')).setOption({
+          title: {
+              text: '衣物销量统计'
+          },
+          tooltip: {},
+          legend: {
+              data: ['销量']
+          },
+          xAxis: {
+              data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+          },
+          yAxis: {
+              type: 'value',
+              name: '日销量（万）',
+              min: 0,
+              max: 4,
+              axisLabel: {
+                  formatter: function(value) {
+                      var texts = [];
+                      if(value == 0) {
+                          texts.push('woo');
+                      } else if(value <= 1) {
+                          texts.push('好');
+                      } else if(value <= 2) {
+                          texts.push('很好');
+                      } else if(value <= 3) {
+                          texts.push('非常好');
+                      } else {
+                          texts.push('完美');
+                      }
+                      return texts;
+
+                  }
+              }
+          },
+          series: [{
+              name: '销量',
+              type: 'bar',
+              //柱状宽度
+              //barWidth: 20,
+              data: [1, 4, 2, 3, 2, 0]
+          }]
+      })
+      </script>
+  </body>
+  </html>

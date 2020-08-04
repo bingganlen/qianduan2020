@@ -1,0 +1,149 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片放大镜测试1   但是放大镜的位置无法悬浮</title>
+                    
+            
+</head>
+<style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 960px;
+            margin:40px auto;
+        }
+        #small{
+            width: 300px;
+            height: 200px;
+            border:1px solid #eee;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        #small img{
+            width: 100%;
+            height: 100%;
+        }
+
+        div    {
+            float: left;
+            margin-right: 10px;
+        }
+
+        #big{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border:1px solid #eee;
+            border-radius: 4px;
+            display: none;
+        }
+
+        #look_girl{
+            position: absolute;
+            left: 0px;
+            top:0px;
+        }
+
+        #move{
+            width: 100px;
+            height: 100px;
+            background:#000;
+            opacity: .5;
+            position: absolute;
+            display: none;
+            left: 0px;
+            top: 0px;
+        }
+
+        .xx{
+            width: 300px;
+            height: 200px;
+            border:1px solid #eee;
+            border-radius: 4px;
+            position: relative;
+        }
+         .xx img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+<body>
+<h3>https://juejin.im/entry/5a5cbb006fb9a01c975a3b8e</h3>
+
+    <div id="small">
+        <img src="img/一切都是穷的错.png">
+        <p id="move"></p>
+    </div>
+    <div class="xx">
+        <img src="img/一切都是穷的错.png">
+        <p id="move"></p>
+    </div>
+    <div class="xx">
+        <img src="img/一切都是穷的错.png">
+        <p id="move"></p>
+    </div>
+    <div id="big">
+        <img src="img/一切都是穷的错.PNG" id="look_girl">
+    </div>
+
+
+
+    <script type="text/javascript">
+    var move = document.getElementById('move');    
+    var small = document.getElementById('small');
+    var big = document.getElementById('big');
+    var look_girl = document.getElementById('look_girl');
+    small.onmousemove = function(event){
+        event = event || window.event;
+        this.style.cursor = 'move';
+        // 计算move移动块的left值
+        var move_left = event.clientX - this.offsetLeft - move.offsetWidth/2;
+        // 计算move移动块的top值
+        var move_top = event.clientY - this.offsetTop - move.offsetHeight/2;
+        // 超出左边界赋值为0
+        move_left = move_left < 0 ? 0 : move_left;
+        // 超出右边界赋值为盒子宽度-移动块的宽度
+        move_left = move_left > this.offsetWidth - move.offsetWidth ? this.offsetWidth - move.offsetWidth : move_left;
+        // 超出上边界赋值为0
+        move_top = move_top < 0 ? 0 : move_top;
+        // 超出下边界赋值为盒子高度-移动块高度
+        move_top = move_top > this.offsetHeight - move.offsetHeight ? this.offsetHeight - move.offsetHeight : move_top;
+        // 修改移动块left、top值
+        move.style.left = move_left + 'px';
+        move.style.top = move_top + 'px';
+        /*
+            计算图片需要移动的坐标
+
+            距离左边left    图片宽度      盒子宽度          距离左边left    图片宽度           盒子宽度
+            big_x/(look_girl.offsetWidth-big.offsetWidth) = move_left/(small.offsetWidth-move.offsetWidth);
+
+            big_y/(look_girl.offsetHeight-big.offsetHeight) = move_top/(small.offsetHeight-move.offsetHeight);
+
+        */
+
+        var big_x = move_left/(small.offsetWidth-move.offsetWidth) * (look_girl.offsetWidth-big.offsetWidth);
+        var big_y = move_top/(small.offsetHeight-move.offsetHeight) * (look_girl.offsetHeight-big.offsetHeight);
+        // 修改图片定位
+        look_girl.style.left = -big_x + 'px';
+        look_girl.style.top = -big_y + 'px';
+    }
+
+    small.onmouseover = function(){
+        move.style.display = 'block';
+        big.style.display = 'block';
+    }
+
+    small.onmouseout = function(){
+        move.style.display = 'none';
+        big.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

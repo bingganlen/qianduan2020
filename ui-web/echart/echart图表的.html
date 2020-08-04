@@ -1,0 +1,184 @@
+<html>
+    <meta charset="utf-8">
+    <head></head>
+    <body>
+
+       <div id="divData">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="input-group input-group-sm">
+                            <input id="tboxSatrtDate" type="text" class="form-control" style="width: 138px;" onfocus="WdatePicker({ isShowClear: false, readOnly: true, startDate: getLastYearYestdy(new Date()),onpicked: function () { tboxEndDate.focus(); } })" placeholder="开始日期" />
+                            <input id="tboxEndDate" type="text" class="form-control" style="width: 138px;" onfocus="WdatePicker({ isShowClear: false, readOnly: true })" placeholder="结束日期" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="btnSubmit" type="button" class="btn btn-black btn-sm">
+                            <i class="glyphicon glyphicon-search"></i> 搜 索
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--日历图标-->
+            <div class="panel-body">
+                <div id="main" style="width: 800px; height: 450px; margin-left: 120px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    <script type="text/javascript">
+         //获得去年今天
+    function getLastYearYestdy(date) {
+        var strYear = date.getFullYear() - 1;
+        var strDay = date.getDate();
+        var strMonth = date.getMonth() + 1;
+        if (strMonth < 10) {
+            strMonth = "0" + strMonth;
+        }
+        if (strDay < 10) {
+            strDay = "0" + strDay;
+        }
+        var datastr = strYear + "-" + strMonth + "-" + strDay;
+        return datastr;
+    }
+    //获取当前时间并且格式化
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+    //日期加天数的方法:dataStr日期字符串  dayCount 要增加的天数
+    function dateAddDays(dataStr,dayCount) {  
+        var strdate=dataStr; //日期字符串  
+        var isdate = new Date(strdate.replace(/-/g,"/"));  //把日期字符串转换成日期格式  
+        isdate = new Date((isdate/1000+(86400*dayCount))*1000);  //日期加1天  
+        var pdate = isdate.getFullYear()+"-"+(isdate.getMonth()+1)+"-"+(isdate.getDate());   //把日期格式转换成字符串  
+   
+        return pdate;//增加n天后的日期字符串 
+    } 
+
+    //<!--start:计算字符串日期间隔天数-->
+    function dateDiff(date1, date2) {
+        var type1 = typeof date1, type2 = typeof date2;
+        if (type1 === 'string')
+            date1 = stringToTime(date1);
+        else if (date1.getTime)
+            date1 = date1.getTime();
+        if (type2 === 'string')
+            date2 = stringToTime(date2);
+        else if (date2.getTime)
+            date2 = date2.getTime();
+        //alert((date1 - date2) / (1000*60*60)); 
+        return (date1 - date2) / (1000 * 60 * 60 * 24); //结果是小时 
+    }
+    //字符串转成Time(dateDiff)所需方法 
+    function stringToTime(string) {
+        var f = string.split(' ', 2);
+        var d = (f[0] ? f[0] : '').split('-', 3);
+        var t = (f[1] ? f[1] : '').split(':', 3);
+        return (new Date(
+            parseInt(d[0], 10) || null,
+            (parseInt(d[1], 10) || 1) - 1,
+            parseInt(d[2], 10) || null,
+            parseInt(t[0], 10) || null,
+            parseInt(t[1], 10) || null,
+            parseInt(t[2], 10) || null
+        )).getTime();
+    }
+    //<!--end:计算字符串日期间隔天数-->
+
+
+    var starttime = "2017-01-01";
+    var endtime = "2017-12-31";
+    var ranges = [];
+    ranges.push(starttime);
+    ranges.push(endtime);
+
+    var myChart = echarts.init(document.getElementById('main'));
+    function getVirtulData(begintime, stoptime) {
+        var date = +echarts.number.parseDate(begintime);
+        var newendtime=dateAddDays(stoptime, 1);//需要日期加1天，否则日历图不显示最后一天
+        var end = +echarts.number.parseDate(newendtime);
+        var dayTime = 3600 * 24 * 1000;
+        var data = [];
+        for (var time = date; time < end; time += dayTime) {
+            data.push([
+                echarts.format.formatTime('yyyy-MM-dd', time),
+                Math.floor(Math.random() * 1000)
+            ]);
+        }
+        return data;
+    }
+    option = {
+        dataRange: {//显示日历图颜色过渡区间
+            min: 0,
+            max: 1000000,
+            text:['High','Low'],
+            realtime: false,
+            calculable : true,
+            color: ['#c24b51', '#e8bc8f','#f4e8a3']
+        },
+        tooltip: {//鼠标悬浮显示对应信息
+            position: 'top',
+            formatter: function (p) {
+                var format = echarts.format.formatTime('yyyy-MM-dd', p.data[0]);
+                return format + ': ' + p.data[1];
+            }
+        },
+        visualMap: {
+            show: false,
+            min: 0,
+            max: 10000
+        },
+        calendar: {
+            cellSize: ['auto', 13],//设置小方格大小
+            //range: [starttime, endtime]
+            range: []
+        },
+        series: {
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            data: getVirtulData(starttime, endtime)
+        }
+    };
+    option.calendar.range = ranges;//为option赋值range
+    myChart.setOption(option);
+
+    $("#btnSubmit").click(function () {
+        starttime = $("#tboxSatrtDate").val();
+        endtime = $("#tboxEndDate").val();
+        if (starttime == null || starttime === "" || endtime == null || endtime === "") {
+            starttime = "2017-01-01";
+            endtime = "2017-12-31";
+        }
+
+        var range = [];
+        range.push(starttime);//重新设置range
+        range.push(endtime);
+        option.calendar.range = range;//为option赋值range
+        getVirtulData(starttime, endtime);//获取图标中的数值
+        
+        myChart.setOption(option);//重新设置图表
+    });
+    </script>
+
+</html>
+
+
+
+
+
+
+

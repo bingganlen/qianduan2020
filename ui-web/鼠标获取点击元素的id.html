@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Untitled Document</title>
+    <!-- <script type="text/javascript">
+      function show_element(e){
+        if(!e){
+          var e = window.event;
+        }
+        //获取事件点击元素
+        var targ = e.target;
+        //获取元素名称
+        var tname = targ.tagName;
+        alert(tname);
+      }
+    </script> -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+       $(function(){
+        $(document).click(function (e) {
+            $(e.target).addClass('bg');     // 设置背景色
+            alert($(e.target).attr('id'));  // 获取id
+        })
+       })
+       
+    </script>
+  </head>
+  <body ><!-- onmousedown="show_element(event)" -->
+    <h1 id="h1">this is a heading</h1>
+    <p id="p21">这是段落</p>
+    <p id="p2">这又是一个段落</p>
+    <img src="1.jpg" id="images" />
+  </body>
+</html>

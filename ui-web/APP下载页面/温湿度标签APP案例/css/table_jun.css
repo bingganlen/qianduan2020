@@ -1,0 +1,87 @@
+/**\
+       标签PDF下载的按钮
+ */
+/*.jtjb2{width:auto; height:60px; margin-left:5px; background:#ECECFB;font-size:22px; color:#435867;line-height:60px;text-indent:30px;font-weight:400;vertical-align:middle;}
+.jlogo_sc_sc{width:100px;margin-left:500px; vertical-align:middle;}
+.b_b{cursor:pointer;height:30px;background:#8DB0CE;border:none;border-radius:1px;color:#fff;margin:5px 8px;}*/
+.jtjb2{margin-top: 5px;margin-bottom: 20px;  /*width: 300px;    width: 200px;*/
+    height: 40px;}
+/* end*/
+
+
+
+
+table tr td{
+    text-align: center;
+}
+
+.table_label_first-td_width{
+    width: 100px;
+}
+
+
+.table-border-no tr td{
+    border-top: 0!important;
+}
+
+
+.table_label_size{
+    font-size: 12px!important;
+}
+.table_label_size1{
+    font-size: 14px!important;
+}
+
+.tablecenter{
+    text-align: center;
+}
+/*.tablecenter tr td:nth-child(4){
+    text-align: left;float: left;
+}*/
+
+.labelExplain{
+    margin-left: 10px;
+}
+
+.formtr-padding{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#tableform{
+    font-size: 12px!important;
+    width: 1400px;
+}
+#tableform tr td{
+    padding-top: 10px;
+    padding-left: 19px;
+}
+
+#tableform tr td select{
+    width: 100px;
+}
+
+#tableform tr td label{
+    font-size: 13px!important;
+}
+
+
+/* 设备配置  统计信息的左 */
+.td2 tr td:nth-child(2){
+    float: left;text-align: left;
+}
+/*.td2 tr td:nth-child(3){*/
+    /*float: left; margin-left: 100px;*/
+/*}*/
+.tdwidth100{
+    width: 110px;
+}
+
+.blue{ background-color: #01AAED; }
+.red{
+    background-color: #ff3f2d;}
+
+.buttonposition{width: 100%;height: 44px;}
+.marginright{position: absolute; right: 10%;margin-bottom: 10px;margin-top: -20px;}
+
+.layui-btn-mybig{ height: 40px;padding: 8px 13px; }

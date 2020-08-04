@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body,h2,div,p{
+	margin: 0;
+	padding: 0;
+}
+#panel h2{
+	text-align: center;
+	height:50px;
+	width:200px;
+	background-color:gray;
+	border-radius: 2px;
+	margin:2px;
+}
+
+#panel div{
+	text-align:center;
+	background-color:pink;
+	height:300px;
+	width:400px;
+}
+#panel{
+	width: 600px;
+	height: 600px;
+	margin:0 auto;
+	
+}

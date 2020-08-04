@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>基础饼图-内部文本</title>
+    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;margin:0;}</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.4.1/dist/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"></script>
+<script>
+var data = [{
+  item: '事例一',
+  count: 40,
+  percent: 0.4
+}, {
+  item: '事例二',
+  count: 21,
+  percent: 0.21
+}, {
+  item: '事例三',
+  count: 17,
+  percent: 0.17
+}, {
+  item: '事例四',
+  count: 13,
+  percent: 0.13
+}, {
+  item: '事例五',
+  count: 9,
+  percent: 0.09
+}];
+var chart = new G2.Chart({
+  container: 'mountNode',
+  forceFit: true,
+  height: window.innerHeight
+});
+chart.source(data, {
+  percent: {
+    formatter: function formatter(val) {
+      val = val * 100 + '%';
+      return val;
+    }
+  }
+});
+chart.coord('theta');
+chart.tooltip({
+  showTitle: false
+});
+chart.intervalStack().position('percent').color('item').label('percent', {
+  offset: -40,
+  // autoRotate: false,
+  textStyle: {
+    textAlign: 'center',
+    shadowBlur: 2,
+    shadowColor: 'rgba(0, 0, 0, .45)'
+  }
+}).tooltip('item*percent', function(item, percent) {
+  percent = percent * 100 + '%';
+  return {
+    name: item,
+    value: percent
+  };
+}).style({
+  lineWidth: 1,
+  stroke: '#fff'
+});
+chart.render();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* 通用样式初始化 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin:0;padding:0;border:none;list-style:none;outline:none;}
+body { font-size: 14px; font-family: "微软雅黑";  padding: 0; margin: 0; color: #535353; }
+div, form, ul, dd, dl, ol, dt, li, p { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; margin: 0; padding: 0; font-weight: normal; }
+table { border-collapse: separate; border-spacing: 0; }
+table, td, th { vertical-align: middle; }
+textarea, input, button, select, keygen, legend { outline: 0; margin: 0; padding: 0;}
+textarea { resize:none; } 
+img{border:none;vertical-align:bottom;}
+input[type="button"],input[type="submit"],input[type="reset"]{-webkit-appearance:none;outline:none;}
+a { text-decoration: none;  cursor: pointer; }
+a:hover { text-decoration: none; }
+/* 清除浮动 */
+.clearfix:after{ content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
+.clear { width: 0; height: 0; margin: 0; padding: 0; line-height: 0px; font-size: 0px; clear: both;}
+
+.none { display: none; }
+.left { float: left; }
+.right { float: right; }
+.red{ color: #f00;}
+
+
+
+

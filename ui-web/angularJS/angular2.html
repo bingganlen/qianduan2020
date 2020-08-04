@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>入门小Demo-3  初始化</title>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('myApp',[]); //定义了一个叫myApp的模块
+        //定义控制器
+        app.controller('myController',function($scope){
+            $scope.add=function(){
+                return parseInt($scope.x)+parseInt($scope.y);
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+x:<input ng-model="x" >
+y:<input ng-model="y" >
+运算结果：{{add()}}
+</body>
+</html>
+<html>
+<head>
+    <title>入门小Demo-3  初始化</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app=angular.module('myApp',[]); //定义了一个叫myApp的模块
+        //定义控制器
+        app.controller('myController',function($scope){
+            $scope.add=function(){
+                return parseInt($scope.x)+parseInt($scope.y);
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+x:<input ng-model="x" >
+y:<input ng-model="y" >
+<button ng-click="add()">运算</button>
+运算结果：{{add()}}
+结果：{{z}}
+</body>
+</html>

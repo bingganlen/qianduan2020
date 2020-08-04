@@ -1,0 +1,74 @@
+div.step_context{ height:70px; margin:15px; }
+
+.step_context ul{  height:70px; width:auto; list-style:none; margin:0px; padding:0px; float:left; }
+.step_context li{ 
+background-image:  url("../image/step2.png");
+ background-repeat:no-repeat;
+border:none;
+height:37px;width:80px; 
+float:left;
+list-style:none;
+line-height:37px;position:relative; }
+.step_context li  span{
+width:35px; height:26px; display:block; position:absolute; top:12px; left:35px; line-height:25px; color:#FFFFFF; font-weight:bold; font-size:17px;}
+.step_context li a{ 
+border:none;height:37px;width:80px; float:left;color:#003300;top:35px;
+text-decoration:none; font-size:12px;list-style:none; text-align:center; position:absolute;  }
+/*第一步完成，并且当前步骤大于1 样式*/
+li.firstFinshStep{
+ background-position: 0px -97px;
+}
+li.firstFinshStep a{
+
+}
+/*只进行到第一步*/
+li.firstFinshStep_curr1{
+ background-position: 0px -287px;
+}
+li.firstFinshStep_curr1 a{
+}
+/*已经完成的步骤的样式*/
+li.finshStep{
+ background-position: 0px -235px;
+}
+li.finshStep a{
+ 
+}
+
+/*下一步未完成的步骤样式*/
+li.coressStep{
+ background-position: 0px -47px;
+
+}
+li.coressStep a{
+
+}
+
+/*等待完成的步骤样式*/
+li.loadStep{
+ background-position: 0px -1px;
+ 
+}
+li.loadStep a{
+
+}
+li.loadStep  span{
+color:#268226;}
+/*最后一个步骤完成后的样式*/
+li.finshlast{
+ background-position: 0px -144px;
+ 
+}
+li.finshlast a{
+
+}
+/*最后一个步骤的样式*/
+li.last{
+ background-position: 0px -185px;
+ }
+ li.last a{
+ 
+}
+li.last  span{
+color:#268226;
+}

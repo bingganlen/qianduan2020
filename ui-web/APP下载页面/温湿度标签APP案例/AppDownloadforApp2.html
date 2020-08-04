@@ -1,0 +1,175 @@
+
+<html>
+<head>
+    <title>温湿度标签 APP应用下载</title>
+    <meta charset="UTF-8">
+    <!-- 推广关键字和链接需要改 -->
+    <meta name="msapplication-task" content="name=珠海美佳音;icon-uri=https://wap.gusuwang.com/upload//img/20161123/1479889463720589.ico">--%>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="./font/aliyunfont/iconfont.css" type="text/css" rel="stylesheet">
+    <link href="./css/RichScan.css" type="text/css" rel="stylesheet">
+    <script src="./js/BesidesLoginAndRegister/jquery-1.8.0.min.js"></script>
+    <style>
+        .btn{ box-sizing:border-box; border:1px solid #1bb9c0;  text-align: center; }
+        .btn{ display: inline-block; width: 220px;height: 44px;
+            margin-left: 20px; margin-bottom: 12px; line-height: 44px; font-size: 16px; margin-right: 20px; position: relative; overflow: hidden; transition:all 0.2s; -pckit-transition:all 0.2s; -moz-transition:all 0.2s;}
+        .btn:hover{ border-radius: 10px;}
+        .btncolor1{color: #fff;background-color:#1bb9c0; }
+        .btncolor2{color: #1bb9c0; background-color:#fff; }
+        .ico{ float: left; line-height: 44px; margin: -5px 6px 0 2px;  }/*margin:7px 6px 0 20px;*/
+        .txt{line-height: 40px;float: left;font-size: 17px;}
+        .sm-a-1{ text-align: center; width: 140px; height: 37px;  line-height: 37px;
+            color: #1bb9c0;margin-right: 20px;margin-left: 15px;}
+        .sm-a-2{width:60px;
+            height: 37px;line-height: 37px;  color: #1bb9c0;margin-left: 20px;}
+    </style>
+</head>
+
+<body>
+<!-- 二维码扫描 如果是微信扫一扫，就提示要在浏览器打开   APP下载 -->
+<div class="weixin-tip">
+    <p>
+        <img src="./images/tip.png" class="weixintipwidth" alt="在浏览器打开" />
+    </p>
+</div>
+
+<!-- 第三方案  用以前的APP图片-->
+<div class="jumbotron text-center" style="background-color: #eeeeee1a;margin-bottom: 10px;">
+    <img src="./images/appdown/megain-j.PNG" style="width: 190px;height: 85px;" alt="megain logo"  >
+    <h2>美佳音温湿度标签</h2>
+</div>
+<div class="container text-center">
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="upload/apk/TempRecordLabel4.0.5-2005157.apk" class="btn btncolor1" id="newVersion">
+                <span class="ico iconfont iconanzhuo" style="font-size: 35px;"></span>
+                <span class="txt">Android版下载</span>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="#" class="btn disabled btncolor2" >
+                <span class="ico iconfont iconpingguo" style="font-size: 35px;"></span>
+                <span class="txt">iphone版下载</span>
+            </a>
+        </div>
+
+        <a href="upload/apk/TempRecordLabel4.0.5-2005157.apk" class="sm-a-1" id="oldAndroidPath">
+            <span id="oldAndroidVersion">Android V4.0.5 下载 </span>
+        </a>
+        <a class="sm-a-2" href="#">使用说明</a>
+
+    </div>
+
+    <img src="./images/appdown/megain_nfc-j-ya.png" alt="NFC-APP主图" class="img-responsive">
+
+
+    <!-- 方案一 原图    下载那里有下次  需要经过PS切片添加下载链接 -->
+    <!-- <div class="container" >
+        <img src="../images/appdown/main.jpg" alt="NFC-APP主图" usemap="#Map" class="img-responsive">
+        <map name="Map" id="Map">
+            <area shape="rect" coords="270,602,1360,774" title="移动阅读大战" data-content="以网易为代表的传统门户在移动时代也不好过，虽然推出了新闻客户端，但今日头条、Zaker等新闻阅读应用也正在侵蚀它们的生存空间。" href="TempRecordLabel3.1.3.apk" class="sss" />--%>
+                    在原页面  宽1327 高145    236，609，1565，755
+            调整后 网页上大小	 743 高145    567，609，1280，755
+            <area shape="rect" coords="567,609,1280,755" title="移动阅读大战" href="TempRecordLabel3.1.3.apk" />
+        </map>
+    </div>
+     -->
+
+
+
+
+
+
+
+
+
+</body>
+<script src="./js/BesidesLoginAndRegister/jquery-1.11.0.min.js"></script>
+<script>
+
+    $(window).on("load", function() {
+        var winHeight = $(window).height();
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        if (isWeixin) {
+            $(".weixin-tip").css("height", winHeight);
+            $(".weixin-tip").show();
+        }
+        else{
+            //$("#down").hide();
+            //$("#down").onclick();
+            //alert("不是微信浏览器,直接下载文件！");//alert("按下了！")
+
+            //模拟bai点击
+            setTimeout(function() {
+                // IE
+                if(document.all) {
+                    zhidocument.getElementById("down").click();
+                }
+                // 其它浏览器
+                else {
+                    var e = document.createEvent("MouseEvents");
+                    e.initEvent("click", true, true);
+                    document.getElementById("down").dispatchEvent(e);
+                }
+            }, 100);
+
+            //方法一    用onclick方法访问后台 <%--<a id="down" href="../images/ok.png" onclick="alert('clicked');" download="Android文件下载">下载安卓应用</a>--%>
+            // setTimeout(function() {
+            //     // IE
+            //     if(document.all) {
+            //         zhidocument.getElementById("down").click();
+            //     }
+            //     // 其它浏览器
+            //     else {
+            //         var e = document.createEvent("MouseEvents");
+            //         e.initEvent("click", true, true);
+            //         document.getElementById("down").dispatchEvent(e);
+            //     }
+            // }, 100);
+        }
+    })
+</script>
+<script>
+    $.ajax({
+        type: "GET",
+        url: '/client/apk/getTwoVersion',
+        dataType: "json", //返回数据形式为json
+        success: function (result) {
+            if (result) {
+                var basepath = '<%=basePath%>';
+                if (result.status==0) {
+                    //$(".androidVersion").text("V"+ result.data.versionName);         //+V
+                    $("#newVersion").attr("href",basepath +result.data.path);             // href
+                    if(result.data.oldpath=="" ){
+                        $("#oldAndroidPath").hide();
+                    }else{
+                        $("#oldAndroidPath").attr("href",basepath +result.data.oldpath);         // href
+                        $("#oldAndroidVersion").text("Android V"+ result.data.oldversionName +" 下载");      //Android V4.0.5 下载
+                    }
+
+                }
+            }
+        }
+    });
+</script>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>图片最好清晰点</title>
+	<style type="text/css">
+		body{margin: 0;padding:0;}
+		.bodybg{
+			float: left;
+			height: auto;
+			width: 100%;
+			position: relative;
+			z-index: 1;
+		}
+		.bodybg li{
+			float: left;
+			width: 100%;
+			display: none;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+		}
+		.bodybg li img{
+			float: left;
+			width: 100%;
+			height: auto;
+			z-index: 1;
+		}
+
+	</style>
+</head>
+
+<body>
+	<ul class="bodybg" id="bodybg">
+		<li style="display: block"><img src="images/1.jpg" alt=""></li>
+		<li><img src="images/2.jpg" alt=""></li>
+		<li><img src="images/3.jpg" alt=""></li>
+		<li><img src="images/4.jpg" alt=""></li>
+		<li><img src="images/5.jpg" alt=""></li>
+	</ul>
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		//先获取背景图片数量，自定义切换函数，每次执行将变量bodybg++,    if bodybg==背景图片数量  设置为0
+		
+		var bodybg = 0;
+		var len = $("ul.bodybg").find("li").length;
+
+		function picTimeer(){
+			bodybg++;
+			if (bodybg == len) {
+				bodybg = 0;
+			}
+			$(".bodybg>li:eq(" + bodybg +")").fadeIn(1500).siblings().fadeOut(1499);
+		}
+
+		setInterval(picTimeer,2000);
+	</script>
+</body>
+</html>

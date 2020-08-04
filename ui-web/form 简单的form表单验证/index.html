@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>南天一叶</title>
+<script src="http://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.js"></script>
+<script type='text/javascript' src='js/jq.validate.js'></script>
+<link rel="stylesheet" type="text/css" href="reset.css" />
+
+<style type="text/css">
+td { padding: 7px; }
+.labels { text-align: right; }
+</style>
+<script type="text/javascript">
+
+$(function(e) {
+
+	var vali=new Validators();
+
+	$("#btn").bind("click", vali.subByJs);
+
+});
+
+</script>
+</head>
+
+<body>
+<form action="#" type="validate">
+  <div align="center">
+    <h1>验证例子：<p>其他的你自己可以尝试着写</p></h1>
+    <br />
+    <table width="30%" border="0">
+      
+        <td class="labels">手机:</td>
+        <td><input type="text" name="t2" valType="MOBILE" msg="<font color=red>*</font>手机格式不正确" /></td>
+      </tr>
+      <tr>
+        <td class="labels">电子邮箱:</td>
+        <td><input type="text" name="t2" valType="MAIL" msg="<font color=red>*</font>电子邮箱格式不正确" /></td>
+      </tr>
+      <tr>
+        <td class="labels">中文姓名:</td>
+        <td><input type="text" name="t2" valType="CHINESE" msg="<font color=red>*</font>中文格式不正确" /></td>
+      </tr>
+      <tr>
+        <td class="labels">身份证号码:</td>
+        <td><input type="text" name="t2" valType="IDENTITY" msg="<font color=red>*</font>身份证号码格式不正确" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="提交" /></td>        
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+</html>

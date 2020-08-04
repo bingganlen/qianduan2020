@@ -1,0 +1,207 @@
+<html>
+<head>
+    <title>温湿度标签 APP应用下载</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+    <link href="./css/appdown/download.css" type="text/css" rel="stylesheet">
+    <link href="./css/RichScan.css" type="text/css" rel="stylesheet">
+    <script src="./js/BesidesLoginAndRegister/jquery-1.8.0.min.js"></script>
+</head>
+
+<body>
+<!-- 二维码扫描 如果是微信扫一扫，就提示要在浏览器打开   APP下载 -->
+<div class="weixin-tip">
+    <p>
+        <img src="./images/tip.png" class="weixintipwidth" alt="在浏览器打开" />
+    </p>
+</div>
+<!--             <div class="pc-pics-box ">
+    <img src="../images/appdown/pic4.png" alt="app下载图" width="" height="" class="img-responsive" style="display: inline;">
+</div>
+
+
+<div class="pc-main">
+    <div class="pc-logo ico">
+        <img class="logo" src="../images/appdown/ico.png">
+        <span class="appname">Temp&Hum Record</span>
+        <span class="version">V4.0.5</span>
+    </div>
+    <div class="pc-btns">
+
+        <a href="../upload/apk/TempRecordLabel4.0.5-2005157.apk" class="btn">
+            <span class="ico ico-android"></span>
+            <span class="txt">Android版下载</span>
+        </a>
+        <a href="#" class="btn disabled" onclick="alert('敬请期待。。');">
+            <span class="ico ico-ios"></span>
+            <span class="txt">敬请期待</span>  &lt;%&ndash;iPhone版下载&ndash;%&gt;
+        </a>
+    </div>
+
+
+        <p>说明书</p>
+
+</div>
+
+<div class="pc-copyright">Copyright ©  All Rights Reserved</div>
+
+
+<script src="../js/BesidesLoginAndRegister/jquery-1.8.0.min.js"></script> -->
+
+
+<!-- 第二方案 -->
+<div class="jumbotron text-center">
+    <!--<h1>我的第一个 Bootstrap 页面</h1>
+    <p>重置浏览器大小查看效果!</p>-->
+    <img class="logo"  width="150" height="150"  src="./images/appdown/ico.png" alt="温湿度标签ico">
+    <p>Temp&Hum Record</p>
+    <span class="androidVersion">V4.0.5</span>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <!--<h3>第一列</h3>
+            <p>hello world！！！</p>-->
+            <a href="./upload/apk/TempRecordLabel4.0.5-2005157.apk" class="btn" id="newVersion">
+                <span class="ico ico-android"></span>
+                <span class="txt">Android版下载</span>
+            </a>
+
+        </div>
+        <div class="col-sm-4">
+            <a href="#" class="btn disabled" onclick="alert('敬请期待。。');">
+                <span class="ico ico-ios"></span>
+                <span class="txt" title="敬请期待">敬请期待</span>
+            </a>
+        </div>
+        <!--<div class="col-sm-4">
+        <a  class="btn" onclick="$('#target').toggle();">
+            <span class="ico ico-other"></span>
+            <span class="txt" title="Android、ISO上一历史版本">上一个历史版本</span>
+        </a>
+    </div>-->
+
+        <div class="col-sm-4">
+            <a href="./upload/apk/TempRecordLabel4.0.5-2005157.apk" class="sm-a-1" id="oldAndroidPath">
+                <span id="oldAndroidVersion">Android V4.0.5 下载 </span>
+            </a>
+            <a class="sm-a-2" href="#">使用说明</a>
+        </div>
+    </div>
+    <!--<div id="target" style="height: 40px;width: 290px; border:1px solid #fff;">
+            &lt;%&ndash;<legend>titleName</legend>  想要一个带标题的div  不成功 &ndash;%&gt;
+            <a href="../upload/apk/TempRecordLabel4.0.5-2005157.apk" class="btnsm">
+                <span class="icosm ico-android"></span>
+                <span class="txt">Android <span class="androidVersion">V4.0.5</span> 下载 </span>
+            </a>
+            &lt;%&ndash; IOS没有历史版本  所以只有Android上一版本下载
+            <a href="#" class="btnsm disabled" onclick="alert('敬请期待。。');">
+                <span class="icosm ico-ios"></span>
+                <span class="txt" title="敬请期待">IOS暂无历史版本</span>
+            </a>&ndash;%&gt;
+        </div>
+
+
+        <br><hr> -->
+</div>
+
+<!-- <img src="../../images/help/zh/help_02.png" alt="使用帮助主图" class="img-responsive"> -->
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="./js/BesidesLoginAndRegister/jquery-1.11.0.min.js"></script>
+<script>
+
+    $(window).on("load", function() {
+        var winHeight = $(window).height();
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        if (isWeixin) {
+            $(".weixin-tip").css("height", winHeight);
+            $(".weixin-tip").show();
+        }
+        else{
+            //$("#down").hide();
+            //$("#down").onclick();
+            //alert("不是微信浏览器,直接下载文件！");//alert("按下了！")
+
+            //模拟bai点击
+            setTimeout(function() {
+                // IE
+                if(document.all) {
+                    zhidocument.getElementById("down").click();
+                }
+                // 其它浏览器
+                else {
+                    var e = document.createEvent("MouseEvents");
+                    e.initEvent("click", true, true);
+                    document.getElementById("down").dispatchEvent(e);
+                }
+            }, 100);
+
+            //方法一    用onclick方法访问后台 <%--<a id="down" href="../images/ok.png" onclick="alert('clicked');" download="Android文件下载">下载安卓应用</a>--%>
+            // setTimeout(function() {
+            //     // IE
+            //     if(document.all) {
+            //         zhidocument.getElementById("down").click();
+            //     }
+            //     // 其它浏览器
+            //     else {
+            //         var e = document.createEvent("MouseEvents");
+            //         e.initEvent("click", true, true);
+            //         document.getElementById("down").dispatchEvent(e);
+            //     }
+            // }, 100);
+        }
+    })
+</script>
+<script>
+    $.ajax({
+        type: "GET",
+        url: '/client/apk/getTwoVersion',
+        dataType: "json", //返回数据形式为json
+        success: function (result) {
+            if (result) {
+                var basepath = '<%=basePath%>';
+                if (result.status==0) {
+                    $(".androidVersion").text("V"+ result.data.versionName);         //+V
+                    $("#newVersion").attr("href",basepath+result.data.path);             // href
+                    if(result.data.oldpath=="" ){
+                        $("#oldAndroidPath").hide();
+                    }else{
+                        $("#oldAndroidPath").attr("href",basepath+result.data.oldpath);         // href
+                        $("#oldAndroidVersion").text("Android V"+ result.data.oldversionName +" 下载");      //Android V4.0.5 下载
+                    }
+                }
+            }}
+    });
+</script>
+
+
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>注册2  手机</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/zhuce2.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+<div id="box">
+    <div id="box-bn">
+        <form accept-charset="UTF-8" action="/" class="register-form" id="new_user" method="post">
+            <div class="header">
+                <div class="left fl">
+                    <i class="fa fa-user-o"></i>
+                    <span>注册</span>
+                </div>
+                <span class="right fr">
+						<span class="have-account">已有帐号?</span>
+						<a href="javascript:void(0)">登录</a>
+					</span>
+            </div>
+            <div id="register">
+                <div class="inline">
+                    <label for="phone">手机</label>
+                    <input id="phone" class="username" name="phone" required="required" size="30" type="text" placeholder="请输入手机号码">
+                    <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div>
+                </div>
+
+
+<!--<div class="text">
+                        <a href="javascript:void(0)" target="_blank">收不到邮件?</a>
+                    </div>-->
+                <div class="inline">
+                    <label>手机验证</label>
+                    <div class="email">
+                        <input id="code" name="code" placeholder="请输入手机验证码" required="required" type="text" value="">
+                        <button class="btn1" data-title="获取验证码" disabled="disabled" type="button">获取验证码</button>
+                    </div>
+                    
+                    <!-- <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div> -->
+                </div>
+
+                <div class="inline">
+                    <label>邮箱</label>
+                    <input id="email" name="email" placeholder="请输入工作邮箱" required="required" size="30" type="text" value="">
+                    <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div>
+                </div>
+
+                <div class="inline">
+                    <label for="username">姓名</label>
+                    <input id="username" name="username" class="username" required="required" size="30" type="text">
+                    <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div>
+                </div>
+
+                <div class=" inline">
+                    <label for="password">密码</label>
+                    <input id="password" placeholder="密码不少于6位" name="password" class="password" required="required" size="30" type="password">
+                    <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div>
+                </div>
+                <div class="inline">
+                    <label for="repass">确认密码</label>
+                    <input id="repass"  required="required" class="password" size="30" type="text" >
+                    <label></label>
+                    <div th:text="${error}" class="checkbox" style="color: red;"></div>
+                </div>
+                <div id="foot">
+                    <button id="btn-submit" name="button" type="submit">注 册</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- 
+.btn_mfyzm {
+    width: 100px;
+    margin-left: 10px;
+    height: 45px;
+    background: #f0f0f0;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+.btn_mfyzm.msgs1,
+.btn_mfyzm.msgs1:hover{ background: #E6E6E6;color: #818080; border: 1px solid #CCCCCC;}
+.btn_mfyzm:hover{color: #ffffff; background:#DD4144; border: 1px solid #DD4144} 
+
+-->
+
+
+
+
+<!-- 
+//登录操作
+$(document).ready(function(){
+if(screen.width < 780 && $(window).width() < 780)
+{
+    $(".content_list").hide();
+
+}else{
+    $(".content_list").show();
+}
+     $(window).resize(function(){   
+     $(".content_list").show();
+     });
+});
+//登录操作
+var phone =/[1][3-9][0-9]{9,9}/;
+var validCode=true;
+function cliLogin() {
+    var txtUser = $.trim($("#username").val());
+    var txtPwd = $("#password").val();
+    
+    if ($.trim(txtUser) == "") {
+    
+        //Tip('请输入你的手机号');
+        Tip('请输入你的用户名');
+        $("#txtUser").focus();
+        return;
+        
+    }
+    /*if(!phone.exec(txtUser)){
+            
+        Tip('手机输入格式不正确,请从新输入');
+        $("#txtUser").focus();
+        return;
+    }*/
+    
+    if ($.trim(txtPwd) == "") {
+        Tip('请输入密码！');
+        $("#Userpwd").focus();
+        return;
+    }
+
+    $.ajax({
+        type: "post",
+        url: "/user/login.do",
+        /*contentType: "application/json; charset=utf-8",*/
+        data: {'username': txtUser, 'password': txtPwd},
+        dataType: "json",//预期服务器返回的数据类型
+        success: function (data) {
+            if (data.status == 0) {
+                //这一步时将后台获取的data存储到obj中   sessionStorage.obj = JSON.stringify(data);    setCookie("token", data.data.token); //token 保存
+                //登陆成功后跳转到首页
+                window.location.href = "/main";
+            } else if (data.status == 1) {
+                document.getElementById("msg").innerHTML = data.msg;
+                $("#errormsg").modal('show');
+            }
+        }
+    });
+
+    
+    return false;
+}
+
+
+
+
+
+//注册操作
+var yancode="";
+function Sendpwd(sender) {
+    var time=30;// 30S重新获取
+
+    var phones = $.trim($("#phone").val());
+    var phone =/[1][3-9][0-9]{9,9}/;
+    if ($.trim(phones) == "") {
+        Tip('请填写手机号码！');
+        $("#phone").focus();
+        return;
+    }
+    if(!phone.exec(phones)){
+
+        Tip('手机输入格式不正确,请从新输入');
+        $("#phones").focus();
+        return;
+    }
+    var code=$(sender);
+        if (validCode) {
+            validCode=false;
+            code.addClass("msgs1").attr("disabled",true);;
+        var t=setInterval(function  () {
+            time--;
+            code.val(time+"秒");
+            if (time==0) {
+                clearInterval(t);
+            code.val("重新获取");
+                validCode=true;
+            code.removeClass("msgs1").attr("disabled",false);
+
+            }
+        },1000);
+        }
+
+
+    yancode="";
+    $.ajax({
+        type:"post",
+        url:"/user/getCode",
+        data:{
+            "phone" : phones
+        },
+        success : function(data) {
+            if (data.status == 0) {
+                yancode = data.data;
+                console.log("::::"+yancode);
+            } else if (data.status == 1) {
+                document.getElementById("msg").innerHTML = data.msg;
+                $("#errormsg").modal('show');
+            }
+        }
+    });
+
+}
+
+
+
+
+
+function Tip(msg) {
+    $(".tishi").show().html("<div class='prompt'><i class='tishi_icon'></i>"+msg+"</div>");
+}
+function Tips(msg) {
+    
+    $(".tishis").show().html("<div class='prompt'><i class='tishi_icon'></i>"+msg+"</div>");
+}
+jQuery(function(){
+    "use strict";
+        $(".navList .navLi").hover(function(){
+        $(this).addClass("active");
+        $(this).find(".navSub").stop().slideDown(); 
+    },function(){
+        $(this).removeClass("active");
+        $(this).find(".navSub").stop().slideUp();
+        $(".navThrList").slideUp();
+        $(".navFouList").slideUp();
+    });
+    function scro(){
+            if($(document).scrollTop()>50){$(".headerbg").addClass("active");}else{$(".headerbg").removeClass("active");}
+        }
+        scro();
+        $(window).scroll(function(){
+            scro();
+        });
+            $(".benefits_name").hover(function(){
+            $(this).addClass("hover");
+            $(this).stop().animate({bottom: "0px", opacity:1 , height:"400px"}, "fast");
+        },function(){
+            $(this).removeClass("hover");
+            $(this).stop().animate({bottom: "0px", opacity:1 , height:"400px"}, "fast") ;           
+        }
+    );
+        $(".Program_name ").hover(function() {
+        $(this).addClass("hover");
+        $(this).find(".Program_title").stop()
+        .animate({ opacity:1 , height:"100%"}, "fast")
+        .css("display","block");
+
+    }, function() {
+        $(this).removeClass("hover");  
+        $(this).find(".Program_title").stop()
+        .animate({ opacity: 1,height:"40px"}, "fast")
+        .css("display","block");
+    });
+        $(".user_casestyle").hover(function(){
+            $(this).addClass("hover");
+            $(this).find(".hd a").css("display","block");
+            //$(this).stop().animate({bottom: "0px", opacity:1 , height:""}, "fast")
+        },function(){
+            $(this).removeClass("hover");
+            $(this).find(".hd a").css("display","none");
+            //$(this).stop().animate({bottom: "0px", opacity:1 , height:""}, "fast")            
+        }
+    );
+    //置顶图标显示
+$('#top-back').hide();
+$(window).scroll(function(){
+     if($(this).scrollTop() > 350){
+        $("#top-back").fadeIn();
+     }
+     else{
+        $("#top-back").fadeOut();
+     }
+  });
+$(".bannerNimg").css("background-image", "url(" + $(".bannerNimg").find("img").attr("src") + ")");
+//置顶事件
+function topBack(){
+  $('body,html').animate({scrollTop:0},300);
+}
+});
+
+$.fn.countTo = function (options) {
+    "use strict";
+    options = options || {};    
+    return $(this).each(function () {
+        // set options for current element
+        var settings = $.extend({}, $.fn.countTo.defaults, {
+            from:            $(this).data('from'),
+            to:              $(this).data('to'),
+            speed:           $(this).data('speed'),
+            refreshInterval: $(this).data('refresh-interval'),
+            decimals:        $(this).data('decimals')
+        }, options);
+        
+        // how many times to update the value, and how much to increment the value on each update
+        var loops = Math.ceil(settings.speed / settings.refreshInterval),
+            increment = (settings.to - settings.from) / loops;
+        
+        // references & variables that will change with each update
+        var self = this,
+            $self = $(this),
+            loopCount = 0,
+            value = settings.from,
+            data = $self.data('countTo') || {};
+        
+        $self.data('countTo', data);
+        
+        // if an existing interval can be found, clear it first
+        if (data.interval) {
+            clearInterval(data.interval);
+        }
+        data.interval = setInterval(updateTimer, settings.refreshInterval);
+        
+        // initialize the element with the starting value
+        render(value);
+        
+        function updateTimer() {
+            value += increment;
+            loopCount++;
+            
+            render(value);
+            
+            if (typeof(settings.onUpdate) == 'function') {
+                settings.onUpdate.call(self, value);
+            }
+            
+            if (loopCount >= loops) {
+                // remove the interval
+                $self.removeData('countTo');
+                clearInterval(data.interval);
+                value = settings.to;
+                
+                if (typeof(settings.onComplete) == 'function') {
+                    settings.onComplete.call(self, value);
+                }
+            }
+        }
+        
+        function render(value) {
+            var formattedValue = settings.formatter.call(self, value, settings);
+            $self.html(formattedValue);
+        }
+    });
+};
+
+$.fn.countTo.defaults = {
+    from: 0,               // the number the element should start at
+    to: 0,                 // the number the element should end at
+    speed: 300,           // how long it should take to count between the target numbers
+    refreshInterval: 100,  // how often the element should be updated
+    decimals: 0,           // the number of decimal places to show
+    formatter: formatter,  // handler for formatting the value before rendering
+    onUpdate: null,        // callback method for every time the element is updated
+    onComplete: null       // callback method for when the element finishes updating
+};
+
+function formatter(value, settings) {
+    return value.toFixed(settings.decimals);
+}
+ -->
+
+
+
+
+<!-- <%--
+  Created by IntelliJ IDEA.
+  User: huangjunhao
+  Date: 2019/11/11
+  Time: 9:02
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" import="java.util.HashMap,java.util.Map" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" type="text/javascript" rel="stylesheet">
+    <link href="./css/bootsnav.css" type="text/css" rel="stylesheet">
+    <link href="./css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="./css/css.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="./js/jquery.step.js"></script>
+    <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./js/bootsnav.js" type="text/javascript"></script>
+
+    <script src="./js/jquery.js" type="text/javascript"></script>
+    [if IE]><script src="./js/html5.js"></script><![endif]
+    <title>登录</title>
+</head>
+
+<body class="logobg_style">
+
+
+<div id="large-header" class="large-header login-page">
+    <canvas id="demo-canvas" width="1590" height="711"></canvas>
+    <div class="login-form">
+        <div class="login-content">
+            <h1 class="title_name">手机号登录</h1>
+            <div class="form-group"></div>
+            <form method="post" role="form" id="form_login" class="login_padding">
+
+
+                <div class="form-group clearfix">
+                    <div class="input-group col-lg-8 col-md-8 col-xs-8">
+                        <div class="input-group-addon"><i class="icon_phone"></i></div>
+                        <input type="text" class="form-control text_phone" name="phone" id="phone" placeholder="你的手机号" autocomplete="off">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-4 fl"><input type="button" id="btn" class="btn_mfyzm" value="获取验证码" onclick="Sendpwd(this)"/></div>
+                </div>
+
+
+
+                <div class="form-group clearfix">
+
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="icon_yanzhen"></i></div>
+                        <input type="text"  class="form-control"  name="Verification" id="Verification"   placeholder="短信验证码" autocomplete="off">
+                    </div>
+
+                </div>
+                <div class="tishi"></div>
+
+                <div class="form-group">
+                    <a href="javascript:;" type="submit" class="btn btn-danger btn-block btn-login" onClick="phoneLogin()">
+                        <i class="fa fa-sign-in"></i>
+                        登录
+                    </a>
+                </div>
+
+                <div class="form-group">
+                    <a href="/toLogin" type="button" class="btn btn-info"> <%--btn btn-info  link--%>
+                        <i class="fa fa-sign-in"></i>
+                        账号登录
+                    </a>
+                </div>
+
+                Implemented in v1.1.4              <div class="form-group"></div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+Modal
+<%@ include  file="./jsp/Public_modal.jsp"%>
+
+<script src="./js/TweenLite/TweenLite.min.js"></script>
+<script src="./js/TweenLite/EasePack.min.js"></script>
+<script src="./js/TweenLite/rAF.js"></script>
+<script src="./js/TweenLite/demo-1.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+    //$("#btn").click();
+    function phoneLogin() {
+        var Verification = $("#Verification").val();
+
+        var phones = $.trim($("#phone").val());
+        var phone =/[1][3-9][0-9]{9,9}/;
+        if ($.trim(phones) == "") {
+            Tip('请填写手机号码！');
+            $("#phone").focus();
+            return;
+        }
+        if(!phone.exec(phones)){
+
+            Tip('手机输入格式不正确,请从新输入');
+            $("#phones").focus();
+            return;
+        }
+        if (yancode == "") {
+            Tip('未获取验证码');
+        }
+
+        if (Verification == yancode) {
+            $.ajax({
+                type:"post",
+                url:"/user/yanlogin",
+                data:{
+                    "phone" : phones,
+                    "code" : Verification
+                },
+                success : function(data) {
+                    if (data.status == 0) {
+                        window.location.href = "/main";
+                    } else if (data.status == 1) {
+                        document.getElementById("msg").innerHTML = data.msg;
+                        $("#errormsg").modal('show');
+                    }
+                }
+            });
+        }
+
+
+    }
+</script>
+ -->

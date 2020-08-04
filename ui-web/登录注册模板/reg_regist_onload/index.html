@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=“renderer” content=“webkit”>  <!--html打开强制为极速模式 -->
+    <meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”> <!--避免IE使用兼容模式-->
+
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="js/jquery.validate.js"></script> -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!--头部-->
+    <header>
+        <div class="head_cont">
+            <img src="images/logo.png" />
+            <img src="images/logo1.png" />
+        </div>
+    </header>
+    <!--内容-->
+    <div class="content">
+        <div class="con_head">
+            <img src="images/icon9_1.png" />
+            <h1>注册会员</h1>
+            <p>我已注册，现在就登录</p>
+            <a href="javascript:;"><span id="oLoad">登录</span></a>
+        </div>
+        <!--正文-->
+        <div class="con_cont">
+            <!--正文顶部小背景-->
+            <div class="con_he_bg">
+                <p>填写注册信息</p>
+                <p>接受并填写手机验证码</p>
+                <p>注册成功</p>
+                <div class="con_he_bg_two">
+                    <img src="images/regis1.png" />
+                    <img src="images/regis3.png" />
+                    <img src="images/regis4.png" />
+                </div>
+            </div>
+            <!--验证内容-->
+            <div class="reg">
+                <!--注册-->
+                <div class="regexg">
+                    <form action="enter.html"" id="myform">
+                        <!-- 手机号 -->
+                        <div class="phonenum">
+                            <label for="phone">手机号码</label>
+                            <input type="text" name='phone' id='phone'>
+                            <img src="images/icon35.png" alt="" class="right right_one">
+                            <div class="prompt-bg error_one">手机号码不正确<img src="images/icon21.png" alt="" class="error"></div>
+                        </div>
+                        <!-- 密码 -->
+                        <div class="psw">
+                            <label for="password">登录密码</label>
+                            <input type="password" name='password' id='password'>
+                            <img src="images/icon35.png" alt="" class="right right_two">
+                            <div class="prompt-bg error_two">密码大于6位&nbsp;以字母开头<img src="images/icon21.png" alt="" class="error"></div>
+                        </div>
+                        <!-- 确认密码 -->
+                        <div class="repsw">
+                            <label for="repassword">确认密码</label>
+                            <input type="password" name='repassword' id='repassword'>
+                            <img src="images/icon35.png" alt="" class="right right_third">
+                            <div class="prompt-bg  error_third">两次输入的密码不一致<img src="images/icon21.png" alt="" class="error">
+                                <img src="images/icon21_1.png" alt="" class="pws_error">
+                            </div>
+                        </div>
+                        <!-- 邮箱 -->
+                        <div class="mail">
+                            <label for="email">常用邮箱</label>
+                            <input type="text" name='email' id='email'>
+                            <img src="images/icon35.png" alt="" class="right right_four">
+                            <div class="prompt-bg error_four">邮箱格式不正确<img src="images/icon21.png" alt="" class="error"></div>
+                        </div>
+                        <!-- 验证码 -->
+                        <div class="conphoto">
+                            <label for="confireph">图形验证码</label>
+                            <input type="text" name='confireph' id='confireph'>
+                            <img src="images/icon36.png" alt="" class="checknum">
+                            <img src="images/icon35.png" alt="" class="right_checknum">
+                            <div class="prompt-bg error_five">验证码不正确<img src="images/icon21.png" alt="" class="error"></div>
+                        </div>
+                        <div class="read">
+                        	<input type="checkbox" name="" id="oberrulls">
+                        	<p>我已阅读并同意遵守<a href="javascript:;"><span>《方便网服务协议》</span></a></p>
+                        </div>
+                        <input type="button" value="申请注册" id='register' disabled="disabled">
+                    </form>
+                </div>
+                <!--图片-->
+                <div id="photo">
+                    <img src="images/webchat.png" />
+                    <img src="images/regis7.png" />
+                    <img src="images/regis6.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <footer>
+        <div class="first_foot">
+            <ul>
+                <li>关于我们</li>
+                <li>免责声明</li>
+                <li>常见问题</li>
+                <li>联系我们</li>
+                <li>人才招聘</li>
+            </ul>
+        </div>
+        <div class="second_foot">
+            <p><span>Copyright@2013-2016</span>|苏ICP备12063525号-4苏州乐卡网络科技有限公司</p>
+        </div>
+    </footer>
+</body>
+
+</html>

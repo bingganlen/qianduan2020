@@ -1,0 +1,145 @@
+#box {
+	width: 565px;
+	height: 550px;
+	border: 1px solid #dce3e8;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#box-bn {
+	padding: 30px;
+}
+
+#box-bn .header {
+	height: 23px;
+	margin-bottom: 20px;
+	color: #40485b;
+}
+#box-bn .header .left span {
+	
+	font-size: 18px;
+}
+#box-bn .header .right .have-account {
+	font-size: 14px;
+}
+#box-bn .header .right a {
+	color: #fe7300;
+	font-size: 14px;
+}
+#register {
+	color: #40485b;
+	width: 520px;
+}
+#register .inline {
+	width: 520px;
+	min-height: 40px;
+	margin-bottom: 10px;
+}
+#register .inline label {
+	min-width: 95px;
+	font-weight: bold;
+	vertical-align: middle;
+	font-size: 14px;
+    color: #666666;
+	margin-right: 20px;
+	display: inline-block;
+	text-align: right;
+}
+#register .inline input{
+	height: 40px;
+}
+.error {
+	color: red;
+	margin-bottom: 5px;
+	border: none;
+	height: 20px;
+}
+#email {
+	width: 270px;
+	padding: 10px 15px;
+	height: 20px;
+	background: #F3F6F8;
+	border-radius: 2px;
+    border: 1px solid #dce3e8;
+}
+#code {
+	width: 160spx;
+	padding: 10px 15px;
+	height: 20px;
+	background: #F3F6F8;
+	border-radius: 2px;
+    border: 1px solid #dce3e8;
+}
+.username {
+	width: 270px;
+	padding: 10px 15px;
+	height: 20px;
+	background: #F3F6F8;
+	border-radius: 2px;
+    border: 1px solid #dce3e8;
+}
+.password {
+	width: 270px;
+	padding: 10px 15px;
+	height: 20px;
+	background: #F3F6F8;
+	border-radius: 2px;
+	border: 1px solid #dce3e8;
+}
+.email {
+	/*height: 40px;*/
+	display: inline-block;
+}
+.btn1 {
+	color: #e28560 !important;
+	border: 1px solid #fe7300;
+	width: 100px;
+	font-size: 14px;
+	height: 42px;
+	cursor: pointer;
+	background: transparent;
+	padding: 7px 14px;
+	margin-left: -5px;
+	border-radius: 2px;
+}
+.text {
+	display: inline;
+    text-decoration: underline;
+    font-size: 12px;
+    text-align: right;
+    padding-left: 30px;
+
+}
+.text a {
+	color:rgba(0,0,0,0.6);
+
+}
+.text a:hover {
+	color:rgba(0,0,0,0.87);
+}
+
+#term {
+	text-align: center;
+	height: 15px;
+	line-height: 15px;
+}
+
+#foot {
+	text-align: center;
+}
+#btn-submit {
+	width: 300px;
+	font-size: 18px;
+    line-height: 22px;
+    padding: 8px 26px;
+    font-weight: 500;
+	color: #fff;
+    background: #fe7300;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+}

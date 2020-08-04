@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>...全部都显示</title>
+    <style type="text/css">
+        div.content{
+            overflow: hidden;
+            position: relative;
+        }
+        img.small{
+            float: left;
+            border:1px solid blue;
+        }
+        div.large{
+            float: left;
+            width:300px;
+            height:300px;
+            overflow: hidden;
+            position: relative;/**/
+        }
+        div.large>img{
+            width:600px;
+            display: none;
+            position:absolute;/**/
+        }
+        div.module{
+            width:150px;
+            height:150px;
+            background-color: rgba(255,255,255,.3);
+            border:1px solid #666666;
+            position:absolute ;
+            top:0;
+            left:0;
+            display: none;
+        }
+        div.module:hover{
+            cursor: move;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="content">
+    <img class="small" src="img/20170228173534_479581114.jpg" width="300" />
+    <div class="module"></div>
+    <div class="large">
+        <img src="img/20170228173534_479581114.jpg" alt=""/>
+    </div>
+</div>
+
+<div class="content">
+    <img class="small" src="img/20170228173534_479581114.jpg" width="300" />
+    <div class="module"></div>
+    <div class="large">
+        <img src="img/20170228173534_479581114.jpg" alt=""/>
+    </div>
+</div>
+
+<div class="content">
+    <img class="small" src="img/20170228173534_479581114.jpg" width="300" />
+    <div class="module"></div>
+    <div class="large">
+        <img src="img/20170228173534_479581114.jpg" alt=""/>
+    </div>
+</div>
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+   $('.content').mousemove(function(e){
+       var mx = e.pageX-$(this).offset().left;
+       var my = e.pageY-$(this).offset().top;
+//           让鼠标在module正中间
+     var left = mx-$('.module').width()/2;
+       var top = my-$('.module').height()/2;
+       if(mx>0&&my>0&&mx<$('.small').width()&&my<$('.small').height()){
+//           防止溢出
+       var L = (left<0)?0:(left>$('.small').width()-$('.module').width())?$('.small').width()-$('.module').width():left;
+           var T = (top<0)?0:(top>$('.small').height()-$('.module').height())?$('.small').height()-$('.module').height():top;
+           $('div.module').css('display','block').css('left',L+'px').css('top',T+'px');
+//           显示放大照片
+       var largeLeft = L*$('.large').width()/$('.module').width();//L*(300/150);
+       var largeTop = T*$('.large').height()/$('.module').height();//T*(300/150);
+       $('.large>img').css('display','block').css('left',0-largeLeft+'px').css('top',0-largeTop+'px');
+        }
+/*为什么left：0-largeLeft？ 
+因为你好好想想，你鼠标往左移动时候，div.large中的图片却是向右移动的，鼠标向右移动时，div.large中的图片是向左动的。
+鼠标向上移动时，div.large中的图片是向下动的。
+鼠标向下移动时，div.large中的图片是向上动的。
+所以要用0减去！*/
+
+       else{
+           $('div.module').css('display','none');
+//           隐藏放大照片
+        $('.large>img').css('display','none');
+       }
+  })
+
+</script>
+
+</body>
+</html>

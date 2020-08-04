@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ckplayer</title>
+<!-- 
+    <style type="text/css">body{margin:0;padding:0px;font-family:"Microsoft YaHei",YaHei,"微软雅黑",SimHei,"黑体";font-size:14px}</style>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script> -->
+
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<!--    <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+	<!-- <video id="my_video_1" class="video-js vjs-default-skin fillWidth" controls width="640" height="268"data-setup='{}'>
+	  <source src="http://10.57.180.133/coil/_definst_/0/0/0/000000000269_app.smil/playlist.m3u8" type="application/x-mpegURL">
+	</video>//如果不用videojs手动启用,那黄色部分代码是必须要有的,否则video.js无法找到该作用于哪个对象导致将失效
+	 -->
+	 <!-- <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1000" height="500" data-setup='{}'>
+	         <source src="./src/z.m3u8" type="application/x-mpegURL">
+	     </video>
+	     <script>
+	         var liveUrl  =  'http://pili-live-hls.qiniu.yunlutong.com/yunlutong/598daedea95be73db168e955.m3u8';
+	         var player = videojs('my_video_1');
+	 
+	         player.ready(function() {
+	             this.src({
+	                 src: liveUrl,
+	                 type: 'application/x-mpegURL',
+	             });
+	         });
+	 
+	     </script>    显示不支持...-->
+	    <!--  <video class="tvhou" width="100%" height="100%"     video有一个错
+	    		    controls="controls" autoplay="autoplay"
+	    		    x-webkit-airplay="true" x5-video-player-fullscreen="true"
+	    		    preload="auto" playsinline="true" webkit-playsinline
+	    		    x5-video-player-typ="h5">
+	    		    <source type="application/x-mpegURL" src="http://www.tvhou.com/zqlive/game.m3u8">
+	             </video> -->
+
+
+	            <!--  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+	            				    <source src="MY_VIDEO.mp4" type='video/mp4'>
+	            				    <source src="MY_VIDEO.webm" type='video/webm'>
+	            				    <p class="vjs-no-js">
+	            				      To view this video please enable JavaScript, and consider upgrading to a web browser that
+	            				      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+	            				    </p>
+	            				  </video>
+	            
+	            				  <script src="https://vjs.zencdn.net/7.4.1/video.js"></script> -->
+	            				  <video src="video/stream.m3u8" controls></video>
+
+</body>
+
+</html>

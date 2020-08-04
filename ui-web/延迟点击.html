@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>空白的地方连续点击三下</title> 
+<script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+
+<script>
+
+        var count = 0, timer;
+        document.onclick = function(){
+            if(count < 2){
+                if(timer){
+                    clearTimeout(timer);
+                }
+                count ++;
+                timer = setTimeout(function(){
+                    count = 0;
+                }, 500);
+            }else if(count === 2){
+                count = 0;
+                clearTimeout(timer);
+                threeClick();
+            }
+        }
+        function threeClick(){
+            alert('three click');
+        }
+
+
+</script>
+</head>
+<body >
+转自https://bbs.csdn.net/topics/370231640 峭沙
+</body>
+</html>
+

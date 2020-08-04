@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 用户注册 界面加js验证</title>
+	<style type="text/css">
+		/* 样式改为bootstarp的样式比较好 */
+
+		#registration{
+			background-image: url(../images/login-bg.png);
+			background-repeat: no-repeat;
+			height: 230px;
+			width: 450px;
+			padding: 5px;
+			z-index: 9999;
+			position: absolute;
+			top:0;
+			/* display: none; */   /*是个弹窗   点击注册显示出来*/
+		}
+		#registration #registration-top{
+			background-image: url(../images/login-head-bg.png);
+			background-repeat: no-repeat;
+			height: 24px;
+			width: 450px;
+			font-family: "宋体",Arial;
+			font-size: 12px;
+			line-height: 24px;
+			font-weight: bold;
+			color: #fff;
+		}
+		#registration #registration-content{
+			height:170px;
+			width:450px;
+		}
+		#registration #registration-content form table{
+			margin-top: 10px;
+			font-family: "宋体",Arial;
+			font-size: 12px;
+			color: #7d7d7d;
+			margin-left: 10px;
+		}
+		#registration #registration-content form table tr td{
+			height: 28px;
+			line-height: 28px;
+		}
+
+		.registration-content-text{
+			background-image: url(../images/login-text-bg.png);
+			background-repeat: no-repeat;
+			height: 20px;
+			width: 140px;
+/*			border-top-width: 0px;
+			border-bottom-width: 0px;
+			border-right-width:0px;
+			border-bottom-width: 0px;
+			border-top-style: none;
+			border-bottom-style: none;
+			border-left-style: none;
+			border-right-style: none;*/
+			vertical-align: middle;
+			font-family: "宋体",Arial;
+			font-size:12px;
+			line-height: 20px;
+			color: #707070;
+			text-align: center;
+		}
+		#registration #registration-foot{
+			height:25px;
+			width:450px;
+			line-height: 25px;
+			font-size: 12px;
+			line-height: 20px;
+			color: #707070;
+			text-align: center;
+			*margin-top:10px !importment;
+			_margin-top:-15px; 
+		}
+		#login #login-top span{
+			color: #fff;
+		}
+		#registration #registration-top span{
+			color: #fff;
+		}
+		#registration span,#login span{
+			text-align: center;
+			padding-left: 10px;
+			color: #a40000;
+		}
+		#registration .right,#login .right{
+			color: #060;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div id="registration">
+		<div id="registration-top">
+			<span style="float: left;margin-left: 10px;">用户注册</span>
+			<span style="float: right;margin-right: 10px;" class="rg-close">关闭</span>
+		</div>
+
+		<!-- 注册头部-->
+		<div id="registration-content">
+			<form method="post" name="form1" onsubmit="return regedit();">
+				<table border="0" cellpadding="0" cellspacing="0" width="381">
+					<tr>
+						<td width="74">
+							<span style="color: #a40000;">* </span>输入用户
+						</td>
+						<td width="145">
+							<input type="text" name="username" id="username" class="registration-content-text" maxlength="10" />
+						</td>
+						<td width="162" align="left">
+							<span id="a-tip"></span>
+						</td>
+					</tr>
+			
+					<tr>
+						<td width="74">
+							<span style="color: #a40000;">* </span>输入密码
+						</td>
+						<td width="145">
+							<input type="password" name="password" id="password" class="registration-content-text" maxlength="10" />
+						</td>
+						<td width="162" align="left">
+							<span id="b-tip"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td width="74">
+							<span style="color: #a40000;">* </span>确认密码
+						</td>
+						<td width="145">
+							<input type="password" name="nextpassword" id="password2" class="registration-content-text" maxlength="10" />
+						</td>
+						<td width="162" align="left">
+							<span id="c-tip"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td width="74">
+							<span style="color: #a40000;">* </span>邮箱地址
+						</td>
+						<td width="145">
+							<input type="text" name="email" id="email" class="registration-content-text"  /> <!-- type也可以是email -->
+						</td>
+						<td width="162" align="left">
+							<span id="d-tip"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td width="74">
+							<span style="color: #a40000;">* </span>手机号码
+						</td>
+						<td width="145">
+							<input type="text" name="phone" id="phone" class="registration-content-text" />
+						</td>
+						<td width="162" align="left">
+							<span id="e-tip"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td ></td>
+						<td style="padding-top: 5px;">
+							<input type="button" name="reg" onclick="regedit()" value="注册" /><!-- 可以是图片按钮 -->
+							<input type="button"  onclick="" value="重置" /><!-- 可以是图片按钮 -->
+						</td>
+						
+					</tr>
+
+
+
+				</table>
+			</form>
+		</div>
+	</div>
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// 注册界面是个弹窗   点击注册显示出来   点击关闭时隐藏 
+		// 把弹窗设置成绝对定位  计算top和left值   公式（ 窗口高度 - 元素高度 ）/ 2 + 窗口top滚动值
+		
+		//(function(){})(jQuery)  jQuery闭包，防止代码被污染
+		//下面代码使弹出窗口居中 
+		(function($){
+			jQuery.fn.extend({
+				"center":function(){
+					this.css("position","absolute");
+					this.css("top",($(window).height()- this.height()/2 + $(window).scrollTop() + "px" ));
+					this.css("top",($(window).width()- this.width()/2 + $(window).scrollLeft() + "px" ));
+				}
+			});
+		})(jQuery)
+	</script>
+
+	<script type="text/javascript">
+
+		// $(function(){
+		// 	$("#registration,#login").center();  // 调用上面定义的center
+		// 	$(".regedit").click(function(){  //注册按钮被点击时
+		// 		$("#registration").fadeIn();
+		// 		$(".outline,#login").hide()
+		// 	});
+		// 	$(".rg-close").click(function(){  //注册按钮被点击时
+		// 		$("#registration,#login").hide()
+		// 	});
+		// })
+
+		//表单验证
+		$("#username").blur(function(){
+			if ($("#username").val() == "") {
+				$("#a-tip").html("用户名不能为空").removeClass("right");
+			}else{
+				$("#a-tip").html("用户名可以").addClass("right");
+			}
+		});
+
+		$("#password").blur(function(){
+			if ($("#password").val() == "") {
+				$("#b-tip").html("密码不能为空").removeClass("right");
+			}else{
+				$("#b-tip").html("密码有效").addClass("right");
+			}
+			if ($("#password").val().length <= 6) {
+				$("#b-tip").html("密码不能小于6位").removeClass("right");
+			}
+		});
+
+		$("#password2").blur(function(){
+			if ($("#password").val() == "") {
+				$("#c-tip").html("密码不能为空").removeClass("right");
+			}
+			if($("#password").val() != $("#password2").val()){
+				$("#c-tip").html("两次密码不一致").removeClass("right");
+			}
+			if ($("#password").val() == $("#password2").val() && $("#password2").val().length>=1) {
+				$("#c-tip").html("密码一致").addClass("right");
+			}
+		});
+
+		$("#email").blur(function(){
+			var emailreg = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+			var emailstring = $(this).val(); 
+
+			if ($("#email").val() == "") {
+				$("#d-tip").html("邮箱地址不能为空").removeClass("right");
+			}
+
+			if (emailreg.test(emailstring)) {
+				$("#d-tip").html("邮箱可以使用").addClass("right");
+			}else{
+				$("#d-tip").html("邮箱格式无效").removeClass("right");
+			}
+		});
+
+		$("#phone").blur(function(){
+			var phonereg = /^\d{4,4}?([-]?((\d)|[]){0,7})$/;
+			var phonestring = $(this).val(); 
+
+			if ($("#phone").val() == "") {
+				$("#e-tip").html("电话号码不能为空").removeClass("right");
+			}
+
+			if (phonereg.test(phonestring)) {
+				$("#e-tip").html("手机号码可以使用").addClass("right");
+			}else{
+				$("#e-tip").html("手机号码无效")
+			}
+		});
+
+
+
+	</script>
+
+
+</body>
+</html>

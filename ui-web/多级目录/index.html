@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>多级无限级菜单</title>
+<link href="yyui.css" rel="stylesheet" type="text/css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="yyui.js"></script>
+</head>
+
+<body style="padding:30px; ">
+菜单<br>
+<br>
+<script>
+yyui_menu('.yyui_menu1');
+</script>
+<style type="text/css">
+.yyui_menu1 { height:35px; line-height:35px; font-size:15px; background-color:#f2f2f2; }
+ 
+.yyui_menu1 li { float:left; position:relative;} /*这一级是导航*/
+.yyui_menu1 li a { display:block; line-height:35px; text-decoration:none; padding:0px 20px; color:#333333;   }
+.yyui_menu1 li a:hover {  background:#EFEFEF; }
+.yyui_menu1 li a.more:after{content:" »";}
+ 
+.yyui_menu1 li ul { position:absolute; float:left; width:150px; border:1px solid #D2D2D2; display:none; background-color:#FFFfff; z-index:9999;} /*这是第二级菜单*/
+.yyui_menu1 li ul a { width:110px;text-decoration:none; color:#333333;}
+.yyui_menu1 li ul a:hover { background:#f2f2f2;}
+ 
+.yyui_menu1 li ul ul{ top:0;left:150px;} /*从第三级菜单开始,所有的子级菜单都相对偏移*/
+</style>
+<ul class="yyui_menu1">
+  <li><a href="#">菜单一</a>
+    <ul class="one">
+      <li><a href="#">菜单一</a></li>
+      <li><a href="#">菜单二</a></li>
+      <li><a href="#">菜单三</a></li>
+      <li><a href="#">菜单四</a></li>
+      <li><a href="#" class="more">菜单五</a>
+        <ul class="two">
+          <li><a href="#">菜单一</a></li>
+          <li><a href="#">菜单二</a></li>
+          <li><a href="#">菜单三</a></li>
+          <li><a href="#">菜单四</a></li>
+          <li><a href="#" class="more">菜单五</a>
+            <ul class="three">
+              <li><a href="#">菜单一</a></li>
+              <li><a href="#">菜单二</a></li>
+              <li><a href="#">菜单三</a></li>
+              <li><a href="#">菜单四</a></li>
+              <li><a href="#" class="more">菜单五</a>
+                <ul class="four">
+                  <li><a href="#">菜单一</a></li>
+                  <li><a href="#">菜单二</a></li>
+                  <li><a href="#">菜单三</a></li>
+                  <li><a href="#">菜单四</a></li>
+                  <li><a href="#" class="more">菜单五</a>
+                    <ul class="four">
+                      <li><a href="#">菜单一</a></li>
+                      <li><a href="#">菜单二</a></li>
+                      <li><a href="#">菜单三</a></li>
+                      <li><a href="#">菜单四</a></li>
+                      <li><a href="#">菜单五</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">菜单二</a>
+    <ul class="one">
+      <li><a href="#">菜单一</a></li>
+      <li><a href="#">菜单二</a></li>
+      <li><a href="#" class="more">菜单三</a>
+        <ul class="two">
+          <li><a href="#">菜单一</a></li>
+          <li><a href="#">菜单二</a></li>
+          <li><a href="#" class="more">菜单三</a>
+            <ul class="three">
+              <li><a href="#">菜单一</a></li>
+              <li><a href="#">菜单二</a></li>
+              <li><a href="#">菜单三</a></li>
+              <li><a href="#">菜单四</a></li>
+              <li><a href="#">菜单五</a></li>
+            </ul>
+          </li>
+          <li><a href="#">菜单四</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">菜单三</a></li>
+  <li><a href="#">菜单四</a></li>
+  <li><a href="#">菜单五</a>
+    <ul class="one">
+      <li><a href="#">菜单一</a></li>
+      <li><a href="#">菜单二</a></li>
+      <li><a href="#">菜单三</a></li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

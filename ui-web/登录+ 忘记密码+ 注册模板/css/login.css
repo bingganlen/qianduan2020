@@ -1,0 +1,364 @@
+﻿/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+/*  
+*@Description: ²àµ¼º½À¸
+*@Author:      zhuyb  
+*@Update:      zhuyb(2012-10-23)  
+*/
+
+html, body {
+	height: 100%;
+	width: 100%;
+    min-height:730px;
+    overflow:hidden;
+    overflow-y:auto;
+    background: #373737 url(img/SidebarBg.png) repeat;
+}
+#login_wrapper{
+	width: 100%;
+	height: 100%;
+}
+#login_main{
+	position: relative;
+	width: 1020px;
+	height: 100%;
+	margin: auto;
+	background: url(img/LoginBgLine.png) 0 350px no-repeat;
+}
+.p_login{
+	font-size: 20px;
+	float: left;
+	color: #8C8C8C;
+	cursor: pointer;
+}
+#login_main .login_active{
+	color: #5F6C74;
+}
+.coopeLoginH_title{
+	font-size: 18px;
+	float: left;
+	color: #8C8C8C;
+}
+.coopeLoginH_switchBtn{
+	float: right;
+	color: #3586C1;
+}
+.coopeLogin_guide{
+	margin-top: 20px;
+	color: #555;
+	font-size: 14px;
+}
+.p_login_Corp{
+	height: 50px;
+	overflow: hidden;
+	font-size: 20px;
+	text-align: center;
+	color: #8C8C8C;	
+}
+.p_register{
+	/*font-size: 20px;*/
+	font-size: 18px;
+	color: #8C8C8C;
+	float: right;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.img_register{
+	display: block;
+	float: left;
+	width: 22px;
+	height: 22px;
+	margin-top: 13px;
+	margin-right: 5px;
+	background: url(img/registerIcon.png) no-repeat;  
+}
+.login_logo {
+	width: 290px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 120px;
+	background: url(img/LoginLogo.png) 0 280px no-repeat;
+}
+.login_logo1 {
+	width: 358px;
+	position: absolute;
+	top: -30px;
+	bottom: 0;
+	left: 120px;
+	background: url(img/logo.gif) 0 280px no-repeat;
+}
+.login_form_header {
+	background: #F5F5F5;
+	height: 50px;
+	border-bottom: 1px solid #DDDDDD;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 0 28px;
+	color: #5F6C74;
+	line-height: 50px;
+}
+.IE_alert {
+	display: none;
+	position: absolute;
+	top: 280px;
+	right: 160px;
+	width: 374px;
+	line-height: 70px;
+	font-size: 14px;
+	color: #949494;
+}
+.suggestBrowser a {
+	color: #3586C1;
+}
+.suggestBrowser a:visited {
+	color: #3586C1;
+}
+.login_form{
+	display: none;
+	position: absolute;
+	top: 200px;
+	right: 160px;
+	width: 374px;
+	/*height: 293px;*/
+	padding-bottom: 20px;
+	border-radius: 5px;
+	background: white;
+	-webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+	z-index: 10;
+}
+.login_items{
+	padding: 0 30px;
+}
+.register_items{
+	display: none;
+	padding: 0 30px;
+}
+.input_val .input{
+	margin-top: 20px;
+	background: #ffffff;
+	width: 270px;
+	height: 25px;
+	padding-right: 30px;
+	padding-left: 10px;
+	font-size: 14px;
+}
+.input_val span{
+	left: 10px;
+	top: -3px;
+	font-size: 14px;
+}
+.input_val img{
+	position: absolute;
+	right: 8px;
+	top: 2px;
+}
+.remeber{
+	margin-top: 8px;
+	text-align: center;
+	color: #999999;
+	font-size: 12px;
+}
+.remember{
+	margin-left: 5px;
+}
+.remeber a{
+	color: #999999;
+}
+.login_btn{
+	display: block;
+	width: 314px;
+	height: 40px;
+	background: url(img/login_btn.png);
+	border: 0;
+	margin-top: 3px;
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 40px;
+}
+.coopeLogin_title{
+	cursor: pointer;
+	width: 100%;
+	height: 17px;
+	margin-top: 20px;
+	line-height: 17px;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+	background: url(img/coopeLoginBg.png);
+}
+.coopeLogin_mainFiild{
+	display: none;
+	width: 155px;
+	margin: 20px auto 11px auto;
+}
+.btn_coopeLogin{
+	display: inline-block;
+	width: 155px;
+	height: 32px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+.coopeLogin_weixin{
+	background: #4EA321 url(img/login_weixin.png) 10px center no-repeat;
+}
+.coopeLogin_mingdao{
+	background: #0066CC url(img/login_mingdao.png) 10px center no-repeat;
+}
+.coopeLogin_weibo{
+	background: #D71900 url(img/login_weibo.png) 10px center no-repeat;
+}
+.coopeLogin_qq{
+	margin-bottom: 0;
+	background: #3C92CC url(img/login_qq.png) 10px center no-repeat;
+}
+.span_coopeLogin{
+	display: inline-block;
+	line-height: 16px;
+	margin: 8px 0 8px 37px;
+	padding-left: 7px;
+	font-size: 14px;
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+
+.register_items .remeber a{
+	color: #3586C1;
+}
+.login_msg, .register_msg {
+	height: 22px;
+	margin-top: 5px;
+}
+.login_error, .register_error{
+	background: #7A3230;
+	border: 1px solid #7A3230;
+	border-radius: 3px;
+	color: white;
+	font-size: 12px;
+	line-height: 19px;
+	display: none;
+	width: 310px;
+	text-align: center;
+}
+
+.register_email{
+	font-size: 14px;
+	line-height: 30px;
+	margin-top: 20px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	overflow: hidden;
+}
+.registerEmail{
+	color: #999999;
+}
+
+.img_authCode{
+	cursor: pointer;
+}
+
+/*服务协议弹窗*/
+
+.treaty{
+	position: relative;
+}
+.treaty_content{
+	height: 390px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999999;
+	text-align: left;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	right: 0;
+	bottom: 10px;
+	overflow-y: auto;
+}
+.treaty_content_h2{
+	color: #333333;
+	line-height: 24px;
+}
+.treaty_content_h3{
+	color: #BBBBBB;
+	font-size: 12px;
+}
+
+.contactUs {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-weight: bold;
+	color: #202020;
+	text-shadow: 0 1px 0 rgb(95, 95, 95);
+}
+
+/*低分辨率下*/
+@media screen and (max-width:1023px){
+	#login_wrapper {
+		overflow: auto;
+	}
+	#login_main {
+		width: 100%;
+		background: none;
+		height: auto;
+	}
+	.login_logo {
+		width: 200px;
+		left: auto;
+		background-position-y: 30px;
+		height: 80px;
+		position: static;
+		margin: 0 auto;
+		background-size: 200px;
+	}
+	.login_items {
+		margin: 0 auto;
+	}
+	.login_error, .register_error {
+		width: 240px;
+		margin: 0 auto;
+	}
+	.login_form {
+		position: static;
+		width: 100%;
+		border-radius: 0;
+		padding-bottom: 0;
+		margin-bottom:90px;
+		padding-bottom: 35px;
+	}
+	.input_val .input {
+		width: 83%;
+	}
+	.input_val span {
+		width: 60px;
+	}
+	.login_btn {
+		width: 250px;
+		background-size: 250px 40px;
+		margin: 20px auto;
+	}
+	.contactUs {
+		position: static;
+	}
+	
+	/* 原始滚动条 */
+	::-webkit-scrollbar{
+		width:0;
+	}
+}
+
+.error-link {
+	color: #FFA300;
+}

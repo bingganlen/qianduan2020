@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=“renderer” content=“webkit”>  <!--html打开强制为极速模式 -->
+    <meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”> <!--避免IE使用兼容模式-->
+    <title>进入登录页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/enter.css">
+    <script src="js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/enter.js"></script>
+</head>
+
+<body>
+    <!--头部-->
+    <header>
+        <div class="head_cont">
+            <img src="images/logo.png" />
+            <img src="images/logo1.png" />
+        </div>
+    </header>
+    <!--内容-->
+    <div class="content">
+        <div class="con_head">
+            <img src="images/icon9_1.png" />
+            <h1>注册会员</h1>
+            <p>我已注册，现在就登录</p>
+            <a href="javascript:;"><span id="oLoad">登录</span></a>
+        </div>
+        <!--正文-->
+        <div class="con_cont">
+            <!--正文顶部小背景-->
+            <div class="con_he_bg">
+                <p>填写注册信息</p>
+                <p>接受并填写手机验证码</p>
+                <p>注册成功</p>
+                <div class="con_he_bg_two">
+                    <img src="images/regis1.png" />
+                    <img src="images/regis2.png" />
+                    <img src="images/regis4.png" />
+                </div>
+            </div>
+            <!--验证内容-->
+            <div class="reg">
+                <!--注册-->
+                   <!--图片-->
+                <div id="photo">
+                    <img src="images/webchat.png" />
+                    <img src="images/regis7.png" />
+                    <img src="images/regis6.png" />
+                </div>
+          
+   
+            <!-- 中间顶部 -->
+            <div class="cen_top">
+                <p>方便网已经向您的手机&nbsp;<span id="please_num"></span>发送了注册验证码</p>
+                <span id="giveNum">aaaa</span>
+                <h1>验证码</h1><input type="text" name="confirm_the_number" id="confirm_the_number">
+                <div id="enter_error"><span>验证码错误</span></div>
+               <button id="reconfirm">确认并提交注册</button>
+            </div>
+             <!-- 中间底部 -->
+             <div class="cen_bottom">
+                 <p>没收到验证码，请重新申请验证码：</p>
+                 <input type="button" name="" value="获取手机验证码" id="get_confirm_the_number">
+             </div>
+            </div>
+            <!-- 常见问题 -->
+            <div class="footer">
+                <h1>验证手机常见问题</h1>
+                <ul>
+                    <li>1.问：为什么要进行手机验证？</li>
+                    <li>答：当您遗忘密码时，可通过验证手机找回密码</li>
+                </ul>
+                 <ul>
+                    <li>2.问：如果多次长时间收不到验证码怎么办？</li>
+                    <li>答：您可以尝试重新发送，若仍未收到，请查看手机是否安装有防火墙拦截了短信。</li>
+                </ul>
+                <ul>
+                    <li>3.问：验证过的手机今后还可以修改吗？</li>
+                    <li>答：手机验证通过后，即生成方便网账户。验证手机是可以修改的，修改后账户名也将一同修改为新手机号码。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <footer>
+        <div class="first_foot">
+            <ul>
+                <li>关于我们</li>
+                <li>免责声明</li>
+                <li>常见问题</li>
+                <li>联系我们</li>
+                <li>人才招聘</li>
+            </ul>
+        </div>
+        <div class="second_foot">
+            <p><span>Copyright@2013-2016</span>|苏ICP备12063525号-4苏州乐卡网络科技有限公司</p>
+        </div>
+    </footer>
+</body>
+
+</html>

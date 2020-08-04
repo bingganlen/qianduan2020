@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MP4是可以的  m3u8不支持</title>
+    <script type="text/javascript" src="ckplayer/ckplayer.js"></script>
+    <style type="text/css">body{margin:0;padding:0px;font-family:"Microsoft YaHei",YaHei,"微软雅黑",SimHei,"黑体";font-size:14px}</style>
+    <!-- <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+    <script src="js/videojs-contrib-hls.js"></script> -->
+
+    <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+</head>
+
+<body>
+   
+
+    <div id="playercontainer"></div>
+<script type="text/javascript" src="http://resource.bcevod.com/player/cyberplayer.js"></script>
+<script type="text/javascript">
+    var player = cyberplayer("playercontainer").setup({
+        width: 640,
+        height: 480,
+        file: "http://gdkd6p41ziwjhrgj1zi.exp.bcevod.com/mda-gmgimznr28p1ruuj/mda-gmgimznr28p1ruuj.m3u8",
+        image: "http://gdkd6p41ziwjhrgj1zi.exp.bcevod.com/mda-gmgimznr28p1ruuj/mda-gmgimznr28p1ruuj.jpg",
+        autostart: false,
+        stretching: "uniform",
+        repeat: false,
+        volume: 100,
+        controls: true,
+        ak: 'cc94de6803904f2ca7159eedeaced55d'
+    });
+</script>
+<!-- 原文：https://blog.csdn.net/enweitech/article/details/53503012  -->
+
+
+   <!-- <button onclick="changeVideo('http://hls.open.ys7.com/openlive/84b99bd79f85495f84965022a7a345fc.m3u8')">视频一</button>
+    <button onclick="changeVideo('http://alhlsgw.lechange.com:9001/LCO/3H06397PAF00873/0/1/20180514185906/dev_20180514185906_sft2z5tlrz957s0t.m3u8')">视频二</button>
+    <div id="videobox">
+        <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="300" height="250">
+            <source id="source" src="http://hls.open.ys7.com/openlive/84b99bd79f85495f84965022a7a345fc.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+   <script type="text/javascript">
+   // videojs 简单使用
+   videojs('myVideo', {
+    bigPlayButton: true,
+    textTrackDisplay: false,
+    posterImage: false,
+    errorDisplay: false
+   })
+   function changeVideo(url){
+    var player = videojs('myVideo');
+    player.pause();
+    player.dispose();
+    document.getElementById('videobox').innerHTML = '';
+    var str2 = `<video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="300" height="250">
+        <source id="source" src="${url}" type="application/x-mpegURL">
+    </video>`;
+    document.getElementById('videobox').innerHTML = str2;
+   
+    videojs('myVideo', {
+        bigPlayButton: true,
+        textTrackDisplay: false,
+        posterImage: false,
+        errorDisplay: false
+    },function(){
+        this.play();
+    })
+   }
+   
+   </script> -->
+   <!-- <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://vjs.zencdn.net/v/oceans.png" data-setup="{}">
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+    <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+    <track kind="captions" src="../shared/example-captions.vtt" srclang="en" label="English"></track>
+    Tracks need an ending tag thanks to IE9
+    <track kind="subtitles" src="../shared/example-captions.vtt" srclang="en" label="English"></track>
+    Tracks need an ending tag thanks to IE9
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+     </video> -->
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片放大镜测试2  放大效果在图片里面</title>
+                    
+            
+</head>
+<style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+         .magnifyMe {
+            /*background: url('//path to image');*/background: url('img/一切都是穷的错.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .iamMagnified {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            /*background: url('//path to image');*/background: url('img/一切都是穷的错.png');
+            background-size: initial;
+            background-repeat: no-repeat;
+            border-radius: 100px;
+            box-shadow: 0 0 10px #000;
+            border: 4px solid #CCC;
+            opacity:0;
+          }
+
+          div.magnifyMe:hover .iamMagnified {
+            opacity: 1;
+          };
+        
+
+
+          .teshu {
+            background: url('img/20170228173534_479581114.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .test {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background: url('img/20170228173534_479581114.jpg');
+            background-size: initial;
+            background-repeat: no-repeat;
+            border-radius: 100px;
+            box-shadow: 0 0 10px #000;
+            border: 4px solid #CCC;
+            opacity:0;
+          }
+
+          div.teshu:hover .test {
+            opacity: 1;
+          };
+        /*20170228173534_479581114.jpg*/
+    </style>
+<body>
+
+      <div class="magnifyMe" >  <!-- style="background: url('img/一切都是穷的错.png');" -->
+
+            <div class="iamMagnified"></div>
+      </div>
+
+      <!-- 放大镜不知道歪哪边去了
+      <div class="teshu">
+        <img src="img/20170228173534_479581114.jpg" width="300" height="300" />
+            <div class="test"></div>
+      </div> -->
+
+      
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="magnifyMe.js"></script>
+<script type="text/javascript">
+        // jQuery('.teshu').magnifyMe('test');
+        jQuery('.magnifyMe').magnifyMe('iamMagnified');
+        
+</script>
+
+</body>
+</html>

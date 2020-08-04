@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vmc.simple.slide Demo</title>
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/vmc.simple.slide.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/css/style.min.css">
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .box {
+            height: 400px;
+        }
+
+        @media screen and (max-width: 992px) {
+            .box {
+                height: 300px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .box {
+                height: 200px;
+            }
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('#vmc-slide').vmcSimpleSlide({
+                minWidth: 400
+            });
+            $('#re-size').on('click', function () {
+                $('#vmc-slide').vmcSimpleSlide('reSize');
+            });
+            $('#show-box').on('click', function () {
+                $('#vmc-slide').show();
+            });
+            $('#hide-box').on('click', function () {
+                $('#vmc-slide').hide();
+            });
+            $('#show-box-2').on('click', function () {
+                $('#vmc-slide').show();
+                $('#vmc-slide').vmcSimpleSlide('reSize');
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="box" id="vmc-slide">
+    <ul>
+        <li title="这里输入图片相关文字"><img src="demo1.jpg"></li>
+        <li><img src="demo2.jpg"></li>
+        <li><img src="demo3.jpg"></li>
+    </ul>
+</div>
+<p>当页面打开，如果默认轮播图是隐藏的，显示轮播图后尺寸需要调用重置尺寸方法</p>
+<button id="hide-box">隐藏</button>
+<button id="show-box">显示</button>
+<button id="re-size">重置尺寸</button>
+<button id="show-box-2">显示并重置尺寸</button>
+
+
+</body>
+</html>

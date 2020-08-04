@@ -1,0 +1,329 @@
+@charset "utf-8";
+header{
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	border-bottom: 2px solid #48a75b;
+	overflow: hidden;
+}
+header .head_cont{
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+header .head_cont img:first-child{
+	width: 166px;
+	height: 70px;
+	position: absolute;
+	left: 0px;
+	top: 10px;
+}
+header .head_cont img:last-child{
+	width: 204px;
+	height: 46px;
+	position: absolute;
+	left:190px ;
+	top: 25px;
+}
+/*内容*/
+.content{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.content .con_head{
+	position: relative;
+	width: 1000px;
+	height: 62px;
+	padding-top: 22px;
+	box-sizing: border-box;
+}
+.content .con_head img{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-left: 12px;
+}
+.content .con_head h1{
+	font-size: 15px;
+	vertical-align: middle;
+	display:inline-block;
+	margin-left: 5px;
+}
+.content .con_head p{
+	font-size:12px;
+	color: #878484;
+	position: absolute;
+	right: 30px;
+	top: 26px;
+}
+.content .con_head #oLoad{
+	font-size: 12px;
+	color: #91b5e9;
+	position: absolute;
+	right: 5px;
+	top: 26px;
+}
+/*正文*/
+.content .con_cont{
+	width: 1000px;
+	height: 550px;
+	border: 1px solid #dcdcdc;
+	/*box-shadow: 20px 20px  20px #eee;*/
+	position: relative;
+	box-sizing: border-box;
+
+}
+/*小背景*/
+.content .con_cont .con_he_bg{
+	width: 100%;
+	height: 108px;
+	background: url(../images/back1.jpg) repeat-x;
+	position: relative;
+}
+.content .con_cont .con_he_bg p{
+	font-size: 15px;
+	color: #878484;
+}
+.content .con_cont .con_he_bg p:nth-of-type(1){
+	position: absolute;
+	left: 34px;
+	top: 15px;
+}
+.content .con_cont .con_he_bg p:nth-of-type(2){
+	position: absolute;
+	left: 425px;
+	top: 15px;
+}
+.content .con_cont .con_he_bg p:nth-of-type(3){
+	position: absolute;
+	right: 45px;
+	top: 15px;
+}
+.content .con_cont .con_he_bg .con_he_bg_two{
+	width: 900px;
+	height: 34px;
+	position: absolute;
+	bottom: 30px;
+	left: 58px;
+}
+.content .con_cont .con_he_bg .con_he_bg_two img{
+	margin-left: -5px;
+}
+/*验证*/
+.content .con_cont .reg{
+	width: 945px;
+	height: 400px;
+	background: #fff;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+/*二维码图片*/
+ #photo{
+	width: 198px;
+	height: 400px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	border: 1px solid #dcdcdc;
+}
+ #photo img:nth-child(3){
+	width: 198px;
+	height: 153px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#photo img:nth-child(1){
+	width: 153px;
+	height: 150px;
+	position: absolute;
+	top: 27px;
+	left: 27px;
+}
+#photo img:nth-child(2){
+	width: 88px;
+	height: 17px;
+	position: absolute;
+	left: 57px;
+	top: 200px;
+}
+/*验证*/
+.content .con_cont .reg .regexg{
+	width: 550px;
+	height: 360px;
+	float: left;
+	font-size: 15px;
+}
+.content .con_cont .reg .regexg #myform>div{
+	position: relative;
+}
+
+.content .con_cont .reg .regexg input{
+	width: 240px;
+	height: 30px;
+	border: 1px solid #e5e5e5;
+	margin-left: 10px;
+	margin-bottom: 22px;
+}
+.content .con_cont .reg .regexg input:focus{
+	width: 240px;
+	height: 30px;
+	border: 1px solid #80bc2b;
+	margin-left: 10px;
+	margin-bottom: 22px;
+}
+.content .con_cont .reg .regexg #confireph{
+	width: 130px;
+	height: 30px;
+}
+
+.content .con_cont .reg .regexg img.right{
+	width:14px;
+	height: 14px;
+	position: absolute;
+	left: 318px;
+	top: 8px; 
+	display: none;
+}
+/*验证码图片侧边提示*/
+.content .con_cont .reg .regexg img.right_checknum{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	left: 220px;
+	top: 8px;
+	display: none;
+}
+.content .con_cont .reg .regexg .prompt-bg{
+	width: 195px;
+	height: 25px;
+	border: 1px solid #ffb924;
+	font-size: 14px;
+	color:#fd874c;
+	text-align: center;
+	line-height: 25px;
+	background-color: #fff6cf; 
+	position: absolute;
+	left: 325px;
+	top: 2px;
+	display: none;
+}
+.content .con_cont .reg .regexg .prompt-bg img.error{
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 10px;
+	bottom: 7px;
+}
+.content .con_cont .reg .regexg .prompt-bg img.pws_error{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	left: -40px;
+	bottom: 7px;
+}
+
+/*验证码*/
+.content .con_cont .reg .regexg .checknum{
+	width: 70px;
+	height: 32px;
+	position: absolute;
+	left: 250px;
+}
+.content .con_cont .read{
+	width: 250px;
+	height: 16px;
+    margin-left: 80px;
+    margin-bottom: 65px; 
+    position: relative;
+}
+.content .con_cont #oberrulls{
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+}
+.content .con_cont .read p{
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	top: 0px;
+}
+.content .con_cont .read p span{
+	color:#8ca8e7;
+}
+
+/*注册*/
+#register{
+	width: 130px;
+	height: 35px;
+	background-color: #e5e5e5;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	line-height: 35px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+}
+
+
+/*底部*/
+footer{
+	width: 100%;
+	height: 230px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+footer .first_foot{
+	width: 100%;
+	height: 105px;
+	overflow: hidden;
+	border-bottom: 2px solid #e5e5e5;
+}
+footer .first_foot ul{
+	width: 605px;
+	height: 15px;
+	margin: 75px auto;
+}
+footer .first_foot ul li{
+	width: 120px;
+	height:15px ;
+	border-right: 1px solid #e5e5e5;
+	float: left;
+	text-align: center;
+}
+footer .second_foot{
+	width: 600px;
+	height: 15px;
+    margin: 25px auto;
+}
+footer .second_foot p{
+	font-size: 15px;
+}
+
+footer .second_foot p span{
+	font-size: 15px;
+	color: #e8e8e8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

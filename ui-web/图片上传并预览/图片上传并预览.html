@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<style type="text/css">
+	/*
+ * Demo1:选取一张图片，并预览
+ */
+.preview_box img {
+  width: 200px;
+}
+
+/*
+ * Demo2:拖拽上传
+ */ 
+#drop_zone {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+}
+
+/*
+ * Demo3:label样式
+ */
+#img_input2 {
+  display: none;
+}
+#img_label2 {
+  background-color: #f2d547;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+}
+#preview_box2 img {
+  width: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Demo1:选取一张图片，并预览</h3>	
+<input id="img_input" type="file" accept="image/*"/>
+	<label for="img_input"></label>
+	<div class="preview_box"></div>
+
+<hr />
+
+<h3>Demo2:拖拽上传</h3>
+
+<div id="drop_zone">Drop files here</div>
+<output id="list"></output>
+
+<hr />
+
+<h3>Demo3:label样式</h3>
+
+	<input id="img_input2" type="file" accept="image/*"/>
+	<label for="img_input2" id="img_label2">选择文件
+    <i class="fa fa-plus fa-lg"></i></label>
+	<div id="preview_box2"></div>
+
+
+
+	<script type="text/javascript">
+		/*
+ * Demo1:选取一张图片，并预览
+ */
+$("#img_input").on("change", function(e) {
+
+  var file = e.target.files[0]; //获取图片资源
+
+  // 只选择图片文件
+  if (!file.type.match('image.*')) {
+    return false;
+  }
+
+  var reader = new FileReader();
+
+  reader.readAsDataURL(file); // 读取文件
+
+  // 渲染文件
+  reader.onload = function(arg) {
+
+    var img = '<img class="preview" src="' + arg.target.result + '" alt="preview"/>';
+    $(".preview_box").empty().append(img);
+  }
+});
+
+/*
+ * Demo2:拖拽上传
+ */
+// 必须阻止dragenter和dragover事件的默认行为，这样才能触发 drop 事件
+function handleFileSelect(evt) {
+  evt.stopPropagation();
+  evt.preventDefault();
+
+  var files = evt.dataTransfer.files; // 文件对象
+
+  // 处理多文件
+  var output = [];
+  for (var i = 0, f; f = files[i]; i++) {
+    output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+      f.size, ' bytes, last modified: ',
+      f.lastModifiedDate.toLocaleDateString(), '</li>');
+  }
+  // 显示文件信息
+  document.getElementById('list').innerHTML = output.join('');
+}
+
+function handleDragOver(evt) {
+  evt.stopPropagation();
+  evt.preventDefault();
+  evt.dataTransfer.dropEffect = 'copy';
+}
+
+// Setup the dnd listeners.
+var dropZone = document.getElementById('drop_zone');
+dropZone.addEventListener('dragover', handleDragOver, false);
+dropZone.addEventListener('drop', handleFileSelect, false);
+
+/*
+ * Demo3:label样式
+ */
+$("#img_input2").on("change", function(e) {
+
+  var file = e.target.files[0]; //获取图片资源
+
+  // 只选择图片文件
+  if (!file.type.match('image.*')) {
+    return false;
+  }
+
+  var reader = new FileReader();
+
+  reader.readAsDataURL(file); // 读取文件
+
+  // 渲染文件
+  reader.onload = function(arg) {
+
+    var img = '<img class="preview" src="' + arg.target.result + '" alt="preview"/>';
+    $("#preview_box2").empty().append(img);
+  }
+});
+	</script>
+</body>
+</html> 

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* mine down */
+body{ background-color: #0DD8E5;}
+.pc-pics-box{  height: 40%;}
+.img-box{display:block; overflow:hidden; position:relative;}/*width="520" height="580"*/
+.btn{ box-sizing:border-box; border:1px solid #fff; color:#fff; text-align: center; }
+.btn{ display: inline-block; width: 200px; height: 62px; margin-left: 15px; margin-bottom: 25px; line-height: 62px; font-size: 16px; margin-right: 16px; border-radius: 30px; position: relative; overflow: hidden; transition:all 0.2s; -pckit-transition:all 0.2s; -moz-transition:all 0.2s;}
+.btn:hover{ border-radius: 10px;}
+.ico{ font-size:0; background-repeat:no-repeat;}
+.ico{ float: left; width: 44px; height: 44px; background-position: left top; background-repeat: no-repeat;margin: 0 6px 0 2px;  background-size: 44px 44px;}/*margin:7px 6px 0 20px;*/
+
+/*弹出层的按钮 小一点*/
+.btnsm{ box-sizing:border-box; border:1px solid #fff; color:#fff; text-align: center;
+    display: inline-block; width: 140px; height: 37px;  line-height: 37px; font-size: 12px;  border-radius: 30px;
+    position: relative; overflow: hidden;
+    /* 全部样式0.2S 缓动  延续时间*/
+    transition:all 0.2s; -pckit-transition:all 0.2s; -moz-transition:all 0.2s;
+}
+.btnsmfirst{margin-right: 16px; margin-bottom: 25px;}
+.icosm{ font-size:0; background-repeat:no-repeat;
+    float: left; width: 30px; height: 30px; background-position: left top; background-repeat: no-repeat;margin: 0 6px 0 2px;  background-size: 30px 30px;
+}
+
+.ico-android{ background-image: url(../../images/appdown/icon_android.png);}
+.ico-ios{ background-image: url(../../images/appdown/icon_ios.png);}
+.ico-other{ background-image: url(../../images/appdown/icon_other.png);}
+.txt{line-height: 47px;float: left;}
+
+.sm-a-1{ text-align: center; width: 140px; height: 37px;  line-height: 37px;
+    color: #fff;margin-right: 20px;margin-left: 15px;}
+.sm-a-2{width:60px;
+    height: 37px;line-height: 37px;  color: #fff;margin-left: 20px;}
+/* mine down */
+
+
+.g-overlay{display:none;left:0;top:0;width:100%;z-index:500;}
+.dialog-container{position:absolute;background-color:#fff;left:50%;}
+.slider-container{ overflow:hidden; position:relative;}
+.slider-flags{ position:absolute; font-size:0;}
+.slider-flags .item{ display:inline-block; cursor:pointer;}
+.img-box{ display:block; overflow:hidden; position:relative;}
+.ico{ font-size:0; background-repeat:no-repeat;}
+.hidden{ display:none;}
+.hide-txt{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis; position:relative;}
+.btn{ box-sizing:border-box; border:1px solid #fff; color:#fff; text-align: center; }
+.pc-contanier{ overflow: hidden;}
+.pc-bg,
+.pc-wrap{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #f5f5f5; z-index: 10;}
+.pc-bg{ display: none; z-index: 20;}
+.pc-bg1{ background-color: #7d34cf;}
+.pc-bg2{ background-color: #ff9e47;}
+.pc-bg3{ background-color: #0dd8e5;}
+.pc-bg4{ background-color: #0DD8E5;}  /*#3bce70;*/
+.pc-bg.current{ display: block;}
+.page-bg-btm{ position: absolute; left: 0; bottom: 0; width: 100%; height: 133px; background: url(../../images/appdown/bottom_bg.png) repeat-x center top; font-size: 0; z-index: 30;}
+.page-bg-btm.mobile{ position: fixed; height: 66px; background-size: 489px 66px;}
+.pc-body{ position: absolute; left: 50%; top: 50%; width: 1040px; height: 580px; margin:-290px 0 0 -520px; z-index: 100;} /*width: 1040px; height: 580px;*/
+.pc-body-item{ float: left; width: 50%;}
+.pc-pics-box{ width: 520px; height: 580px;}
+.pc-pics-box .item{ display: none; position: absolute; left: 0; top:0;}
+.pc-pics-box .item.current{ display: inline-block;}
+.pc-main{ padding:100px 0 0 12px;}
+.pc-logo{ height: 88px; position: relative;}
+.pc-logo .logo{height: 85px;padding: 10px 0}
+.pc-logo .appname{position: absolute; left: 80px; top: 15px; font-size: 12px; letter-spacing: 3px;font-size: 28px;line-height: 32px}
+.pc-logo .version{position: absolute; left: 80px; top: 55px; font-size: 14px; letter-spacing: 3px;}
+.pc-btns{ margin-top: 40px; font-size: 0;}
+.pc-btns .btn{ display: inline-block; width: 200px; height: 62px; line-height: 62px; font-size: 16px; margin-right: 16px; border-radius: 30px; position: relative; overflow: hidden; transition:all 0.2s; -pckit-transition:all 0.2s; -moz-transition:all 0.2s;}
+.pc-btns .btn:hover{ border-radius: 10px;}
+.pc-btns .ico{ float: left; width: 44px; height: 44px; background-position: left top; background-repeat: no-repeat;margin: 0px 6px 0 2px;  background-size: 44px 44px;}/*margin:7px 6px 0 20px;*/
+.pc-btns .ico-ios{ background-image: url(../../images/appdown/icon_ios.png);}
+.pc-btns .ico-android{ background-image: url(../../images/appdown/icon_android.png);}
+.pc-btns .txt{float: left;line-height:62px; }
+.pc-erwei{ margin-top: 36px; font-size: 14px;}
+.pc-erwei .img-box{ padding: 16px 0 0 20px;}
+.pc-bg-flag{ left: 0; bottom: 72px; width: 100%; text-align: center; z-index: 110;}
+.pc-bg-flag .item{ width: 20px; height: 20px; background: url(../../images/appdown/dott_n.png) no-repeat center center;}
+.pc-bg-flag .item.current{ background-image: url(../../images/appdown/dott_f.png);}
+.pc-copyright{ position: absolute; left: 0; bottom: 20px; width: 100%; text-align: center; z-index: 120; opacity: .6; filter:alpha(opacity=60);}
+.slider-next,
+.slider-prev{ width: 88px; height: 88px; position:absolute; top: 50%; z-index: 130; margin-top: -44px; cursor:pointer; background-repeat:no-repeat; background-position: left top; font-size:0; opacity: 0.6; filter:alpha(opacity=90); transition:all 0.2s; -pckit-transition:all 0.2s; -moz-transition:all 0.2s;}
+.slider-next{ right: 20px; background-image: url(../../images/appdown/arrow_next.png);}
+.slider-prev{ left: 20px; background-image: url(../../images/appdown/arrow_previous.png);}
+.slider-next:hover,
+.slider-prev:hover{ opacity: 1.0; filter:alpha(opacity=100);}
+
+/*appdownload begin*/
+.appdownload-body{ background-color:#7d34cf;}
+.appdownload-wrap{ width:100%; text-align:center; position:relative; z-index:100;}
+
+.mb-stars{ position: fixed; left: 0; top: 20px; width: 100%; height: 158px; background: url(../../images/appdown/stars.png) repeat-x center top; background-size: 320px 158px;}
+
+.appdownload-logo{ padding-top:154px;}
+.appdownload-logo .appname{ color:#fff; font-size:14px; padding-top:16px; line-height:22px;}
+.appdownload-note{ color:#fff; font-size:14px; padding-top:36px; line-height:22px;}
+.appdownload-btns{ padding:32px 0 26px; position:relative; overflow:hidden;}
+.appdownload-btns .btn{ display:block; max-width:185px; margin:22px auto 0 auto; border-radius:21px; line-height:42px; height:42px; text-align:left; position:relative; font-size: 16px; position:relative; overflow:hidden;}
+.appdownload-btns .ico{ float: left; width: 30px; height: 30px; background-position: left top; background-repeat: no-repeat; background-size: 30px 30px; margin:4px 6px 0 20px;}
+.appdownload-btns .ico-ios{ background-image: url(../../images/appdown/icon_ios.png);}
+.appdownload-btns .ico-android{ background-image: url(../../images/appdown/icon_android.png);}
+.appdownload-btns .txt{float: left;}
+
+.appdownload-copyright{ padding:73px 0 60px; opacity: .6; filter:alpha(opacity=60);}
+.appdownload-copyright-web{ padding:0; position:fixed; bottom:24px; width:100%; left:0; }
+
+.appdownload-check-erwei{ padding-left:18px; cursor:pointer; color:#fff; font-size:14px; margin-top:26px; background:url(../../images/appdown/icon_erwei_small.png) no-repeat left 2px; background-size:14px 14px;}
+.appdownload-erwei-box{ width:112px; height:112px; padding:4px; background-color:#fff; margin:24px auto 0 auto;}
+.appdownload-erwei-overlay{ display:none; position:fixed; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,.5); z-index:1000;}
+.appdownload-erwei-overlay .container{ position:absolute; left:50%; top:50%; width:226px; height:226px; margin:-113px 0 0 -113px; background-color:#fff; font-size:14px; color:#4a4a4a; text-align:center;}
+.appdownload-erwei-overlay .container p{ margin:32px 0 24px 0;}
+
+.android-guider{ position:absolute; left:0; top:0; right:0; bottom:0; background-color:rgba(0,0,0,.69); z-index:5000;}
+.android-guider-arrow{ position:absolute; right:24px; top:8px; width:44px; height:47px;}
+.android-guider-box{ margin-top:66px; padding:0 40px; }
+.android-guider-text{ width:100%; max-width:100%;}
+/*appdownload end*/
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery弹出注册框 - ab蓝学网 http://www.ablanxue.com</title>
+ <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+ <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+	
+	$("#login").click(function(){
+		$.XYTipsWindow({
+			___title:"登录",
+			___content:"iframe:login.html",
+			___width:"460",
+			___height:"150",
+			___showbg:true,
+			___drag:"___boxTitle"
+
+		});
+	});
+	
+	$("#reg").click(function(){
+		$.XYTipsWindow({
+			___title:"注册",
+			___content:"iframe:reg.html",
+			___width:"460",
+			___height:"450",
+			___showbg:true,
+			___drag:"___boxTitle"
+		});
+	});
+	
+
+
+ })
+ </script>
+ <link href="css/box_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body style="text-align:center; padding-top:100px;">
+<button id="login">登录</button>
+<button id="reg">注册</button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、傲游、搜狗、世界之窗. 不支持Safari、Opera。</p>
+<p>来源：<a href="http://www.ablanxue.com" target="_blank">ab蓝学网</a></p>
+</div>
+</body>
+</html>

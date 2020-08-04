@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kpopup demo</title>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/kpopup.js"></script>
+</head>
+<body>
+	<div style="text-align: center;">
+
+		<div id="topPopup"></div>
+		<div id="bottomPopup"></div>
+		<div id="leftPopup"></div>
+		<div id="rightPopup"></div>
+	
+		<div id="content" style="display: none;">
+			我是滑出块内容。。</br>
+			我是滑出块内容。。</br>
+			我是滑出块内容。。</br>
+			重要事，说三遍。。。
+		</div>
+
+		<div style="margin: 200px 300px">
+			<button type="button" id="topBtn">上滑出</button>
+			<button type="button" id="bottomBtn">下滑出</button>
+			<button type="button" id="leftBtn">左滑出</button>
+			<button type="button" id="rightBtn">右滑出</button>
+			<br>
+			<a target="_blank" href="https://tools.kalvinbg.cn">Kalvin在线工具</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+
+			// 上滑出层
+	        new popup('#topPopup', '#topBtn', {
+	            // width: '334px',	// 滑出层宽度
+	            // height: '170px',	// 滑出层调度
+	            content: $('#content'),	// 主要内容；可以为html，可以为dom对象
+	            duration: 500	// 滑出速度，默认fast
+	        }).setRight(0).popupTop();	// 可以调用setTop,setRight等方法对滑出层位置进行调整
+
+	        // 下滑出层
+	        new popup('#bottomPopup', '#bottomBtn', {
+	            // width: '334px',	// 滑出层宽度
+	            // height: '170px',	// 滑出层调度
+	            content: $('#content'),	// 主要内容；可以为html，可以为dom对象
+	            duration: 500	// 滑出速度，默认fast
+	        }).setRight(0).popupBottom();	// 可以调用setTop,setRight等方法对滑出层位置进行调整
+
+	        // 左滑出层
+	        new popup('#leftPopup', '#leftBtn', {
+	            // width: '334px',	// 滑出层宽度
+	            // height: '170px',	// 滑出层调度
+	            content: $('#content'),	// 主要内容；可以为html，可以为dom对象
+	            duration: 500	// 滑出速度，默认fast
+	        }).popupLeft();	// 可以调用setTop,setRight等方法对滑出层位置进行调整
+
+	        // 右滑出层
+	        new popup('#rightPopup', '#rightBtn', {
+	            // width: '334px',	// 滑出层宽度
+	            // height: '170px',	// 滑出层调度
+	            content: $('#content'),	// 主要内容；可以为html，可以为dom对象
+	            duration: 500	// 滑出速度，默认fast
+	        }).popupRight();	// 可以调用setTop,setRight等方法对滑出层位置进行调整
+
+		});
+	</script>
+</body>
+</html>

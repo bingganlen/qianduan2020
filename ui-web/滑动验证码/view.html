@@ -1,0 +1,2355 @@
+<!-- saved from url=(0714)https://ssl.captcha.qq.com/cap_union_new_show?aid=2046103261&accver=1&showtype=popup&ua=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MS4wLjM1NzguOTggU2FmYXJpLzUzNy4zNg%3D%3D&noheader=1&fb=1&fpinfo=fpsig%3Dundefined&grayscale=1&clientype=2&subsid=2&sess=5_4h6tmRGmHj6_08lkKNtPFIWDMpT_mQ96BDX63NMFXd8LnAe5AfxkejNEHbMTQhJOUtXoA4S344GZihcyUD1-gxKtY18uFzm5ISZ4rI5A1pgTMSrnTPGT1FfSeJkphAr7V378a6-sX2zfT5yJdMvd42iZJj6scHOsDrnVw6txey9UqJlwISP0qz6eN7SoFU6sn8tSCvFRKkFwA8QBgaBA**&fwidth=0&sid=6646916926524812978&forcestyle=undefined&wxLang=&tcScale=1&uid=&cap_cd=&rnd=805211&TCapIframeLoadTime=undefined&prehandleLoadTime=41&createIframeStart=1547605820611 -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="line-gutter-backdrop"></div>
+<table>
+    <tbody>
+    <tr>
+        <td class="line-number" value="1"></td>
+        <td class="line-content"><span class="html-doctype">&lt;!DOCTYPE html&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="2"></td>
+        <td class="line-content"><span class="html-tag">&lt;html <span class="html-attribute-name">lang</span>="<span
+                class="html-attribute-value">mul</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="3"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="4"></td>
+        <td class="line-content"><span class="html-tag">&lt;head&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="5"></td>
+        <td class="line-content"><span class="html-tag">&lt;meta <span class="html-attribute-name">charset</span>="<span
+                class="html-attribute-value">UTF-8</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="6"></td>
+        <td class="line-content"><span class="html-tag">&lt;meta <span class="html-attribute-name">name</span>="<span
+                class="html-attribute-value">renderer</span>" <span class="html-attribute-name">content</span>="<span
+                class="html-attribute-value">webkit</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="7"></td>
+        <td class="line-content"><span class="html-tag">&lt;link <span class="html-attribute-name">rel</span>="<span
+                class="html-attribute-value">dns-prefetch</span>" <span class="html-attribute-name">href</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank" href="https://hy.captcha.qq.com/"
+                rel="noreferrer noopener">//hy.captcha.qq.com</a>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="8"></td>
+        <td class="line-content"><span class="html-tag">&lt;title&gt;</span>腾讯验证码<span
+                class="html-tag">&lt;/title&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="9"></td>
+        <td class="line-content"><span class="html-tag">&lt;style&gt;</span>html{ width: 100%; height: 100%; }<span
+                class="html-tag">&lt;/style&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="10"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="11"></td>
+        <td class="line-content"> /**</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="12"></td>
+        <td class="line-content"> * 时间统计类</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="13"></td>
+        <td class="line-content"> *</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="14"></td>
+        <td class="line-content"> * @type {{log, logEnd}}</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="15"></td>
+        <td class="line-content"> * @author: steephenliu</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="16"></td>
+        <td class="line-content"> * @date: 2018/6/15</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="17"></td>
+        <td class="line-content"> */</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="18"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="19"></td>
+        <td class="line-content">;(function (w) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="20"></td>
+        <td class="line-content"> var timingLog = {};</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="21"></td>
+        <td class="line-content"> var prefix = '^';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="22"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="23"></td>
+        <td class="line-content"> var timing = {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="24"></td>
+        <td class="line-content"> log: function (type) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="25"></td>
+        <td class="line-content"> var cur = +new Date();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="26"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="27"></td>
+        <td class="line-content"> if (typeof type === 'string') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="28"></td>
+        <td class="line-content"> timingLog[prefix + type] = cur;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="29"></td>
+        <td class="line-content"> timingLog[type] = null;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="30"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="31"></td>
+        <td class="line-content"> for (var i = 0; i &lt; type.length; i++) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="32"></td>
+        <td class="line-content"> timingLog[prefix + type[i]] = cur;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="33"></td>
+        <td class="line-content"> timingLog[type[i]] = null;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="34"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="35"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="36"></td>
+        <td class="line-content"> },</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="37"></td>
+        <td class="line-content"> logEnd: function (type) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="38"></td>
+        <td class="line-content"> // 不覆盖</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="39"></td>
+        <td class="line-content"> if (timingLog[type]) return timingLog[type];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="40"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="41"></td>
+        <td class="line-content"> var cur = +new Date();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="42"></td>
+        <td class="line-content"> timingLog[type] = cur - (timingLog[prefix + type] || cur);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="43"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="44"></td>
+        <td class="line-content"> return timingLog[type];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="45"></td>
+        <td class="line-content"> },</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="46"></td>
+        <td class="line-content"> point: function (type) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="47"></td>
+        <td class="line-content"> return timingLog[prefix + type] || +new Date();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="48"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="49"></td>
+        <td class="line-content"> };</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="50"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="51"></td>
+        <td class="line-content"> w.timing = timing;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="52"></td>
+        <td class="line-content">})(window);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="53"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="54"></td>
+        <td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="55"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="56"></td>
+        <td class="line-content"> ;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="57"></td>
+        <td class="line-content">(function (win, lib) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="58"></td>
+        <td class="line-content"> var DEFAULT_VERSION = 8.0;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="59"></td>
+        <td class="line-content"> var ua = navigator.userAgent.toLowerCase();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="60"></td>
+        <td class="line-content"> var isIE = ua.indexOf("msie") &gt; -1;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="61"></td>
+        <td class="line-content"> var safariVersion,docModIe;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="62"></td>
+        <td class="line-content"> if (isIE) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="63"></td>
+        <td class="line-content"> safariVersion = ua.match(/msie ([\d.]+)/)[1];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="64"></td>
+        <td class="line-content"> docModIe = isIE &amp;&amp; document.documentMode ;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="65"></td>
+        <td class="line-content"> if(safariVersion &amp;&amp; (safariVersion &lt;= DEFAULT_VERSION)) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="66"></td>
+        <td class="line-content"> return</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="67"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="68"></td>
+        <td class="line-content"> if(docModIe &amp;&amp; docModIe &lt; 9) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="69"></td>
+        <td class="line-content"> return;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="70"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="71"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="72"></td>
+        <td class="line-content"> var doc = win.document;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="73"></td>
+        <td class="line-content"> var docEl = doc.documentElement;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="74"></td>
+        <td class="line-content"> var metaEl = doc.querySelector('meta[name="viewport"]');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="75"></td>
+        <td class="line-content"> var flexibleEl = doc.querySelector('meta[name="flexible"]');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="76"></td>
+        <td class="line-content"> var parentScale = /tcScale=([\d.]+)/.exec(location.href);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="77"></td>
+        <td class="line-content"> var dpr = 0;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="78"></td>
+        <td class="line-content"> var scale = 0;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="79"></td>
+        <td class="line-content"> var tid;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="80"></td>
+        <td class="line-content"> var flexible = lib.flexible || (lib.flexible = {});</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="81"></td>
+        <td class="line-content"> var isIPhone = win.navigator.appVersion.match(/iphone|ipad|ipod/gi);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="82"></td>
+        <td class="line-content"> // 默认不设viewport，此段没有用到</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="83"></td>
+        <td class="line-content"> // if (metaEl) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="84"></td>
+        <td class="line-content"> // console.warn('将根据已有的meta标签来设置缩放比例');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="85"></td>
+        <td class="line-content"> // var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="86"></td>
+        <td class="line-content"> // if (match) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="87"></td>
+        <td class="line-content"> // scale = parseFloat(match[1]);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="88"></td>
+        <td class="line-content"> // dpr = parseInt(1 / scale);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="89"></td>
+        <td class="line-content"> // }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="90"></td>
+        <td class="line-content"> // } // else if (flexibleEl) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="91"></td>
+        <td class="line-content"> // var content = flexibleEl.getAttribute('content');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="92"></td>
+        <td class="line-content"> // if (content) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="93"></td>
+        <td class="line-content"> // var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="94"></td>
+        <td class="line-content"> // var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="95"></td>
+        <td class="line-content"> // if (initialDpr) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="96"></td>
+        <td class="line-content"> // dpr = parseFloat(initialDpr[1]);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="97"></td>
+        <td class="line-content"> // scale = parseFloat((1 / dpr).toFixed(2));</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="98"></td>
+        <td class="line-content"> // }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="99"></td>
+        <td class="line-content"> // if (maximumDpr) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="100"></td>
+        <td class="line-content"> // dpr = parseFloat(maximumDpr[1]);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="101"></td>
+        <td class="line-content"> // scale = parseFloat((1 / dpr).toFixed(2));</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="102"></td>
+        <td class="line-content"> // }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="103"></td>
+        <td class="line-content"> // }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="104"></td>
+        <td class="line-content"> // }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="105"></td>
+        <td class="line-content"> if (parentScale) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="106"></td>
+        <td class="line-content"> scale = parseFloat(parentScale[1]);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="107"></td>
+        <td class="line-content"> dpr = parseInt(1 / scale);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="108"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="109"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="110"></td>
+        <td class="line-content"> if (!dpr &amp;&amp; !scale) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="111"></td>
+        <td class="line-content"> var isAndroid = /android[ ]+(\d\.\d)/gi.exec(win.navigator.appVersion);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="112"></td>
+        <td class="line-content"> var devicePixelRatio = win.devicePixelRatio;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="113"></td>
+        <td class="line-content"> if (devicePixelRatio &amp;&amp; (isIPhone || (isAndroid &amp;&amp;
+            parseFloat(isAndroid[1]) &gt; 4.2))) {
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="114"></td>
+        <td class="line-content"> // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="115"></td>
+        <td class="line-content"> if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="116"></td>
+        <td class="line-content"> dpr = 3;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="117"></td>
+        <td class="line-content"> } else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2)) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="118"></td>
+        <td class="line-content"> dpr = 2;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="119"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="120"></td>
+        <td class="line-content"> dpr = 1;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="121"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="122"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="123"></td>
+        <td class="line-content"> // 其他设备下，仍旧使用1倍的方案</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="124"></td>
+        <td class="line-content"> dpr = 1;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="125"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="126"></td>
+        <td class="line-content"> scale = 1 / dpr;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="127"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="128"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="129"></td>
+        <td class="line-content"> docEl.setAttribute('data-dpr', dpr);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="130"></td>
+        <td class="line-content"> if (!metaEl) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="131"></td>
+        <td class="line-content"> metaEl = doc.createElement('meta');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="132"></td>
+        <td class="line-content"> metaEl.setAttribute('name', 'viewport');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="133"></td>
+        <td class="line-content"> metaEl.setAttribute('content', 'width=device-width, initial-scale=' + scale + ',
+            maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="134"></td>
+        <td class="line-content"> if (docEl.firstElementChild) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="135"></td>
+        <td class="line-content"> docEl.firstElementChild.appendChild(metaEl);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="136"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="137"></td>
+        <td class="line-content"> var wrap = doc.createElement('div');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="138"></td>
+        <td class="line-content"> wrap.appendChild(metaEl);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="139"></td>
+        <td class="line-content"> doc.write(wrap.innerHTML);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="140"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="141"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="142"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="143"></td>
+        <td class="line-content"> function refreshRem() {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="144"></td>
+        <td class="line-content"> var rect = docEl.getBoundingClientRect();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="145"></td>
+        <td class="line-content"> var width = rect.width;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="146"></td>
+        <td class="line-content"> var height = rect.height;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="147"></td>
+        <td class="line-content"> var orientation;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="148"></td>
+        <td class="line-content"> if (width / dpr &gt; 460) { // 最大宽度: 460</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="149"></td>
+        <td class="line-content"> width = 340 * dpr;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="150"></td>
+        <td class="line-content"> // 屏幕太宽了，也当成横屏处理</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="151"></td>
+        <td class="line-content"> orientation = 'landscape';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="152"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="153"></td>
+        <td class="line-content"> var rem = width / 10;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="154"></td>
+        <td class="line-content"> docEl.style.fontSize = rem + 'px';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="155"></td>
+        <td class="line-content"> flexible.rem = win.rem = rem;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="156"></td>
+        <td class="line-content"> docEl.setAttribute('data-dpr', dpr);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="157"></td>
+        <td class="line-content"> try {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="158"></td>
+        <td class="line-content"> var realFontSize = parseFloat(getComputedStyle(docEl).fontSize);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="159"></td>
+        <td class="line-content"> if (Math.abs(realFontSize - rem) &gt; 0.5) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="160"></td>
+        <td class="line-content"> var delta = realFontSize / rem;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="161"></td>
+        <td class="line-content"> docEl.style.fontSize = (rem / delta) + 'px'</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="162"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="163"></td>
+        <td class="line-content"> } catch (e) {}</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="164"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="165"></td>
+        <td class="line-content"> if (!orientation) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="166"></td>
+        <td class="line-content"> orientation = isIPhone ? window.orientation : null;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="167"></td>
+        <td class="line-content"> switch (orientation) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="168"></td>
+        <td class="line-content"> case 90:</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="169"></td>
+        <td class="line-content"> case -90:</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="170"></td>
+        <td class="line-content"> orientation = 'landscape'; //这里是横屏</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="171"></td>
+        <td class="line-content"> break;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="172"></td>
+        <td class="line-content"> case 0:</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="173"></td>
+        <td class="line-content"> orientation = 'portrait'; //这里是竖屏</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="174"></td>
+        <td class="line-content"> break;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="175"></td>
+        <td class="line-content"> default:</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="176"></td>
+        <td class="line-content"> if (width / height &gt; 1.2) orientation = 'landscape'; //这里是横屏</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="177"></td>
+        <td class="line-content"> else orientation = 'portrait'; //这里是竖屏</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="178"></td>
+        <td class="line-content"> break;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="179"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="180"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="181"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="182"></td>
+        <td class="line-content"> docEl.setAttribute('data-orientation', orientation);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="183"></td>
+        <td class="line-content"> if (flexible.resizeCb) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="184"></td>
+        <td class="line-content"> for (var i = 0; i &lt; flexible.resizeCb.length; i++) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="185"></td>
+        <td class="line-content"> try {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="186"></td>
+        <td class="line-content"> flexible.resizeCb[i] &amp;&amp; flexible.resizeCb[i]();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="187"></td>
+        <td class="line-content"> } catch (e) {}</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="188"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="189"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="190"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="191"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="192"></td>
+        <td class="line-content"> win.addEventListener('resize', function () {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="193"></td>
+        <td class="line-content"> clearTimeout(tid);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="194"></td>
+        <td class="line-content"> tid = setTimeout(refreshRem, 150);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="195"></td>
+        <td class="line-content"> }, false);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="196"></td>
+        <td class="line-content"> win.addEventListener('pageshow', function (e) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="197"></td>
+        <td class="line-content"> if (e.persisted) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="198"></td>
+        <td class="line-content"> clearTimeout(tid);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="199"></td>
+        <td class="line-content"> tid = setTimeout(refreshRem, 150);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="200"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="201"></td>
+        <td class="line-content"> }, false);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="202"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="203"></td>
+        <td class="line-content"> if (doc.readyState === 'complete') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="204"></td>
+        <td class="line-content"> doc.body.style.fontSize = 12 * dpr + 'px';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="205"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="206"></td>
+        <td class="line-content"> doc.addEventListener('DOMContentLoaded', function (e) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="207"></td>
+        <td class="line-content"> doc.body.style.fontSize = 12 * dpr + 'px';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="208"></td>
+        <td class="line-content"> }, false);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="209"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="210"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="211"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="212"></td>
+        <td class="line-content"> refreshRem();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="213"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="214"></td>
+        <td class="line-content"> flexible.dpr = win.dpr = dpr;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="215"></td>
+        <td class="line-content"> flexible.refreshRem = refreshRem;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="216"></td>
+        <td class="line-content"> flexible.rem2px = function (d) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="217"></td>
+        <td class="line-content"> var val = parseFloat(d) * this.rem;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="218"></td>
+        <td class="line-content"> if (typeof d === 'string' &amp;&amp; d.match(/rem$/)) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="219"></td>
+        <td class="line-content"> val += 'px';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="220"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="221"></td>
+        <td class="line-content"> return val;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="222"></td>
+        <td class="line-content"> };</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="223"></td>
+        <td class="line-content"> flexible.px2rem = function (d) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="224"></td>
+        <td class="line-content"> var val = parseFloat(d) / this.rem;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="225"></td>
+        <td class="line-content"> if (typeof d === 'string' &amp;&amp; d.match(/px$/)) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="226"></td>
+        <td class="line-content"> val += 'rem';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="227"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="228"></td>
+        <td class="line-content"> return val;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="229"></td>
+        <td class="line-content"> };</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="230"></td>
+        <td class="line-content"> flexible.resizeCb = [];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="231"></td>
+        <td class="line-content"></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="232"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="233"></td>
+        <td class="line-content">})(window, window['lib'] || (window['lib'] = {}));</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="234"></td>
+        <td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="235"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="236"></td>
+        <td class="line-content"> /**</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="237"></td>
+        <td class="line-content"> *</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="238"></td>
+        <td class="line-content"> *</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="239"></td>
+        <td class="line-content"> * @author: steephenliu</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="240"></td>
+        <td class="line-content"> * @date: 2018/6/12</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="241"></td>
+        <td class="line-content"> */</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="242"></td>
+        <td class="line-content">;(function () {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="243"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="244"></td>
+        <td class="line-content"> window.captchaConfig = {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="245"></td>
+        <td class="line-content"> "htdocsPath": "https://captcha.gtimg.com/2",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="246"></td>
+        <td class="line-content"> "lang": "2052",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="247"></td>
+        <td class="line-content"> "fpHtdocsPath": "https://captcha.gtimg.com/public/2",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="248"></td>
+        <td class="line-content"> "fpFileName": "tokenidiframe.web-token.0.0.2.js",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="249"></td>
+        <td class="line-content"> "color": "1a79ff",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="250"></td>
+        <td class="line-content"> "tdcHtdocsPath": "https://dj.captcha.qq.com",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="251"></td>
+        <td class="line-content"> "dcFileName": "tdc.js",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="252"></td>
+        <td class="line-content"> "vmFileName": "dc_vx.js",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="253"></td>
+        <td class="line-content"> "noheader": "0",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="254"></td>
+        <td class="line-content"> "showtype": "popup",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="255"></td>
+        <td class="line-content"> "theme": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="256"></td>
+        <td class="line-content"> "uid": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="257"></td>
+        <td class="line-content"> "subcapclass": "15",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="258"></td>
+        <td class="line-content"> "aid": "2046103261",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="259"></td>
+        <td class="line-content"> "uip": "2746447038",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="260"></td>
+        <td class="line-content"> "clientype": "2",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="261"></td>
+        <td class="line-content"> "websig":
+            "3ac1d253f080ccb00e2241c0fd6881befa3c70aae4140fa7ab9e32e54b68407368a5880df8606fb388943f84a81cc70cf6573c154066b7d9e010fd6b63e6a559",
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="262"></td>
+        <td class="line-content"> "collectdata": "bcdefb",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="263"></td>
+        <td class="line-content"> "asig": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="264"></td>
+        <td class="line-content"> "buid": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="265"></td>
+        <td class="line-content"> "vmData": "vmData",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="266"></td>
+        <td class="line-content"> "vsig":
+            "c013fztYlMqxbZ6oQpz_XnTrGpCotNOY9oZIzdxC2SNYP2hRLyoKeGWcrwp6mhWoneI4cI0jf4311nSPWMgXHQyEwHnT-fCTne_94AXwBjJ_EODWKuIu2HdbuOB9t3w7jFa_Hu4sYszCXoAdm4jSPZ4Xr_v9R36M3lT0xi_530yyDs*",
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="267"></td>
+        <td class="line-content"> "dst": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="268"></td>
+        <td class="line-content"> "capSrc": "capFrame",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="269"></td>
+        <td class="line-content"> "spt": "30",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="270"></td>
+        <td class="line-content"> "curenv": "inner",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="271"></td>
+        <td class="line-content"> "fwidth": "0",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="272"></td>
+        <td class="line-content"> "slink": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="273"></td>
+        <td class="line-content"> "cdnPic1": "https://hy.captcha.qq.com/hycdn_1_937452297478523648_0",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="274"></td>
+        <td class="line-content"> "cdnPic2": "https://hy.captcha.qq.com/hycdn_2_937452297478523648_0",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="275"></td>
+        <td class="line-content"> "iscdn": "1",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="276"></td>
+        <td class="line-content"> "vmByteCode": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="277"></td>
+        <td class="line-content"> "vmAvailable": "",</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="278"></td>
+        <td class="line-content"> "TuCao": "https://support.qq.com/products/2136"</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="279"></td>
+        <td class="line-content"> };</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="280"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="281"></td>
+        <td class="line-content"> try {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="282"></td>
+        <td class="line-content"> window.captchaConfig['capChallenge'] = JSON.parse('{&amp;quot;randstr&amp;quot;:&amp;quot;zxdD&amp;quot;,&amp;quot;M&amp;quot;:&amp;quot;100&amp;quot;,&amp;quot;ans&amp;quot;:&amp;quot;132708a72059a20c47925250001de492&amp;quot;}'.replace(/&amp;quot;/g,
+            '"'));
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="283"></td>
+        <td class="line-content"> } catch (e) {}</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="284"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="285"></td>
+        <td class="line-content"> var captchaType, showtype = window.captchaConfig.showtype;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="286"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="287"></td>
+        <td class="line-content"> // var captchaType = window.captchaConfig.showtype === 'popup' ? 'type-popup' :
+            'type-fullscreen';
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="288"></td>
+        <td class="line-content"> if(showtype === 'popup'|| showtype === 'point') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="289"></td>
+        <td class="line-content"> captchaType = 'type-popup';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="290"></td>
+        <td class="line-content"> } else if(showtype === 'embed') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="291"></td>
+        <td class="line-content"> captchaType = 'type-embed';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="292"></td>
+        <td class="line-content"> } else {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="293"></td>
+        <td class="line-content"> captchaType = 'type-fullscreen'</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="294"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="295"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="296"></td>
+        <td class="line-content"> var html = document.getElementsByTagName('html')[0];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="297"></td>
+        <td class="line-content"> // html.classList.add(captchaType);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="298"></td>
+        <td class="line-content"> var htmlClass = html.className;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="299"></td>
+        <td class="line-content"> htmlClass ? (htmlClass += ' ' + captchaType) : htmlClass += captchaType;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="300"></td>
+        <td class="line-content"></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="301"></td>
+        <td class="line-content"> //全屏是否隐藏头部</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="302"></td>
+        <td class="line-content"> if(window.captchaConfig.noheader === '1') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="303"></td>
+        <td class="line-content"> htmlClass ? (htmlClass += ' noHeader') : htmlClass += 'noHeader';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="304"></td>
+        <td class="line-content"></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="305"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="306"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="307"></td>
+        <td class="line-content"> if(!(/(iPhone|iPad|iPod|Android|ios|SymbianOS|Mobile)/i.test(navigator.userAgent)))
+            {
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="308"></td>
+        <td class="line-content"> htmlClass ? (htmlClass += ' html-pc') : htmlClass += 'html-pc';</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="309"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="310"></td>
+        <td class="line-content"> html.className = htmlClass;</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="311"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="312"></td>
+        <td class="line-content"> // 详见知乎：https://www.zhihu.com/question/39516424</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="313"></td>
+        <td class="line-content"> if (window.captchaConfig.lang === '2052') {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="314"></td>
+        <td class="line-content"> html.setAttribute('lang', 'zh-cmn-Hans');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="315"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="316"></td>
+        <td class="line-content">})();</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="317"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="318"></td>
+        <td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="319"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank"
+                href="https://captcha.gtimg.com/public/2/tokenidiframe.web-token.0.0.2.js" rel="noreferrer noopener">https://captcha.gtimg.com/public/2/tokenidiframe.web-token.0.0.2.js</a>" <span
+                class="html-attribute-name">defer</span>&gt;</span><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="320"></td>
+        <td class="line-content"><span class="html-tag">&lt;style <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">inlineCaptchaStyle</span>" <span
+                class="html-attribute-name">type</span>="<span class="html-attribute-value">text/css</span>"&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="321"></td>
+        <td class="line-content"> /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
+            */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em
+            0}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline
+            dotted;-moz-text-decoration:underline dotted;text-decoration:underline
+            dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:.026667rem
+            dotted ButtonText}fieldset{padding:.35em .75em
+            .625em}legend{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-.053333rem}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}html{-ms-touch-action:manipulation;touch-action:manipulation}body{font-family:Helvtical,microsoft
+            yahei,PingFang
+            SC,sans-serif;background:#fff!important;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}[data-dpr="1"]
+            body{font-size:12px}[data-dpr="2"] body{font-size:24px}[data-dpr="3"]
+            body{font-size:36px}a{color:#007aff;text-decoration:none}.fl-left{float:left}.clearfix{clear:both}.table-wrap{display:table;height:100%}.table-cell{display:table-cell;vertical-align:middle}.right-to-left{display:block!important;text-align:right!important}.hide{display:none!important}a:focus,div:focus,input:focus,p:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;outline:none}@-webkit-keyframes
+            opacity2{0%{opacity:0}12%{opacity:1}to{opacity:1}}@keyframes
+            opacity2{0%{opacity:0}12%{opacity:1}to{opacity:1}}.vnish{-webkit-animation:2s opacity2 0s
+            infinite;animation:2s opacity2 0s infinite}@-webkit-keyframes
+            shake{10%,90%{-webkit-transform:translate3d(-.026667rem,0,0);transform:translate3d(-.026667rem,0,0)}20%,80%{-webkit-transform:translate3d(.08rem,0,0);transform:translate3d(.08rem,0,0)}30%,50%,70%{-webkit-transform:translate3d(-.053333rem,0,0);transform:translate3d(-.053333rem,0,0)}40%,60%{-webkit-transform:translate3d(.053333rem,0,0);transform:translate3d(.053333rem,0,0)}}@keyframes
+            shake{10%,90%{-webkit-transform:translate3d(-.026667rem,0,0);transform:translate3d(-.026667rem,0,0)}20%,80%{-webkit-transform:translate3d(.08rem,0,0);transform:translate3d(.08rem,0,0)}30%,50%,70%{-webkit-transform:translate3d(-.053333rem,0,0);transform:translate3d(-.053333rem,0,0)}40%,60%{-webkit-transform:translate3d(.053333rem,0,0);transform:translate3d(.053333rem,0,0)}}@-webkit-keyframes
+            dot0{to{-webkit-transform:scale(1);transform:scale(1);left:.32rem}}@keyframes
+            dot0{to{-webkit-transform:scale(1);transform:scale(1);left:.32rem}}@-webkit-keyframes
+            dot1{to{left:.746667rem}}@keyframes dot1{to{left:.746667rem}}@-webkit-keyframes
+            dot2{to{left:1.146667rem}}@keyframes dot2{to{left:1.146667rem}}@-webkit-keyframes
+            dot3{80%{left:1.2rem}to{-webkit-transform:scale(.2);transform:scale(.2);left:1.253333rem}}@keyframes
+            dot3{80%{left:1.2rem}to{-webkit-transform:scale(.2);transform:scale(.2);left:1.253333rem}}.tc-header-wrap{height:1.386667rem;padding:0
+            .4rem;border-bottom:1px solid #e6e6e6;overflow:hidden}.tc-header-wrap
+            .tc-header{height:1.386667rem;width:100%;padding:0
+            2.666667rem;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tc-header-wrap
+            .tc-header .left,.tc-header-wrap .tc-header .middle,.tc-header-wrap .tc-header
+            .right{float:left;height:100%;position:relative}.tc-header-wrap .tc-header
+            .middle{width:100%;text-align:center;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis}.tc-header-wrap
+            .tc-header .left{margin-left:-100%;left:-2.666667rem;width:2.666667rem}.tc-header-wrap .tc-header
+            .right{margin-left:-2.666667rem;right:-2.666667rem;width:2.666667rem}.tc-header-wrap .tc-header
+            .go-back-icon line{stroke:#1c85ff;stroke-linecap:round;stroke-width:2}.tc-header-wrap .tc-header
+            .backup-text{height:.533333rem;padding-left:.16rem;font-size:.426667rem;line-height:.533333rem;color:#007aff}.tc-header-wrap
+            .tc-header
+            .tc-header-title{color:#333;font-size:.533333rem;line-height:1.386667rem;font-weight:700;white-space:nowrap;word-break:normal}.tools{position:fixed;right:0;bottom:.533333rem;padding:0
+            .133333rem;z-index:10}.tools button{font-size:.426667rem;padding:.08rem .133333rem;border:.026667rem solid
+            #eee;-webkit-border-radius:.08rem;border-radius:.08rem;margin-bottom:.08rem}[data-orientation=landscape]
+            body .body-wrap{margin:0
+            auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}[data-orientation=landscape][data-dpr="1"].type-fullscreen
+            body .body-wrap{max-width:340px}[data-orientation=landscape][data-dpr="2"].type-fullscreen body
+            .body-wrap{max-width:680px}[data-orientation=landscape][data-dpr="3"].type-fullscreen body
+            .body-wrap{max-width:1020px}.body-wrap{width:100%;padding:0 .4rem;font-size:.48rem}.body-wrap,.body-wrap
+            .tc-title-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.body-wrap
+            .tc-title-wrap{height:1.546667rem;padding:.4rem 0}.body-wrap .tc-title-wrap
+            .tc-title{font-size:.586667rem;line-height:.746667rem;display:inline-block;margin:0}.body-wrap
+            .tc-title-wrap .middle-fontsize{line-height:.853333rem;font-size:.426667rem}.body-wrap .tc-title-wrap
+            .small-fontsize{line-height:.96rem;font-size:.373333rem}.body-wrap .tc-title-wrap
+            .small-fontsize.multi-line{line-height:.426667rem}.body-wrap
+            .tc-cover{position:absolute;top:0;left:0;width:100%;height:100%;z-index:4;background:hsla(0,0%,100%,.8)}.body-wrap
+            .tc-opera{-webkit-transform:translateZ(0);transform:translateZ(0)}.body-wrap
+            .tc-imgarea{width:100%;position:relative}.body-wrap .tc-loading{display:none}.body-wrap
+            .tc-loading-dots{position:relative;margin:.32rem
+            auto;width:1.706667rem;height:.64rem;top:1.866667rem;z-index:4}.body-wrap .tc-loading-dots
+            .tc-loading-dot{position:absolute;width:.266667rem;height:.266667rem;-webkit-border-radius:50%;border-radius:50%;background:#b3b3b3;top:50%}.body-wrap
+            .tc-loading-dots
+            .dot0{left:.24rem;-webkit-transform:scale(.2);-ms-transform:scale(.2);transform:scale(.2);-webkit-animation:dot0
+            linear .5s infinite;animation:dot0 linear .5s infinite}.body-wrap .tc-loading-dots
+            .dot1{left:.32rem;-webkit-animation:dot1 linear .5s infinite;animation:dot1 linear .5s infinite}.body-wrap
+            .tc-loading-dots .dot2{left:.72rem;-webkit-animation:dot2 linear .5s infinite;animation:dot2 linear .5s
+            infinite}.body-wrap .tc-loading-dots .dot3{left:1.12rem;-webkit-animation:dot3 linear .5s
+            infinite;animation:dot3 linear .5s infinite}.body-wrap .shake{-webkit-animation:shake .4s;animation:shake
+            .4s}.body-wrap .tc-bg-placeholder{width:100%;height:100%;visibility:hidden}.body-wrap
+            .tc-bg{position:absolute;top:0;left:0;width:100%;z-index:1}.body-wrap .tc-bg
+            .tc-bg-img{width:100%;height:auto;visibility:hidden;pointer-events:none}.body-wrap .tc-bg
+            .tc-bg-img[src]{visibility:visible}.body-wrap
+            .tc-jpp{position:absolute;width:100%;height:2rem;top:0;z-index:2}.body-wrap .tc-jpp
+            .tc-jpp-img{position:absolute;width:0;height:auto;left:.746667rem;cursor:pointer}.body-wrap
+            .tc-fail{visibility:hidden;background:#efefef}.body-wrap .tc-fail
+            .tc-fail-text{color:#999;font-size:.4rem;text-align:center;padding-top:1.76rem}.body-wrap .tc-fail
+            .tc-fail-btn{width:1.173333rem;height:.746667rem;margin:.266667rem
+            auto;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAuCAMAAACmok+8AAAARVBMVEUAAADAwMC/v7+/v7/AwMC/v7+8vLy/v7+/v7+/v7/AwMDAwMC/v7+/v7+/v7+/v7+/v7+/v7/AwMC3t7e/v7/AwMC/v7+h4VMXAAAAFnRSTlMA8UDArX8qJiDf1ce1WvekgDhMEAiBe32EagAAAOBJREFUSMft170SgkAMBOAE7kcEBETz/o8qjjds412RLXXbzHyzyWmBSA5qX3K7yJmr1aMhH4ZWphOQ1VrRLKE6vJ9IsmaCaHU2PJr7ICqN4bO9DwKkddvkR2zCPn4Et41+BLdNBGIr9nEjuG30I7htYpC+IB2DdAXpCQRF/AiKEAiK+BEUIRAUIRAUIZC5IMogWn70I4PY+EEWCrGIf58fse2NzCQy7AeykYgtB7ITCN5Z/QjeefQjeOeFRixK5BHbZuORofMjyEQgyB/5dUR5QyXwSJCkdJGEDwQvEbK8AKRe9ZCnWNz4AAAAAElFTkSuQmCC)
+            no-repeat;-webkit-background-size:cover;background-size:cover}.body-wrap
+            .tc-success{visibility:hidden}.body-wrap .tc-success
+            .tc-success-icon{width:1.706667rem;height:1.706667rem;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAzFBMVEUAAAAs0AAu1AAs0AAr0AAq1QAs0AAt0AAs0AAs0AAr0AAq0wAs0AAq0QAs0AAs0AAs0AAs0AAr0AAs0AAr0AAs0AAr0QAs0QAs0AApygAs0AAs0AAs0AAs0AAs0QAr0QAt0gAs0AAt0QAtzwAq0QArzwAs0AAqzQAs0QAs0AAs0AAs0AD////l+d/8/vty4FVG1iCI5W/X989G1h881BNy31My0gd34Vr5/vjt++qk65Gd6omO5naB42Za2jdL1ybR9cjA8bNp3kpZ2jY9PuX7AAAAK3RSTlMA/APuFwfUZln0OxLIVEbr49vZzsKxmW1MDvmsqIxpXiGejlA3NGgk1pyDVbbBQAAAArxJREFUaN7Nmody2kAURZ9QQRIyTTTRDDauV3GsFNzjlP//p8CQjAZLwLY3w/mAc9EWZvftIzGS8HIyitp2AAR2OxpNLsOETFHzex5K8Hp+Td/u9DsWdmJ1+o6OvTLoWjiA1R1UFPVutQ0h2lVX5ddXmxCmWZX+ijCGFHEot3BuIM1cYkmd21DAPhcd/TMociY0E7MIysQzgdltQIPGxSH/yRBaBPX9/lMLmgz9vX4Y4HTP+FgwgHWyy78IYIThYsf6bMAQjasyvxvDGLFLRW5gkHnJBMMohYl2bBjFdmibMQwz3vbXYZz61j+0B+N4FcqpgoFq7nebYKDpFj6A6xMqLbDQ+j8LAzAxoA1dMNH9t4kt6PL+/Ov5DwpYm+3chy7fH9M0vctQoE9rOtr+u3TN3Ts+0ln7a5a+f8NrcYzWx0nflD99QQF/FdAz5U8fUKC3CvCgw+fc/2WJAh5RYsr/6R4lJHTB6kdIPqsfU7pl9WNCY1Y/RhSx+hFRCzv4/fPx6Xmp6UeLbJTzsFnb3/T8sClAKcunNE9Q9yMglPMjTfMEdT+wOyBP0PFjzxDlCRr+YN8k5wnKfti7l2lWSFDwo0URhBIU/YhoDLEENT9GdAvBhIL/KwSYkA/RBBU/pnQB4QQFP0JKIJzwJu9HQuQJJ6Tyfk/g2JJp+NETOXhl6n74QkfHTNlv1cQOv5miHx3R43um5kdf+AKSKfktR/wKlSn40ZW5BL49rvealB8DqWvs/evLwxIytCrMF/FL9lICdzGEvZzDXZBiLqmN2IuC7GXNAnMYZM5cWvZcKuGKqTiesxjCCMGC94FiWGd+YvG5H4m4n7nYH+oOMouhTDwjAVz1x1L3OJ57VzhjSDN2SIa6Bym8+rE1Daxwp6JtD1P3OBs3+FtP8uaZa5RwnTfP6JOE0+32n6lo+89fOWa8/GcTqREAAAAASUVORK5CYII=);-webkit-background-size:cover;background-size:cover;margin:1.2rem
+            auto 0}.body-wrap .tc-success
+            .tc-success-text{color:#1bc300;text-align:center;margin-top:.426667rem}.body-wrap
+            .tc-error{visibility:hidden;color:#1c85ff}.body-wrap .tc-error
+            .tc-cover-icon{width:1.066667rem;height:1.066667rem;margin:1.866667rem auto 0;text-align:center}.body-wrap
+            .tc-error .tc-cover-icon line{stroke:#1c85ff;stroke-linecap:round;stroke-width:3}.body-wrap .tc-error
+            .tc-error-text{line-height:.533333rem;text-align:center;width:7.466667rem;margin:0
+            auto;word-break:break-word}.body-wrap .tc-error
+            .tc-token{font-size:.373333rem;padding-top:.32rem;font-size:.32rem;text-align:center}.body-wrap
+            .tc-drag{padding:.533333rem 0 .32rem;position:relative}.body-wrap .tc-drag
+            .tc-drag-track{width:100%;height:.4rem;-webkit-border-radius:.213333rem;border-radius:.213333rem;background:#e4e4e4}.body-wrap
+            .tc-drag
+            .tc-drag-button{width:1.813333rem;height:1.013333rem;position:absolute;top:.213333rem;left:.746667rem;cursor:pointer}.body-wrap
+            .tc-drag .tc-drag-button .tc-drag-thumb{background-color:#007aff;-webkit-box-shadow:rgba(0,122,255,.52) 0 0
+            .266667rem .026667rem;box-shadow:0 0 .266667rem .026667rem
+            rgba(0,122,255,.52);width:100%;height:100%;-webkit-border-radius:.533333rem;border-radius:.533333rem;line-height:1.013333rem;text-align:center}.body-wrap
+            .tc-drag .tc-drag-button .tc-drag-thumb
+            .tc-dragable-icon{display:inline-block;width:.533333rem;pointer-events:none}.body-wrap .tc-drag
+            .tc-drag-button .tc-drag-thumb-pc{display:none}.body-wrap
+            .tc-status{height:1.013333rem;position:relative;margin-top:.133333rem}.body-wrap .tc-status
+            .tc-status--right{float:right;width:1.866667rem;line-height:.693333rem;top:50%}.body-wrap .tc-status
+            .tc-note{visibility:hidden;position:absolute;padding-left:.213333rem;width:7.146667rem;height:100%;left:.8rem;top:0;text-align:left;font-size:.4rem;line-height:.426667rem;color:#999}.body-wrap
+            .tc-status .tc-note .tc-note-text{display:table-cell;vertical-align:middle}.body-wrap .tc-status
+            .tc-note.tc-note--error{color:#ec1313}.body-wrap .tc-status
+            .tc-note-deco{visibility:hidden;float:left;width:.04rem;height:.426667rem;margin:.106667rem
+            .186667rem;line-height:0;font-size:0;background:#d9d9d9}.body-wrap
+            .tc-action{position:relative;z-index:1}.body-wrap
+            .tc-action.tc-action--feedback{float:left;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAb1BMVEUAAADJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycmTXYqZAAAAJHRSTlMABRT5h03t6g7imNN4Hd1gNgmzM5/ErFaqWedGK8qnlSC6ba7ZDFtlAAABp0lEQVQ4y51VWXaDMAw0xizGZgtbsy/V/c9YuaDIwfTlNfMVi8EaDZIiXtHY0aRxnJrRNuJPlEqDB63KTZq8xrBCfJUhb8oAkfV1I6NINnU/n6cVLSpceEgiL5QMLlZEPq/dYahK1lmSCsO71nvZ8b7yUE/+5Zh8p8urxCaUy/6sw+e1R6vUo3th7hdfMsxLImw6O3M+EvMCkEpKXOWLprNzL/slP0hntSQv0Weqd+dqxyq7OzLpzgTfLWcRwxI6Amj59OFMyYe5BM0XfgPUy88TAEi+UmO/AGRkVMoPBQrqqEKsthEWoKe2ADg8XQKAEx16ACtGTpcrZelZjRW03mEUxl0bQB44EZoAYEjXimeoftKUOtHRmnerUO2JzxHq2CLeNPp+EytimLo1KIlinNosfjEs5iUeF0P2eLhzxLeHDGcYdtA3nD4hQ4PmA39CagpG17Ez3BTcZiH8NuPGZXemaWItXuOKK4+CQwkAfPRGQUj0/BISw+ESexrXkMjjygsgIPIC+OdKeb+kPll7riJapJ1bpB0t0v3GmBThai7kx8v+/d/HD0/0OMbq9glUAAAAAElFTkSuQmCC)
+            no-repeat;-webkit-background-size:cover;background-size:cover}.body-wrap
+            .tc-action.tc-action--refresh{float:right}.body-wrap .tc-action.tc-action--refresh
+            .tc-action-icon{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAflBMVEUAAACzs7Ozs7Ozs7O0tLSzs7O0tLS0tLSzs7Ozs7O0tLSzs7Ozs7Ozs7Ozs7Ozs7O0tLSzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0tLS1tbWvr6+0tLSzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0tLS0tLSzs7O0tLS0tLSysrKysrKzs7OviM2hAAAAKXRSTlMA7fqzBvMjA8+poGGTT+fAZeHKmoRxa1Y9GhMM2NPEjVxDM3geHKR8RX/2SbEAAAFsSURBVDjLjZTpcoIwEIATIOUIILccgojnvv8Ldneg1GKY7vdDQ+Zzr3ERf3Drp91LJdNDrhuxy1co4Y2DdozaPYAtqXbXIKuXKCCkXVRjcs2zJeoiPO1Fcx50bQX1GqJNPLpSEZWewyJ2B7oMNvVHJ/qxFp2Noed4AyWNxBbnTGZJZQyCoDa8mzAwWjCT0ZMmrxVGjovZ47nB6cV3YSZSs3jCc47flx2v+kmd4ijxHOx42Mwq0oNlTuz4sCKFG+8GvASZ+hUn/KzFLrdXmR8kJhVXtF3xD22dCKzDFhx6gIIlYv6EJeIUjyxRochNrVmix2yGP54SB+5wxGn+kzFIAXyWWABYXxyxsbghQ6wy4ohtjI2zkh9pyxpu8pMxZuT53fsW2TuvFIqQiK0J/ibopYePhXJDurMer3V9unGgKzV+dCSBUPa50roMBwsIbzJMKbRggywd8w4X8bvmVZ3Yw52uvhcrGWdBtensGxQBNRSqRdcZAAAAAElFTkSuQmCC)
+            no-repeat}.body-wrap .tc-action.tc-action--close{display:none}.body-wrap .tc-action.tc-action--close
+            .tc-action-icon{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAZlBMVEUAAACzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Nj9GtKAAAAIXRSTlMAnAYRmO3pq6A2h+Pf07OVXlgcT00zw4R5eGBM8afFxIgs0CidAAABfUlEQVQ4y5WV25aCMAxFQwNCEQS5eEMd+/8/OekEJm2hSz1PNt0QcppG8KWveZ0Zk9X5VUNUXbk3jvZlt4lhY1ZqcM0dd4a0K24alUJ9K3h9DDCV2vCzV06of9pYqjzuQKFqgEBDReGDCrgcYSXMfdLmPcOmzjb7fx20KCGikjbninBHeSGqB/mPS+IK4yBWc/KO3s31tlnjEk3Wcu0EdPwRP7xz50dnJZSSf524BDrfftliMlz0dO4Ams5JzXYWdlO4BFiKqtVwMaYA8EnhWBS+Anl/A49MQg5a619tXyvkHxJwMBpTA/UzQkAGHKA1gIIKXCUrDhRFPgbD1BBNTcWMIJJilF+M2OP6LKTYI4YLx61cKM9wOULhhJQjdJuiYU7IRJrCa7NMOCbv0mZz4078zffNxp24cSnw4VUApJSPN5fru+v6fgB8N1KErKaQmyrhvLF3GtyHhxOPvcggbUc7SMdWBmkoTM1K6ba/3csf9q8OotKX5e/josHTL8HeNiRMGCf8AAAAAElFTkSuQmCC)
+            no-repeat}.body-wrap .tc-action.tc-icon{width:.64rem;height:.64rem;cursor:pointer}.body-wrap
+            .tc-action.tc-icon
+            .tc-action-icon{width:100%;height:100%;-webkit-background-size:cover;background-size:cover;background-repeat:no-repeat}.type-fullscreen
+            .tc-popup-header-wrap{display:none}.type-fullscreen .tc-captcha-mobile .body-wrap .hide-feedback
+            .tc-note{width:8rem;left:0;padding-left:0}.type-fullscreen.noHeader .tc-header-wrap{display:none}.type-embed
+            .tc-captcha-mobile,.type-popup .tc-captcha-mobile{width:100%}.type-embed .tc-captcha-mobile
+            .body-wrap,.type-popup .tc-captcha-mobile .body-wrap{padding:0 .266667rem}.type-embed .tc-captcha-mobile
+            .tc-header-wrap,.type-popup .tc-captcha-mobile .tc-header-wrap{display:none}.type-embed .tc-captcha-mobile
+            .tc-popup-header-wrap,.type-popup .tc-captcha-mobile .tc-popup-header-wrap{padding:.373333rem 0 .053333rem
+            .266667rem;color:#1a79ff}.type-embed .tc-captcha-mobile .tc-popup-header-wrap .tc-popup-title,.type-popup
+            .tc-captcha-mobile .tc-popup-header-wrap
+            .tc-popup-title{color:#999;font-size:.373333rem;line-height:.373333rem}.type-embed .tc-captcha-mobile
+            .body-wrap .tc-title-wrap,.type-popup .tc-captcha-mobile .body-wrap
+            .tc-title-wrap{height:1.013333rem;padding:0}.type-embed .tc-captcha-mobile .body-wrap .tc-title-wrap
+            .tc-title,.type-popup .tc-captcha-mobile .body-wrap .tc-title-wrap .tc-title{line-height:.96rem}.type-embed
+            .tc-captcha-mobile .body-wrap .tc-title-wrap .middle-fontsize,.type-popup .tc-captcha-mobile .body-wrap
+            .tc-title-wrap .middle-fontsize{line-height:.853333rem;font-size:.426667rem}.type-embed .tc-captcha-mobile
+            .body-wrap .tc-title-wrap .small-fontsize,.type-popup .tc-captcha-mobile .body-wrap .tc-title-wrap
+            .small-fontsize{line-height:.96rem;font-size:.373333rem}.type-embed .tc-captcha-mobile .body-wrap
+            .tc-title-wrap .small-fontsize.multi-line,.type-popup .tc-captcha-mobile .body-wrap .tc-title-wrap
+            .small-fontsize.multi-line{line-height:.426667rem}.type-embed .tc-captcha-mobile .body-wrap
+            .tc-note,.type-popup .tc-captcha-mobile .body-wrap .tc-note{width:5.973333rem}.type-embed .tc-captcha-mobile
+            .body-wrap .hide-feedback .tc-note,.type-popup .tc-captcha-mobile .body-wrap .hide-feedback
+            .tc-note{width:6.986667rem;left:0;padding-left:0}.type-embed .tc-captcha-mobile .body-wrap
+            .tc-action--refresh,.type-popup .tc-captcha-mobile .body-wrap .tc-action--refresh{float:left}.type-embed
+            .tc-captcha-mobile .body-wrap .tc-action--close,.type-popup .tc-captcha-mobile .body-wrap
+            .tc-action--close{display:block;float:right}.type-fullscreen .loading .tc-title-wrap{padding:.426667rem
+            0!important}.type-embed .loading .tc-title-wrap,.type-popup .loading
+            .tc-title-wrap{padding-top:.133333rem!important}.show-site-underline{padding-bottom:.053333rem;border-bottom:.026667rem
+            solid #999}.loading .tc-title-wrap
+            .tc-title{display:block;width:50%;line-height:.693333rem!important;font-size:.32rem!important}.loading
+            .tc-header-title,.loading .tc-popup-title,.loading
+            .tc-title{color:#efefef!important;background:#efefef!important}.loading .tc-drag .tc-drag-track,.loading
+            .tc-imgarea{background:#efefef!important}.loading .tc-header-title{font-size:.48rem!important}.loading
+            .fl-left,.loading .tc-cover,.loading .tc-drag-button{display:none!important}.loading
+            .tc-action-icon{background:#efefef!important}.loading
+            .tc-action--feedback{display:none!important}.tc-captcha-mobile .show-loading
+            .tc-loading{display:block}.tc-captcha-mobile .show-company-note .tc-note-deco,.tc-captcha-mobile
+            .show-error-tip .tc-note-deco,.tc-captcha-mobile .show-error .tc-error,.tc-captcha-mobile .show-fail
+            .tc-fail,.tc-captcha-mobile .show-success .tc-success{visibility:visible}.tc-captcha-mobile .body-wrap
+            .hide-feedback .feedback-group{display:none}.tc-captcha-mobile .show-company-note
+            .tcaptcha-note--company,.tc-captcha-mobile .show-error-tip
+            .tc-note--error{visibility:visible}.tc-captcha-mobile .show-company-note.show-error-tip
+            .tcaptcha-note--company{visibility:hidden}.html-pc .tc-little-title{display:none!important}.html-pc
+            .tc-opera{padding:.266667rem 0
+            .106667rem!important}.tcaptcha-embed{display:none;float:right;font-size:.32rem;line-height:.506667rem}.type-embed
+            .tc-captcha-mobile .tc-popup-header-wrap{display:none}.type-embed .tc-captcha-mobile .body-wrap
+            .tc-title-wrap{height:.8rem;padding:.16rem 0 0}.type-embed .tc-captcha-mobile .body-wrap .tc-title-wrap
+            .tc-title{float:left}.type-embed .tc-captcha-mobile .body-wrap .tc-title-wrap
+            .middle-fontsize{line-height:1;font-size:.426667rem;margin:0}.type-embed .tc-captcha-mobile .body-wrap
+            .tc-status{display:none}.type-embed .tcaptcha-embed{display:block}.type-embed .tcaptcha-embed
+            .tcaptcha-embed-contrl{float:right;color:#b3b3b3;cursor:pointer;margin-left:.266667rem;font-size:.373333rem}.type-embed
+            .body-wrap .tc-opera{padding:0!important}.body-wrap .tc-drag-button,.body-wrap
+            .tc-jpp-img{-webkit-transform:translate(-1.6rem);-ms-transform:translate(-1.6rem);transform:translate(-1.6rem);-webkit-transition:opacity
+            .2s,-webkit-transform .2s;transition:opacity .2s,-webkit-transform .2s;-o-transition:transform .2s,opacity
+            .2s;transition:transform .2s,opacity .2s;transition:transform .2s,opacity .2s,-webkit-transform
+            .2s;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;-webkit-transition-delay:.3s;-o-transition-delay:.3s;transition-delay:.3s;opacity:0}.body-wrap.body-wrap-show
+            .tc-drag-button,.body-wrap.body-wrap-show
+            .tc-jpp-img{-webkit-transform:translate(0);-ms-transform:translate(0);transform:translate(0);opacity:1}
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="322"></td>
+        <td class="line-content"><span class="html-tag">&lt;/style&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="323"></td>
+        <td class="line-content"><span class="html-tag">&lt;/head&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="324"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="325"></td>
+        <td class="line-content"><span class="html-tag">&lt;body <span class="html-attribute-name">ontouchstart</span>&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="326"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-captcha-mobile tc-slide loading</span>" <span
+                class="html-attribute-name">id</span>="<span class="html-attribute-value">tcWrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="327"></td>
+        <td class="line-content"><span class="html-comment">&lt;!--全屏头部--&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="328"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-header-wrap</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcWrapHeader</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="329"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-header</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="330"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">middle</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="331"></td>
+        <td class="line-content"><span class="html-tag">&lt;span <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-header-title tc-little-title</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">fsHeaderTitle</span>"&gt;</span>安全验证<span
+                class="html-tag">&lt;/span&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="332"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="333"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">left</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="334"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">go-back table-wrap fl-left go-back-area</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="335"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="336"></td>
+        <td class="line-content"><span class="html-tag">&lt;svg <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">iconGoback</span>" <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">go-back-icon</span>" <span class="html-attribute-name">width</span>="<span
+                class="html-attribute-value">10</span>" <span class="html-attribute-name">height</span>="<span
+                class="html-attribute-value">20</span>" <span class="html-attribute-name">version</span>="<span
+                class="html-attribute-value">1.1</span>" <span class="html-attribute-name">xmlns</span>="<span
+                class="html-attribute-value">http://www.w3.org/2000/svg</span>"</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="337"></td>
+        <td class="line-content"><span class="html-attribute-name">viewBox</span>="<span class="html-attribute-value">0 0 10 20</span>"&gt;
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="338"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">7</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">4</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">1</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">11</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="339"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">1</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">11</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">7</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">18</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="340"></td>
+        <td class="line-content"><span class="html-tag">&lt;/svg&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="341"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="342"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="343"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-wrap fl-left go-back-area</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">btnBack</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="344"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="345"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">backup-text</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">txtBack</span>"&gt;</span>返回<span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="346"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="347"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="348"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="349"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">right</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="350"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="351"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="352"></td>
+        <td class="line-content"><span class="html-comment">&lt;!--弹框头部--&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="353"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-popup-header-wrap</span>" <span
+                class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">popCtWrapHeader</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="354"></td>
+        <td class="line-content"><span class="html-tag">&lt;span <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-popup-title tc-little-title</span>" <span
+                class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">pHeaderTitle</span>"&gt;</span>安全验证<span
+                class="html-tag">&lt;/span&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="355"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="356"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="357"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">body-wrap</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">bodyWrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="358"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-title-wrap</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">guideWrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="359"></td>
+        <td class="line-content"><span class="html-tag">&lt;p <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-title</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">guideText</span>"&gt;</span>拖动下方滑块完成拼图<span
+                class="html-tag">&lt;/p&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="360"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-embed</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="361"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-embed-contrl</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="362"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-embed-refresh show-reload</span>" <span
+                class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">e_reload</span>"&gt;</span>刷新<span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="363"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="364"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-embed-contrl</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="365"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-embed-feedback show-FB</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">e_showFB</span>"&gt;</span>反馈<span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="366"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="367"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="368"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="369"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-opera</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcOperation</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="370"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-imgarea drag</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="371"></td>
+        <td class="line-content"><span class="html-comment">&lt;!--占位图--&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="372"></td>
+        <td class="line-content"><span class="html-tag">&lt;div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="373"></td>
+        <td class="line-content"><span class="html-tag">&lt;img <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-bg-placeholder</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank"
+                href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAnCAYAAAC2c+5GAAAAZ0lEQVRoge3QMRHAMBDAsCT8YT6PZutgAu0gIfB5z8yzeJ2vA/7GkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkLgMcgP5gqyNnwAAAABJRU5ErkJggg=="
+                rel="noreferrer noopener">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAnCAYAAAC2c+5GAAAAZ0lEQVRoge3QMRHAMBDAsCT8YT6PZutgAu0gIfB5z8yzeJ2vA/7GkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkDAkDAlDwpAwJAwJQ8KQMCQMCUPCkLgMcgP5gqyNnwAAAABJRU5ErkJggg==</a>"&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="374"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="375"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="376"></td>
+        <td class="line-content"><span class="html-comment">&lt;!-- 挖掉了拼图块的背景 --&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="377"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-bg</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">slideBgWrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="378"></td>
+        <td class="line-content"><span class="html-tag">&lt;img <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-bg-img</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">slideBg</span>" <span class="html-attribute-name">draggable</span>="<span
+                class="html-attribute-value">false</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="379"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="380"></td>
+        <td class="line-content"><span class="html-comment">&lt;!-- 拼图块(jpp = jigsaw puzzle piece) --&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="381"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-jpp</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">slideBlockWrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="382"></td>
+        <td class="line-content"><span class="html-tag">&lt;img <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-jpp-img</span>" <span class="html-attribute-name">alt</span>="" <span
+                class="html-attribute-name">id</span>="<span class="html-attribute-value">slideBlock</span>" <span
+                class="html-attribute-name">draggable</span>="<span class="html-attribute-value">false</span>" <span
+                class="html-attribute-name">ondragstart</span>="<span class="html-attribute-value">return false;</span>"&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="383"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="384"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="385"></td>
+        <td class="line-content"><span class="html-comment">&lt;!--正在加载--&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="386"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-cover tc-loading</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="387"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-loading-dots</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="388"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-loading-dot dot0</span>"&gt;</span><span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="389"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-loading-dot dot1</span>"&gt;</span><span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="390"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-loading-dot dot2</span>"&gt;</span><span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="391"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-loading-dot dot3</span>"&gt;</span><span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="392"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="393"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="394"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="395"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-cover tc-fail</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="396"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-fail-text</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">statusFail</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="397"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-fail-btn</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">coverReload</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="398"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="399"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-cover tc-success</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="400"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-success-icon</span>"&gt;</span><span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="401"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-success-text</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">statusSuccess</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="402"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="403"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-cover tc-error</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="404"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-cover-icon</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="405"></td>
+        <td class="line-content"><span class="html-tag">&lt;svg <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">errorIcon</span>" <span class="html-attribute-name">width</span>="<span
+                class="html-attribute-value">37</span>" <span class="html-attribute-name">height</span>="<span
+                class="html-attribute-value">25</span>" <span class="html-attribute-name">version</span>="<span
+                class="html-attribute-value">1.1</span>" <span class="html-attribute-name">xmlns</span>="<span
+                class="html-attribute-value">http://www.w3.org/2000/svg</span>"</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="406"></td>
+        <td class="line-content"><span class="html-attribute-name">viewBox</span>="<span class="html-attribute-value">0 0 37 25</span>"&gt;
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="407"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">3</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">3</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">10</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">9</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="408"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">10</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">9</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">3</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">15</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="409"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">34</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">3</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">27</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">9</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="410"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">27</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">9</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">34</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">15</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="411"></td>
+        <td class="line-content"><span class="html-tag">&lt;line <span class="html-attribute-name">x1</span>="<span
+                class="html-attribute-value">12</span>" <span class="html-attribute-name">y1</span>="<span
+                class="html-attribute-value">23</span>" <span class="html-attribute-name">x2</span>="<span
+                class="html-attribute-value">25</span>" <span class="html-attribute-name">y2</span>="<span
+                class="html-attribute-value">23</span>"&gt;</span><span class="html-tag">&lt;/line&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="412"></td>
+        <td class="line-content"><span class="html-tag">&lt;/svg&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="413"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="414"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-error-text</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">statusError</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="415"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="416"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="417"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-drag</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">slide</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="418"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-drag-track</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="419"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-drag-button tc-drag-button-pc</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcaptcha_drag_button</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="420"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-drag-thumb</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcaptcha_drag_thumb</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="421"></td>
+        <td class="line-content"><span class="html-tag">&lt;img <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-dragable-icon</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank"
+                href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAcAgMAAABuexVFAAAACVBMVEUAAADCwsL9/f1P0DqbAAAAAXRSTlMAQObYZgAAAB1JREFUGNNjCGVgYGANABKhyMwoEHMBkIgaZWIwAdyJJQnaJRg5AAAAAElFTkSuQmCC"
+                rel="noreferrer noopener">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAcAgMAAABuexVFAAAACVBMVEUAAADCwsL9/f1P0DqbAAAAAXRSTlMAQObYZgAAAB1JREFUGNNjCGVgYGANABKhyMwoEHMBkIgaZWIwAdyJJQnaJRg5AAAAAElFTkSuQmCC</a>"</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="422"></td>
+        <td class="line-content"><span class="html-attribute-name">alt</span>="<span class="html-attribute-value">tag-bar</span>"
+            <span class="html-attribute-name">draggable</span>="<span class="html-attribute-value">false</span>"&gt;
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="423"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="424"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-drag-thumb-pc</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="425"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-drag-thumb-bg t_iconfont</span>" <span
+                class="html-attribute-name">id</span>="<span class="html-attribute-value">t_iconfont</span>"&gt;</span>&amp;#xe900;<span
+                class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="426"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-drag-thumb-deco deco1</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="427"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-drag-thumb-deco deco2</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="428"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tcaptcha-drag-thumb-deco deco3</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="429"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="430"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="431"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="432"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="433"></td>
+        <td class="line-content"><span class="html-comment">&lt;!-- 状态区 --&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="434"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-status</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcStatus</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="435"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">feedback-group table-wrap fl-left</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="436"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="437"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-action tc-icon tc-action--feedback show-FB</span>" <span
+                class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">feedback</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="438"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-note-deco</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="439"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="440"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="441"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="442"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-note tcaptcha-note--company table-wrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="443"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcaptcha_site</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="444"></td>
+        <td class="line-content"><span class="html-tag">&lt;span <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcaptcha_site_click</span>" <span class="html-attribute-name">style</span>='<span
+                class="html-attribute-value">color:#999</span>'&gt;</span>由<span class="html-tag">&lt;span <span
+                class="html-attribute-name">style</span>='<span
+                class="html-attribute-value">color:#666</span>'&gt;</span>腾讯防水墙<span
+                class="html-tag">&lt;/span&gt;</span>提供安全保护<span class="html-tag">&lt;/span&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="445"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="446"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="447"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="448"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-note tc-note--error table-wrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="449"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>" <span class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">tcaptcha_note</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="450"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="451"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="452"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-status--right table-wrap</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="453"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">table-cell</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="454"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-action tc-icon tc-action--refresh show-reload</span>" <span
+                class="html-attribute-name">id</span>="<span class="html-attribute-value">reload</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="455"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-action-icon</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="456"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="457"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-action tc-icon tc-action--close</span>" <span
+                class="html-attribute-name">id</span>="<span
+                class="html-attribute-value">captcha_close</span>"&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="458"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">tc-action-icon</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="459"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="460"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="461"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="462"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="463"></td>
+        <td class="line-content"><span class="html-tag">&lt;div <span class="html-attribute-name">class</span>="<span
+                class="html-attribute-value">clearfix</span>"&gt;</span><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="464"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="465"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="466"></td>
+        <td class="line-content"><span class="html-tag">&lt;/div&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="467"></td>
+        <td class="line-content"><span class="html-tag">&lt;script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="468"></td>
+        <td class="line-content"> timing.log('domLoaded');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="469"></td>
+        <td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="470"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="471"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank" href="https://dj.captcha.qq.com/tdc.js"
+                rel="noreferrer noopener">https://dj.captcha.qq.com/tdc.js</a>"&gt;</span><span class="html-tag">&lt;/script&gt;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="472"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank"
+                href="https://captcha.gtimg.com/2/dc_vx.js" rel="noreferrer noopener">https://captcha.gtimg.com/2/dc_vx.js</a>"&gt;</span><span
+                class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="473"></td>
+        <td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">type</span>="<span
+                class="html-attribute-value">text/javascript</span>" <span class="html-attribute-name">src</span>="<a
+                class="html-attribute-value html-resource-link" target="_blank"
+                href="https://captcha.gtimg.com/2/tcaptcha-slide.35d022af.js" rel="noreferrer noopener">https://captcha.gtimg.com/2/tcaptcha-slide.35d022af.js</a>" <span
+                class="html-attribute-name">crossorigin</span>="<span class="html-attribute-value">anonymous</span>"&gt;</span><span
+                class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="474"></td>
+        <td class="line-content"><span class="html-tag">&lt;/body&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="475"></td>
+        <td class="line-content"><span class="html-tag">&lt;script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="476"></td>
+        <td class="line-content"> if (!window.TCaptchaLoaded) {</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="477"></td>
+        <td class="line-content"> new Image().src = "https://aq.qq.com/cn2/manage/mbtoken/cap_monitor?type=15&amp;appid=2046103261";
+            // 上报到aq monitor
+        </td>
+    </tr>
+    <tr>
+        <td class="line-number" value="478"></td>
+        <td class="line-content"> var head = document.head || document.getElementsByTagName('head')[0];</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="479"></td>
+        <td class="line-content"> var script = document.createElement('script');</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="480"></td>
+        <td class="line-content"> script.src = "/tcaptcha-slide.35d022af.js";</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="481"></td>
+        <td class="line-content"> head.appendChild(script);</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="482"></td>
+        <td class="line-content"> }</td>
+    </tr>
+    <tr>
+        <td class="line-number" value="483"></td>
+        <td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="484"></td>
+        <td class="line-content"><br></td>
+    </tr>
+    <tr>
+        <td class="line-number" value="485"></td>
+        <td class="line-content"><span class="html-tag">&lt;/html&gt;</span><span class="html-end-of-file"></span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>复选框美化下载</title>
+<link rel="stylesheet" href="css/jquery.richUI.min.css" />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.richUI.min.js"></script>
+<script type="text/javascript" src="js/jquery.browser.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//单选
+		/*
+		* selected: 默认选中值
+		*/
+		$("input[name='sex']").richradio();
+		$("input[name='sex2']").richradio();
+		$("input[name='sex3']").richradio({selected:"2"});
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+
+
+			<span>单选（普通）：</span>
+			<input name="sex" value="1" type="radio" lab="男" />
+			<input name="sex" value="2" type="radio" lab="女" />
+			<br />
+			<br />
+			<span>单选（默认选中1）：</span>
+			<input name="sex2" value="1" type="radio" lab="男" />
+			<input name="sex2" value="2" type="radio" lab="女" />
+			<input name="sex2" value="3" type="radio" checked="checked" lab="未知" />
+			<br />
+			<br />
+			<span>单选（默认选中2）：</span>
+			<input name="sex3" value="1" type="radio" lab="男" />
+			<input name="sex3" value="2" type="radio" lab="女" />
+			<input name="sex3" value="3" type="radio" lab="未知" />
+
+
+</body>
+</html>

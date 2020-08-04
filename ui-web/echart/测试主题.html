@@ -1,0 +1,63 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+</head>
+<body> 
+<div id="main" style="width: 800px; height: 500px;"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.min.js"></script>
+    <script type="text/javascript" src="js/macarons.js"></script>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById("main"),"macarons");
+        myChart.setOption({
+	    xAxis: {
+	        type: 'value'
+	    },
+	    yAxis: {
+	        type: 'value'
+	    },
+	    dataZoom: [// 这个dataZoom组件，若未设置xAxisIndex或yAxisIndex，则默认控制x轴。
+	        {
+	            type: 'slider',//这个 dataZoom 组件是 slider 型 dataZoom 组件（只能拖动 dataZoom 组件导致窗口变化）
+	            xAxisIndex: 0, //控制x轴
+	            start: 10, 	// 左边在 10% 的位置
+	            end: 60 	// 右边在 60% 的位置
+	        },
+	        {
+	            type: 'inside',//这个 dataZoom 组件是 inside 型 dataZoom 组件（能在坐标系内进行拖动，以及用滚轮（或移动触屏上的两指滑动）进行缩放）
+	            xAxisIndex: 0,//控制x轴
+	            start: 10,
+	            end: 60
+	        },
+	        {
+	            type: 'slider',//slider 型 dataZoom 组件
+	            yAxisIndex: 0,//控制y轴
+	            start: 30,
+	            end: 80
+	        },
+	        {
+	            type: 'inside',// inside 型 dataZoom 组件
+	            yAxisIndex: 0,//控制y轴
+	            start: 30,
+	            end: 80
+	        }
+	    ],
+	    series: [
+	        {
+	            name: 'scatter',
+	            type: 'scatter',// 这是个『散点图』
+	            itemStyle: {
+	                normal: {
+	                    opacity: 0.8
+	                }
+	            },
+	            symbolSize: function (val) {
+	                return val[2] * 40;
+	            },
+	            data: [["14.616","7.241","0.896"],["3.958","5.701","0.955"],["2.768","8.971","0.669"],["9.051","9.710","0.171"],["14.046","4.182","0.536"],["12.295","1.429","0.962"],["4.417","8.167","0.113"],["0.492","4.771","0.785"],["7.632","2.605","0.645"],["14.242","5.042","0.368"]]
+	        }
+	    ]
+	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<style>
+			a{
+				text-decoration: none;
+				color: #333;
+			}
+			.head{
+				background-color: cornflowerblue;
+			}
+			.content
+			{
+				background-color: coral;
+			/*	height: 1000px;  */
+			}
+			.detail{
+				margin-top:20px ;
+				padding-bottom: 400px;
+			}
+			.foot{
+				background-color: blueviolet;
+			}
+			.timeline{
+			    position: fixed;
+   				margin-top: 10%;
+    			top: 0px;
+    			left: 72%;
+    			/* margin-top: 3%; */
+    			list-style-type: none;
+			}
+			.timeline li{
+				margin-top: 50px;
+			}
+			.timeline li.active a{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			头部
+		</div>
+	<div class="content">
+			<div class="detail">
+				<a id="a1">第一段落</a>
+			</div>
+			<div class="detail">
+				<a id="a2">第2段落</a>
+			</div>
+			<div class="detail">
+		
+				<a id="a3">第3段落</a>
+			</div>
+			<div class="detail">
+				<a id="a4">第4段落</a>
+			</div>
+			<div class="detail">
+				<a id="a5">第5段落</a>
+			</div>
+			<div class="detail">
+				<a id="a6">第6段落</a>
+			</div>
+			<div class="detail">
+				<a id="a7">第7段落</a>
+			</div>
+			<div class="detail">
+				<a id="a8">第8段落</a>
+			</div>
+			<div class="detail">
+				<a id="a9">第9段落</a>
+			</div>
+			<div class="detail">
+				<a id="a0">第0段落</a>
+			</div>
+			<div class="detail">
+				<a id="a10">第0段落</a>
+			</div>
+			<div class="detail">
+				<a id="a11">第11段落</a>
+			</div>
+			<div class="detail">
+				<a id="a12">第12段落</a>
+			</div>
+			<div class="detail">
+				<a id="a13">第13段落</a>
+			</div>
+			<div class="detail">
+				<a id="a14">第14段落</a>
+			</div>
+		</div>
+		<div class="foot">
+			脚部
+		</div>
+		<ul class="timeline">
+			<li class="active"><a href="#a1">第一段落</a></li>
+			<li><a href="#a2">第2段落</a></li>
+			<li><a href="#a3">第3段落</a></li>
+			<li><a href="#a4">第12段落</a></li>
+			<li><a href="#a5">第5段落</a></li>
+			<li><a href="#a6">第6段落</a></li>
+			<li><a href="#a7">第7段落</a></li>
+			<li><a href="#a8">第8段落</a></li>
+			<li><a href="#a9">第10段落</a></li>
+			<li><a href="#a0">第9段落</a></li>
+			<li><a href="#a10">第0段落</a></li>
+			<li><a href="#a11">第11段落</a></li>
+			<li><a href="#a12">第12段落</a></li>
+			<li><a href="#a13">第13段落</a></li>
+			<li><a href="#a14">第14段落</a></li>
+		</ul>
+	</body>
+	<script>
+		$(function(){
+			//点击效果
+			$(".timeline li").click(function(){
+				$this = $(this);
+				$(".timeline li").each(function(){
+					$that = $(this);
+					$that.removeClass("active");
+				});
+				$this.addClass("active");
+			});
+			var con = [];
+			var timeli = [];
+			//需要遍历的对象放到集合中 内容对象
+			$(".content .detail").each(function(){
+				con.push($(this));
+			});
+			//时间线对象
+			$(".timeline li").each(function(){
+				timeli.push($(this));
+			});
+			$(window).scroll(function () {
+				for (var i=con.length-1 ;i>=0;i--) {
+					if(con[0].offset().top+$(window).scrollTop()>=con[i].offset().top){
+						if(i>0){
+							var index = i;
+							$(".timeline li").each(function(){
+								$that = $(this);
+								$that.removeClass("active");
+							});
+							timeli[index].addClass("active");
+							var per =0;
+							per = $(window).scrollTop()/$(document).height()*100;
+							$(".timeline").css("margin-top","-"+per+"%");
+							if(i==1){
+								$(".timeline").css("margin-top","10%");
+							}
+							return false;
+						}
+					}
+				}
+        		//$(window).scrollTop()这个方法是当前滚动条滚动的距离
+        		//$(window).height()获取当前窗体的高度
+        		//$(document).height()获取当前文档的高度
+    		});
+		});
+		
+	</script>
+</html>

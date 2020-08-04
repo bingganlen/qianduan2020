@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>回到顶部</title>
+	<style type="text/css">
+		body{margin: 0;padding:0;}
+		/* .top_head a{
+			display: block;
+			height: 26px;
+			text-align: center;
+			background:#3e3f40;  background:#3e3f40 url(../images/top.png) no-repeat 10px;
+			color: #fff;
+			line-height: 26px;
+			clear: both;
+		} */
+
+
+		.fixed-btn {
+		    position: fixed;
+		    right: 1%;
+		    bottom: 5%;
+		    width: 40px;
+		    border: 1px solid #eee;
+		    background-color: white;
+		    font-size: 24px;
+		    z-index: 1040;
+		    -webkit-backface-visibility: hidden;
+		}
+		.fixed-btn .go-top {
+		    border-bottom: 1px solid #eee;
+		}
+		.fixed-btn a {
+		    display: inline-block;
+		    width: 40px;
+		    height: 40px;
+		    text-align: center;
+		}
+		a {
+		    color: #64854c;
+		    text-decoration: none;
+		    -o-transition-duration: .2s;
+		    -o-transition-property: opacity;
+		    -webkit-transition-duration: .2s;
+		    -webkit-transition-property: opacity;
+		}
+		.fixed-btn a i {
+		    vertical-align: middle;
+		}
+		.fa {
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		        font-size: 14px;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+		.fixed-btn .writer {
+		    background-color: #96b97d;
+		    font-size: 18px;
+		    color: white;
+		}
+		.fixed-btn .modal.fade.in {
+		    top: auto;
+		    bottom: 0;
+		    height: 188px;
+		    width: 128px;
+		    padding: 10px;
+		    margin: 0;
+		    right: 65px;
+		    left: auto;
+		    text-align: center;
+		}
+		.modal {
+		    background-color: white;
+		    border: 1px solid #d9d9d9;
+		    font-size: 14px;
+		    font-weight: normal;
+		    line-height: 20px;
+		    position: fixed;
+		    top: 10%;
+		    left: 50%;
+		    z-index: 1050;
+		    width: 560px;
+		    margin-left: -280px;
+		    border: 1px solid rgba(0,0,0,0.3);
+		    -webkit-border-radius: 6px;
+		    -moz-border-radius: 6px;
+		    border-radius: 6px;
+		    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+		    -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+		    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+		    -webkit-background-clip: padding-box;
+		    -moz-background-clip: padding-box;
+		    background-clip: padding-box;
+		    outline: 0;
+		}
+		.hide {
+		    display: none;
+		}
+
+		.fade.in {
+		    opacity: 1;
+		}
+		.panel-modal .panel-body {
+		    overflow-y: auto;
+		    min-height: 90px;
+		    max-width: 150px;
+		}
+		img {
+		    height: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div class="top_head" id="totop">
+		<a href="#hoend">回到顶部</a>
+	</div> -->
+
+	<div class="fixed-btn">
+	    <a class="go-top" href="javascript:void(0)" title="返回顶部"> <i class="fa fa-angle-up"></i></a>
+	    <a class="qrcode"  href="javascript:void(0)" title="关注我们"><i class="fa fa-qrcode"></i></a>
+	    <a class="writer" style="display:none" href="javascript:void(0)"   title="标记/收藏"><i class="fa fa-star" aria-hidden="true"></i></a>
+	    <!-- qrcode modal -->
+	    <div id="bottom-qrcode" class="modal panel-modal hide fade in">
+	      <h4>微信关注</h4>
+	      <div class="panel-body"><img alt="微信关注" width="128" height="128" src="/wp-content/themes/runoob/assets/images/qrcode.png"></div> 
+	    </div>
+	</div>
+
+
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//scrollTop设置元素中滚动条的垂直偏移
+		/*$(window).scroll(function(){
+			if ($(window).scrollTop() > 100) {
+					$("#totop").fadeIn();
+			}else{
+					$("#totop").fadeOut();
+			}
+		});
+		//返回按钮事件
+		$("#totop").click(function(){
+			$("body,html").animate({
+				scrollTop:0
+			},500);
+		});*/
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html> 
+<head> 
+	<meta charset="utf-8">
+<title>把input file型別的value清空--Test by 程式設計浪子</title> 
+<script> 
+function clearMethod1() 
+{ 
+var objFile=document.getElementsByTagName('input')[0]; 
+alert("\""+objFile.value+"\"已清除"); 
+objFile.outerHTML=objFile.outerHTML.replace(/(value=\").+\"/i,"$1\""); 
+} 
+function clearMethod2() 
+{ 
+var objFile=document.getElementsByTagName('input')[0]; 
+alert("\""+objFile.value+"\"已清除"); 
+var WshShell=new ActiveXObject("WScript.Shell"); 
+objFile.focus(); 
+objFile.createTextRange().select(); 
+WshShell.SendKeys("{del}"); 
+} 
+function clearMethod3() 
+{ 
+var objFile=document.getElementsByTagName('input')[1]; 
+alert("\""+objFile.value+"\"已清除"); 
+objFile.value=""; 
+} 
+</script> 
+<head> 
+<body> 
+<input type="file" value="C:\abc.txt"/><br><br> 
+<button onclick="clearMethod1();">清除大法1：李代桃僵</button><br> 
+<button onclick="clearMethod2();">清除大法2：暗渡陳倉</button> 
+<br><br><br><br><br><br><br> 
+<input type="text" value=""/><input type="file" value="C:\abc.txt" onchange="this.previousSibling.value=this.value;" style="width:20"/><br><br> 
+<button onclick="clearMethod3();">清除大法3：聲東擊西</button> 
+</body> 
+<html> 

@@ -1,0 +1,186 @@
+/* css style ,made by zgy 2018.06 */
+/*全局设置*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;
+    padding:0;
+	font-family: "Microsoft YaHei" ! important;
+	font-size:13px;
+}
+input,button,select,option,textarea{outline: none;} /*去掉聚焦时的蓝框*/
+div,ul,li{ list-style-type:none;}
+
+input,textarea {-webkit-appearance:none; /*去除input默认样式，尤其是iphone/pad*/}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {  /* placeholder的颜色 */ color: #cacaca;}
+input:-moz-placeholder, textarea:-moz-placeholder {color:#cacaca;}
+input::-moz-placeholder, textarea::-moz-placeholder {color:#cacaca;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#cacaca;}
+		
+/*输入框****************************************************************************/
+.yyui_input{box-sizing:border-box;
+	border:1px solid #E6E6E6; padding-left:10px; height:38px;   font-size:13px; 
+	-webkit-border-radius: 2px;  border-radius:2px; outline:none;
+}
+.yyui_input_sm{box-sizing:border-box;
+	border:1px solid #E6E6E6; padding-left:8px; height:30px;   font-size:13px;
+	-webkit-border-radius: 2px;  border-radius:2px; outline:none;
+}
+
+/*日期框****************************************************************************/
+.yyui_date , .yyui_datetime {box-sizing:border-box;
+	border:1px solid #E6E6E6; padding-left:10px; height:38px;   font-size:13px; 
+	-webkit-border-radius: 2px;  border-radius:2px; outline:none;
+	background: url("http://yuyun365.com/images/riqi.png") no-repeat scroll right center transparent; background-color:#FFFFFF;
+}
+
+
+/*文本域****************************************************************************/
+.yyui_textarea{box-sizing:border-box; resize:none; 
+	border:1px solid #E6E6E6; padding:6px 10px; line-height:1.5; font-size:13px;
+	-webkit-border-radius: 2px;  border-radius:2px; outline:none; 
+}
+
+
+
+/*普通按钮****************************************************************************/
+.yyui_btnbai { box-sizing:border-box; border:1px solid #CCCCCC; height:38px; color:#333333; background-color:#ffffff;  cursor:pointer; 
+font-size:13px; padding:0px 18px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnbai:hover {background-color:#E6E6E6; border:1px solid #ADADAD; }
+
+.yyui_btnlan {box-sizing:border-box; border:0 none; height:38px; color:#ffffff; background-color:#337AB7;  cursor:pointer;
+font-size:13px; padding:0px 18px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnlan:hover {background-color:#2E6DA4;  }
+
+.yyui_btnhong {box-sizing:border-box;  border:0 none; height:38px; color:#ffffff; background-color:#D9534F;  cursor:pointer;
+font-size:13px; padding:0px 18px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnhong:hover {background-color:#C9302C;  }
+
+.yyui_btnjinyong {box-sizing:border-box;  border:1px solid #E6E6E6; height:38px; color:#C9C9C9; background-color:#FBFBFB;  cursor:not-allowed; 
+font-size:13px; padding:0px 18px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnjinyong:hover {}
+
+
+/*小按钮small****************************************************************************/
+.yyui_btnbai_sm {box-sizing:border-box;  border:1px solid #CCCCCC; height:30px; color:#333333; background-color:#ffffff;  cursor:pointer; 
+font-size:11px; padding:0px 10px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnbai_sm:hover {background-color:#E6E6E6; border:1px solid #ADADAD; }
+
+.yyui_btnlan_sm {box-sizing:border-box;  border:0 none; height:30px; color:#fff; background-color:#337AB7;  cursor:pointer; 
+font-size:11px; padding:0px 10px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnlan_sm:hover {background-color:#2E6DA4;  }
+
+.yyui_btnhong_sm {box-sizing:border-box;  border:0 none; height:30px; color:#fff; background-color:#D9534F;  cursor:pointer; 
+font-size:11px; padding:0px 10px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnhong_sm:hover {background-color:#C9302C;  }
+
+.yyui_btnjinyong_sm {box-sizing:border-box;  border:1px solid #E6E6E6; height:30px; color:#C9C9C9; background-color:#FBFBFB;cursor:not-allowed; 
+font-size:11px; padding:0px 10px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnjinyong_sm:hover {}
+
+
+/*特小按钮small****************************************************************************/
+.yyui_btnbai_xs {box-sizing:border-box; border:1px solid #CCCCCC; height:22px; color:#333333; background-color:#ffffff;  cursor:pointer; 
+font-size:11px; padding:0px 5px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnbai_xs:hover {background-color:#E6E6E6; border:1px solid #ADADAD; }
+
+.yyui_btnlan_xs {box-sizing:border-box; border:0 none; height:22px; color:#fff; background-color:#337AB7;  cursor:pointer; 
+font-size:11px; padding:0px 5px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnlan_xs:hover {background-color:#2E6DA4;  }
+
+.yyui_btnhong_xs {box-sizing:border-box; border:0 none; height:22px; color:#fff; background-color:#D9534F;  cursor:pointer; 
+font-size:11px; padding:0px 5px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnhong_xs:hover {background-color:#C9302C;  }
+
+.yyui_btnjinyong_xs {box-sizing:border-box; border:1px solid #E6E6E6; height:22px; color:#C9C9C9; background-color:#FBFBFB;cursor:not-allowed; 
+font-size:11px; padding:0px 5px;-moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_btnjinyong_xs:hover {}
+
+ 
+
+/*下拉框****************************************************************************/
+.yyui_select::-ms-expand { display: none;  } /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+.yyui_select{ box-sizing:border-box;
+	/*很关键：将默认的select选择框样式清除*/
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+	border:1px solid #E6E6E6; height:38px; 
+	-webkit-border-radius: 2px;  border-radius:2px; 
+	/*在选择框的最右侧中间显示小箭头图片*/
+	background: url("http://yuyun365.com/images/jiantou.png") no-repeat scroll right center transparent;
+	background-color:#FFFFFF;
+	/*为下拉小箭头留出一点位置，避免被文字覆盖*/
+	padding-right: 24px;padding-left:10px;
+}
+
+
+
+/*单选框与复选框****************************************************************************/
+.yyui_checkbox input[type=checkbox],
+.yyui_radio input[type=radio] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    outline: 0 !important;
+    border: 0;
+}
+.yyui_checkbox input[type=checkbox]:before,
+.yyui_radio input[type=radio]:before {
+    display: inline-block;
+	width:1em;
+    text-align: left;
+	font-family:FontAwesome;
+    color: rgb(212, 212, 212);
+	font-size:1.6em;
+}
+.yyui_checkbox input[type=checkbox]:checked:before,.yyui_radio input[type=radio]:checked:before {color:#3498DB;}
+.yyui_checkbox input[type=checkbox]:before {content: "\f096";}
+.yyui_checkbox input[type=checkbox]:checked:before {content: "\f14a";}
+.yyui_radio input[type=radio]:before {content: "\f1db";}
+.yyui_radio input[type=radio]:checked:before {content: "\f192";}
+
+
+
+/*选项卡_默认样式****************************************************************************/
+.yyui_tab{ }
+.yyui_tab > ul{}
+.yyui_tab > ul > .yyui_tab_title{box-sizing:border-box;line-height:38px;
+height:38px; color:#000000;    cursor:pointer; display:inline-block;
+font-size:13px; padding:0px 18px; letter-spacing:0px;
+}
+.yyui_tab > ul > .yyui_tab_title_this{box-sizing:border-box; line-height:36px;
+border-left:1px solid #e6e6e6;border-top:1px solid #e6e6e6;border-right:1px solid #e6e6e6;  height:38px; color:#000000; background-color:#ffffff;  cursor:pointer; display:inline-block; font-size:13px; padding:0px 18px;
+-moz-border-radius: 2px 2px 0px 0px;   -webkit-border-radius: 2px 2px 0px 0px; border-radius:2px 2px 0px 0px; letter-spacing:0px;
+}
+.yyui_tab > .yyui_tab_content{ margin-top:-1px; display:none; box-sizing:border-box; padding:10px; border-top:1px solid #e6e6e6; }
+.yyui_tab > .yyui_tab_content_this{margin-top:-1px;  display:block; box-sizing:border-box; padding:10px; border-top:1px solid #e6e6e6;}
+
+
+/*选项卡_card卡片样式****************************************************************************/
+.yyui_tab_card{ border:1px solid #e6e6e6; background-color:#f2f2f2;
+-moz-border-radius: 2px ;   -webkit-border-radius: 2px; border-radius:2px; letter-spacing:0px;
+}
+.yyui_tab_card > ul{ margin-left:-1px;}
+.yyui_tab_card > ul > .yyui_tab_title{box-sizing:border-box;line-height:38px;
+height:38px; color:#333333; cursor:pointer; display:inline-block;
+font-size:13px; padding:0px 18px; letter-spacing:0px;
+}
+.yyui_tab_card > ul > .yyui_tab_title_this{box-sizing:border-box;line-height:36px;
+border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; height:38px; color:#333333; background-color:#ffffff;  cursor:pointer; display:inline-block; font-size:13px; padding:0px 18px;
+-moz-border-radius: 2px 2px 0px 0px; -webkit-border-radius: 2px 2px 0px 0px; border-radius:2px 2px 0px 0px; letter-spacing:0px;
+}
+.yyui_tab_card > .yyui_tab_content{ display:none; box-sizing:border-box; padding:10px;margin-top:-1px;border-top:1px solid #e6e6e6; background-color:#ffffff; }
+.yyui_tab_card > .yyui_tab_content_this{ display:block; box-sizing:border-box; padding:10px;margin-top:-1px; border-top:1px solid #e6e6e6;background-color:#ffffff;}
+
+
+
+/*徽章，未读数，小圆点****************************************************************************/
+.yyui_badge { line-height:21px; color:#ffffff; background-color:#FF5722; margin-left:4px;
+font-size:11px; padding:0px 5px; -moz-border-radius: 2px;   -webkit-border-radius: 2px;   border-radius:2px; letter-spacing:0px;}
+.yyui_badge_dot { color:#FF5722; font-size:1.4em; line-height:0.8; margin-left:4px;  }
+
+
+  
+
+/*下面是个性定义****************************************************************************/
+
+
