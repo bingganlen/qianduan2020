@@ -1,0 +1,201 @@
+{
+	"data": [
+		{
+			"menuId": "01",
+			"menuName": "基础信息管理",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "岗位管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "证书类型",
+					"menuCode": "RR1234",
+					"menuAction": "https://fanyi.baidu.com/?aldtype=16047#auto/zh"
+				}, {
+					"menuId": "001",
+					"menuName": "岗位证书",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "考勤类型",
+					"menuCode": "Yggdcd",
+					"menuAction": "https://fanyi.baidu.com/?aldtype=16047#auto/zh"
+				}, {
+					"menuId": "001",
+					"menuName": "技能等级",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}
+			]
+		}, {
+			"menuId": "01",
+			"menuName": "考勤管理",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "考勤录入",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "考勤审批",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "考勤查看",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}
+			]
+		}, {
+			"menuId": "01",
+			"menuName": "证书管理",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "人员证书",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "到期证书",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "缺失证书",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "证书统计",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}
+			]
+		}, {
+			"menuId": "01",
+			"menuName": "证书统计",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "员工证书统计",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "单位各证书情况",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}
+			]
+		},  {
+			"menuId": "01",
+			"menuName": "系统管理",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "机构管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "菜单管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "角色管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "用户管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "角色菜单",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "角色人员",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "人员管理",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}
+			]
+		},{
+			"menuId": "01",
+			"menuName": "人员动态管理",
+			"menuCode": "RR1234",
+			"menuAction": "#",
+			"children": [
+				{
+					"menuId": "001",
+					"menuName": "人员异动汇总",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "人员调整(发起)",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "人员调整(审批)",
+					"menuCode": "RR1234",
+					"menuAction": "https://www.baidu.com/"
+				}, {
+					"menuId": "001",
+					"menuName": "人员技能",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "岗位信息",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						},{
+							"menuId": "001",
+							"menuName": "学历信息",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						},{
+							"menuId": "001",
+							"menuName": "身份信息",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						},{
+							"menuId": "001",
+							"menuName": "现场测评",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var data = {
+            "children": [{
+                    "children": [{
+                        "children": [{
+                            "children": [],
+                            "name": '第四级' + "\n123567788"
+                        }],
+                        "name": '第三级' + "\n123567788"
+                    }],
+                    "name": '第二级' + "\n123567788"
+                },
+                {
+                    "children": [{
+                        "children": [{
+                            "children": [],
+                            "name": '第四级' + "\n123567788"
+                        }],
+                        "name": '第三级' + "\n123567788"
+                    }],
+                    "name": '第二级' + "\n123567788"
+                },
+                {
+                    "children": [{
+                        "children": [{
+                            "children": [],
+                            "name": '第四级' + "\n123567788"
+                        }],
+                        "name": '第三级' + "\n123567788"
+                    }],
+                    "name": '第二级' + "\n123567788"
+                },
+                {
+                    "children": [{
+                        "children": [{
+                            "children": [],
+                            "name": '第四级' + "\n123567788",
+                        }],
+                        "name": '第三级' + "\n123567788"
+                    }],
+                    "name": '第二级' + "\n123567788"
+                }
+            ],
+            "name": '第一级' + "\n123567788",
+            /*   symbolSize: [60, 80],
+              //value: 4, 
+              itemStyle: { normal: { label: { show: true, position: 'bottom' } } } */
+
+        }
+        // 指定图表的配置项和数据
+        /*  myChart.showLoading(); */
+        myChart.setOption(option = {
+            tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove'
+            },
+            series: [{
+                type: 'tree',
+                initialTreeDepth: 5,
+                data: [data],
+                top: '2%',
+                left: '7%',
+                bottom: '1%',
+                right: '20%',
+
+                symbolSize: 7,
+
+                label: {
+                    normal: {
+                        position: 'top',
+                        verticalAlign: 'middle',
+                        align: 'center',
+                        fontSize: 9,
+                        distance: -30
+                    },
+
+                },
+                leaves: {
+                    label: {
+                        normal: {
+                            position: 'top',
+                            verticalAlign: 'middle',
+                            align: 'center',
+                            distance: -30
+                        }
+                    }
+                },
+
+                expandAndCollapse: true,
+                animationDuration: 550,
+                animationDurationUpdate: 750
+            }]
+        });
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

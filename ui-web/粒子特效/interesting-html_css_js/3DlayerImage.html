@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3D图层悬浮效果</title>
+  <style>
+    body{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      position: relative;
+      height: 415px;
+      width: 250px;
+      background-color: rgba(0,0,0,.1);
+      transform: rotate(-30deg) skew(25deg);
+      transition: 0.5s;
+    }
+    .container img{
+      height: 415px;
+      width: 250px;
+      position: absolute;
+      transition: 0.5s;
+    }
+    .container:hover img:nth-child(4){
+      transform: translate(120px,-120px);
+      opacity: 1;
+    }
+    .container:hover img:nth-child(3){
+      transform: translate(90px,-90px);
+      opacity: .8;
+    }
+    .container:hover img:nth-child(2){
+      transform: translate(60px,-60px);
+      opacity: .6;
+    }
+    .container:hover img:nth-child(1){
+      transform: translate(30px,-30px) ;
+      opacity: .4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/bg_04.jpg" alt="">
+    <img src="images/bg_04.jpg" alt="">
+    <img src="images/bg_04.jpg" alt="">
+    <img src="images/bg_04.jpg" alt="">
+  </div>
+</body>
+</html>

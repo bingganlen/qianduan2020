@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                formatter: function (params, ticket, callback) {
+                    let res = params[0].name;
+                    for (let i = 0, l = params.length; i < l; i++) {
+                        res += '<br/>' + params[i].marker + params[i].seriesName + ' : ' +
+                            params[i].value + 'KB/s';
+                    }
+                    return res
+                },
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                itemGap: 15,
+                top: 20,
+                data: ['流出', '流入']
+            },
+            color: ['#5170ac', '#77acff'],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '0%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                position: 'top',
+                show: false,
+            },
+            yAxis: {
+                triggerEvent: true,
+                type: 'category',
+                inverse: true,
+                axisLabel: {
+                    formatter: function (value) {
+                        let res = value;
+                        if (res.length > 5) {
+                            res = res.substring(0, 4) + "..";
+                        }
+                        return res;
+                    }
+                },
+                data: []
+            },
+        };
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                formatter: function (params, ticket, callback) {
+                    let res = params[0].name;
+                    for (let i = 0, l = params.length; i < l; i++) {
+                        res += '<br/>' + params[i].marker + params[i].seriesName + ' : ' +
+                            params[i].value + 'KB/s';
+                    }
+                    return res
+                },
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                itemGap: 15,
+                top: 20,
+                data: ['流出', '流入']
+            },
+            color: ['#5170ac', '#77acff'],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '0%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                position: 'top',
+                show: false,
+            },
+            yAxis: {
+                triggerEvent: true,
+                type: 'category',
+                inverse: true,
+                axisLabel: {
+                    formatter: function (value) {
+                        let res = value;
+                        if (res.length > 5) {
+                            res = res.substring(0, 4) + "..";
+                        }
+                        return res;
+                    }
+                },
+                data: [1,2,3,4,5,6,78,9,0,7,6,6]
+            },
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商城精美商城购物选项卡</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      font-family: "Open sans",sans-serif;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: #7ed6df;
+      transition: 0.6s linear;
+    }
+    .product-cart{
+      width:400px;
+      background-color: #ecedef;
+      padding:40px;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      text-transform: uppercase;
+    }
+    .product-cart h1{
+      font-size: 22px;
+      margin-bottom:4px;
+    }
+    .product-cart p{
+      font-size: 13px;
+      color:#bbb;
+    }
+    .product-pic{
+      background-image: url(images/shoes_01.png);
+      height:200px;
+      width:100%;
+      background-size: cover;
+      background-position: center;
+      transition: 0.6s linear;
+    }
+    .product-colors{
+      margin-bottom:40px;
+      display: flex;
+      justify-content: center;
+    }
+    .product-colors span{
+      width:14px;
+      height:14px;
+      border-radius: 50%;
+      margin:0 10px;
+      cursor: pointer;
+      position: relative;
+    }
+    .blur{
+      background-color: #7ed6df;
+    }
+    .green{
+      background-color: #badc58;
+    }
+    .yellow{
+      background-color: #f9ca24;
+    }
+    .rose{
+      background-color: #ff7979;
+    }
+    .product-colors .active:after{
+      content: '';
+      width:22px;
+      height:22px;
+      border-radius: 50%;
+      position: absolute;
+      left:-4px;
+      top:-4px;
+      border:2px solid #ccc;
+      box-sizing: border-box;
+    }
+    .product-info{
+      display: flex;
+      align-items: center;
+    }
+    .product-price{
+      color:#7ed6df;
+      font-size: 26px;
+    }
+    .product-button{
+      margin-left:auto;
+      color:#7ed6df;
+      text-decoration: none;
+      border:2px solid;
+      padding: 8px 24px;
+      border-radius:20px;
+      transition:.4s linear;
+    }
+    .product-button:hover{
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+<body>
+  <div class="product-cart">
+    <h1>Original shoes</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="blur active" data-color="#7ed6df" data-pic="url(images/shoes_01.png)"></span>
+      <span class="green" data-color="#badc58" data-pic="url(images/shoes_02.png)"></span>
+      <span class="yellow" data-color="#f9ca24" data-pic="url(images/shoes_03.png)"></span>
+      <span class="rose" data-color="#ff7979" data-pic="url(images/shoes_04.png)"></span>
+    </div>
+    <div class="product-info">
+      <div class="product-price">$90</div>
+      <a href="#" class="product-button">Add To Car</a>
+    </div>
+  </div>
+  <script>
+    $(".product-colors span").click(function(){
+      $(this).addClass('active').siblings('.product-colors span').removeClass('active');
+      $("body").css({"background":$(this).attr('data-color')});
+      $(".product-price").css({"color":$(this).attr('data-color')});
+      $(".product-button").css({"color":$(this).attr('data-color')});
+      $(".product-pic").css({"background-image":$(this).attr('data-pic')});
+    })
+  </script>
+</body>
+</html>

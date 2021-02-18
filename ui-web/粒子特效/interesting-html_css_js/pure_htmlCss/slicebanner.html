@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>切割轮播图</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 960px;
+      height: 540px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    ul {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    ul li {
+      list-style: none;
+      height: 100%;
+      width: 20%;
+      background-color: skyblue;
+      float: left;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 0.5s;
+    }
+
+    ul li span {
+      background-size: 960px 540px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    ul li span:nth-child(1) {
+      background-image: url("../images/bg_0.jpg");
+      transform: translateZ(200px) rotateX(0deg);
+    }
+
+    ul li span:nth-child(2) {
+      background-image: url("../images/bg_1.jpg");
+      transform: translateY(-540px) rotateX(90deg);
+    }
+
+    ul li span:nth-child(3) {
+      background-image: url("../images/bg_2.jpg");
+      transform: translateZ(-200px) rotateX(180deg);
+    }
+
+    ul li span:nth-child(4) {
+      background-image: url("../images/bg_3.jpg");
+      transform: translateY(-540px) rotateX(-90deg);
+    }
+
+    ul li:nth-child(2) span {
+      background-position: -100% 0;
+    }
+
+    ul li:nth-child(3) span {
+      background-position: -200% 0;
+    }
+
+    ul li:nth-child(4) span {
+      background-position: -300% 0;
+    }
+
+    ul li:nth-child(5) span {
+      background-position: -400% 0;
+    }
+
+    .pre,
+    .next {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 40px;
+      position: absolute;
+      top: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transform: translate(0, -50%);
+    }
+
+    a:active {
+      color: red
+    }
+
+    .pre {
+      left: 0
+    }
+
+    .next {
+      right: 0
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+
+    </ul>
+    <a href="javascript:;" class="pre">&lt;</a>
+    <a href="javascript:;" class="next">&gt;</a>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script>
+    $(function () {
+      var index = 0;
+      var turn = true,
+        timer = null;
+      $(".next").on("click", function () {
+        if (turn) {
+          clearInterval(timer);
+          turn = false;
+          index--;
+          $("ul li").each(function (key, value) {
+            $(this).css({
+              "transform": "rotateX(" + (index * 90) + "deg)",
+              "transition-delay": key * 0.2 + "s"
+            })
+          })
+          timer = setInterval(() => {
+            turn = true;
+          }, 1000);
+        }
+      })
+      $(".pre").on("click", function () {
+        if (turn) {
+          clearInterval(timer);
+          turn = false;
+          index++;
+          $("ul li").each(function (key, value) {
+            $(this).css({
+              "transform": "rotateX(" + (index * 90) + "deg)",
+              "transition-delay": key * 0.2 + "s"
+            })
+          })
+          timer = setInterval(() => {
+            turn = true;
+          }, 1000);
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
