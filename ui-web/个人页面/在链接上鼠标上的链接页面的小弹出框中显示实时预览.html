@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            display: none;
+            width: 100%;
+        }
+
+        a:hover + .box,.box:hover{
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+<!--方法1  -->
+<!--<p id="p1"><a href="http://cnet.com">Cnet</a></p>-->
+<!--<p id="p2"><a href="http://codegena.com">Codegena</a></p>-->
+<!--<p id="p3"><a href="http://apple.com">Apple</a></p>-->
+<p id="p1"><a href="./index.html">Cnet</a></p>
+<p id="p2"><a href="../广东揭阳我的故乡.html">Codegena</a></p>
+<p id="p3"><a href="../gaode卫星控件.html">Apple</a></p>
+
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<link href="http://codegena.com/assets/css/image-preview-for-link.css" rel="stylesheet">
+<script type="text/javascript">
+    $(function() {
+        // $('p a').miniPreview({ prefetch: 'pageload' });
+        $('#p1 a').miniPreview({ prefetch: 'pageload' });
+        $('#p2 a').miniPreview({ prefetch: 'parenthover' });
+        $('#p3 a').miniPreview({ prefetch: 'none' });
+    });
+</script> <script src="http://codegena.com/assets/js/image-preview-for-link.js"></script>
+
+
+<!--方法二  下面的和上面的css-->
+This live preview for <a href="./index.html">Wikipedia</a>
+<div class="box">
+    <iframe src="./index.html" width = "500px" height = "500px"></iframe>
+</div> remains open on mouseover.
+
+</body>
+</html>

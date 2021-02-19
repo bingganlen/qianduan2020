@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap3隐藏滑动侧边栏菜单代码</title>
+
+<link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div class="overlay"></div>
+
+	<!-- Sidebar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+		<ul class="nav sidebar-nav" id="navmenu">
+			<li class="sidebar-brand">
+				<a href="#">
+				   Bootstrap 3
+				</a>
+			</li>
+			<!--<li>
+				<a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-folder"></i> Page one</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li class="dropdown-header">Dropdown heading</li>
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li><a href="#">Separated link</a></li>
+				<li><a href="#">One more separated link</a></li>
+			  </ul>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+			</li>-->
+		</ul>
+	</nav>
+	<!-- /#sidebar-wrapper -->
+
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+	  <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+		<span class="hamb-top"></span>
+		<span class="hamb-middle"></span>
+		<span class="hamb-bottom"></span>
+	  </button>
+		<!--<div class="container">-->
+		<div class="contentRight">
+			<div class="right_col" role="main" id="rightContent"></div>
+		</div>
+			<!--<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h1 class="page-header">Awesome Bootstrap 3 Sidebar Navigation</h1>  
+					<p class="lead">Originally authored by  maridlcrmn  on Bootsnipp and then converted to Less and customized further by j_holtslander who is building a collection of great Bootstrap 3 navbars.</p>
+					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.</p>
+					<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<h3>A heading in the mix.</h3>
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+					<blockquote>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.</blockquote>
+					<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<h3>Another heading for typography's sake.</h3>
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.</p>
+					<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+				</div>
+			</div>-->
+
+		<!--</div>-->
+	</div>
+	<!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<!--<script src="js/home.js"></script>-->
+<script>
+	$(function() {
+		//$.ajax({
+		//	type: "get",
+		//	url: 'json/data.json',
+		//	dataType: "json",
+		//	success: function(result) {
+		//		var res = eval(result.data);
+		//		showSideMenu(res);
+		//	}
+		//});
+
+		// data里面的 menuCode毫无作用 当作父目录所在的标识吗  menuId保留  当成数据库的id
+		var result = {
+			"data": [
+				{
+					"menuId": "01",
+					"menuName": "基础信息管理",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "岗位管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "证书类型",
+							"menuCode": "RR1234",
+							"menuAction": "https://fanyi.baidu.com/?aldtype=16047#auto/zh"
+						}, {
+							"menuId": "001",
+							"menuName": "岗位证书",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "考勤类型",
+							"menuCode": "Yggdcd",
+							"menuAction": "https://fanyi.baidu.com/?aldtype=16047#auto/zh"
+						}, {
+							"menuId": "001",
+							"menuName": "技能等级",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				}, {
+					"menuId": "01",
+					"menuName": "考勤管理",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "考勤录入",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "考勤审批",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "考勤查看",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				}, {
+					"menuId": "01",
+					"menuName": "证书管理",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "人员证书",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "到期证书",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "缺失证书",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "证书统计",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				}, {
+					"menuId": "01",
+					"menuName": "证书统计",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "员工证书统计",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "单位各证书情况",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				},  {
+					"menuId": "01",
+					"menuName": "系统管理",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "机构管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "菜单管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "角色管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "用户管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "角色菜单",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "角色人员",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "人员管理",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}
+					]
+				},{
+					"menuId": "01",
+					"menuName": "人员动态管理",
+					"menuCode": "RR1234",
+					"menuAction": "#",
+					"children": [
+						{
+							"menuId": "001",
+							"menuName": "人员异动汇总",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "人员调整(发起)",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "人员调整(审批)",
+							"menuCode": "RR1234",
+							"menuAction": "https://www.baidu.com/"
+						}, {
+							"menuId": "001",
+							"menuName": "人员技能",
+							"menuCode": "RR1234",
+							"menuAction": "#",
+							"children": [
+								{
+									"menuId": "001",
+									"menuName": "岗位信息",
+									"menuCode": "RR1234",
+									"menuAction": "https://www.baidu.com/"
+								},{
+									"menuId": "001",
+									"menuName": "学历信息",
+									"menuCode": "RR1234",
+									"menuAction": "https://www.baidu.com/"
+								},{
+									"menuId": "001",
+									"menuName": "身份信息",
+									"menuCode": "RR1234",
+									"menuAction": "https://www.baidu.com/"
+								},{
+									"menuId": "001",
+									"menuName": "现场测评",
+									"menuCode": "RR1234",
+									"menuAction": "https://www.baidu.com/"
+								}
+							]
+						}
+					]
+				}
+			]
+		};
+
+		showSideMenu(result.data);
+		// $("#navmenu").on("click", ".liname", function(index) {
+		// 	var index = $("#navmenu .liname").index(this);
+		// 	$("#navmenu>li>.dropdown-menu").eq(index).slideToggle();
+		// 	$("#navmenu>li>.dropdown-menu").eq(index).parent().siblings("li").find(".dropdown-menu").slideUp();
+		// });
+
+		var fram = "<iframe src="+ result.data[0].children[1].menuAction + " +' name='myFrame' id='myIframe' width='100%' height='100%'  scrolling='auto' frameborder='0'></iframe>"
+		$("#rightContent").append(fram);
+	});
+
+	function showSideMenu(res) {
+		for(var i = 0; i < res.length; i++) {
+			var html = "";
+			html += "<li class='dropdown'>";
+			html += "<a class='dropdown-toggle' data-toggle='dropdown'>" + res[i].menuName + " <span class='caret'></span></a>";
+			html += "<ul class='dropdown-menu' role='menu'>";
+			for(var k = 0; k < res[i].children.length; k++) {
+				if(typeof(res[i].children[k].children) != 'undefined') {
+					html += "<li class='dropdown'style='background: #0D67BB;' >";
+					html += "<a href='" + res[i].children[k].menuAction + "' class='dropdown-toggle' data-toggle='dropdown'>" + res[i].children[k].menuName + "</a>";
+					html += "<ul class='dropdown-menu'>";
+					for(var j = 0; j < res[i].children[k].children.length; j++) {
+						html += "<li>";
+						html += "<a href='" + res[i].children[k].children[j].menuAction + "' target='myFrame' >" + res[i].children[k].children[j].menuName + "</a>";
+						html += "</li>";
+					}
+					html += "</ul>";
+					html += "</li>";
+				} else if(typeof(res[i].children[k].children) == 'undefined'){
+					html += "<li>";
+					html += "<a href='" + res[i].children[k].menuAction + "' target='myFrame'>" + res[i].children[k].menuName + "</a>";
+					html += "</li>";
+				}
+			}
+			html += "</ul>";
+			html += "</li>";
+			$("#navmenu").append(html);
+		};
+		// $("#navmenu .dropdown-menu").eq(0).css({
+		// 	"display": "block"
+		// });
+		// $("#navmenu .dropdown-menu").eq(0).find("li:eq(0)").addClass("current-page");
+
+
+
+		// $("#navmenu .dropdown-menu").on("click", "li", function() {
+		// 	var index = $("#navmenu .dropdown-menu li").index(this);
+		// 	$("#navmenu .dropdown-menu li").eq(index).parent().parent().siblings("li").find(".dropdown-menu").slideUp();
+		// 	$("#navmenu .dropdown-menu li").eq(index).parent().parent().siblings("li").find(".dropdown-menu").find("li").removeClass("current-page");
+		// 	$("#navmenu .dropdown-menu li").eq(index).addClass("current-page")
+		// 	$("#navmenu .dropdown-menu li").eq(index).siblings().removeClass("current-page");
+		// });
+
+
+		// $("#navmenu").on("click", ".three_menu", function() {
+		// 	var index = $("#navmenu .three_menu").index(this);
+		// 	$("#navmenu .three_menu .dropdown-menu").eq(index).slideDown();
+		// });
+		//
+		//
+		//
+		// $("#navmenu .three_menu").on("click", "li", function() {
+		// 	var index = $("#navmenu .three_menu li").index(this);
+		// 	$("#navmenu .three_menu li a").eq(index).css({
+		// 		"color": "beige"
+		// 	});
+		// 	$("#navmenu .three_menu li a").eq(index).parent().siblings("li").find("a").css({
+		// 		"color": "white"
+		// 	});
+		//
+		// });
+
+
+		var str = window.screen.availHeight - 170;
+		$("#rightContent").css({
+			"min-height": str
+		});
+
+		var bdHeight = document.documentElement.clientHeight;
+		$("#rightContent").height(bdHeight - 65);
+
+	}
+</script>
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+	  var trigger = $('.hamburger'),
+		  overlay = $('.overlay'),
+		 isClosed = false;
+
+		trigger.click(function () {
+		  hamburger_cross();      
+		});
+
+		function hamburger_cross() {
+
+		  if (isClosed == true) {          
+			overlay.hide();
+			trigger.removeClass('is-open');
+			trigger.addClass('is-closed');
+			isClosed = false;
+		  } else {   
+			overlay.show();
+			trigger.removeClass('is-closed');
+			trigger.addClass('is-open');
+			isClosed = true;
+		  }
+	  }
+	  
+	  $('[data-toggle="offcanvas"]').click(function () {
+			$('#wrapper').toggleClass('toggled');
+	  });
+
+	$(".dropdown ul li a").click(function (e) {
+		overlay.show();
+		trigger.removeClass('is-closed');
+		trigger.addClass('is-open');
+		//e.css('background-color','red');
+		console.log(e);
+	});
+	});
+</script>
+
+
+</body>
+</html>

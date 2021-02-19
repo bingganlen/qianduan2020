@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JUNHAO</title>
+    <meta name="description" content="这里是junhao的个人主页，目前我已是一个刚入社会的咸鱼，程序员。">
+    <meta name="keywords" content="junhao,个人主页,程序员">
+    <link rel="icon" type="image/ico" href="//gravatar.eas1.cn/avatar/4cc893d113dd74ceca73f9863f2c5446/">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css.map">
+</head>
+
+<body>
+<div id="main" class="container">
+    <div class="row my-card justify-content-center">
+        <div class="col-lg-4 photo-bg"></div>
+        <div class="col-lg-8 card">
+            <h1>Hi，我是Junhao （千山鸟语），想法很多，这里是我的主页！  </h1>
+            <p>很荣幸您能访问我的网站！ 目前我已是一个刚入社会的咸鱼，人生犹如白驹过隙!仿佛毕业季就在昨天。昨天的我羡慕的个人网站，今天的我就折腾一下。欢迎各位朋友访问并交流！。
+            </p>
+            <p>
+                沉醉其中不愿醒来，那是装睡还是梦太多！！</p>
+               <p> 心灵藏在房子里，总是透过窗户看世界，那是安全的呢还是已被黑暗包裹
+
+            </p>
+
+            <p>Catch me:</p>
+            <div class="row">
+                <a href="//eas1.cn" target="_blank" class="btn btn-primary col-lg-4">BLOG</a>
+                <a href="https://github.com/bingganlen" target="_blank" class="btn btn-secondary col-lg-4">GitHub</a>
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=i@eas1.cn" target="_blank" class="btn btn-success col-lg-4">Send a Mail</a>
+            </div>
+
+            <h4 class="mt-4">or, keep your eyes on</h4>
+
+            <ul class="social mt-1">
+                <!--<li><a href="https://weibo.com/"><i class="fab fa-weibo " aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="#"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>-->
+                <li title="CSDN"><a href="https://blog.csdn.net/huang_ftpjh" style="font-size: 10px;"><i class="fab" aria-hidden="true"></i>CSDN</a></li>
+                <li title="Github"><a href="https://github.com/bingganlen" style="font-size: 10px;"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://bilibili.com/" style="font-size: 10px;">bilibili</a></li>  <!--https://space.bilibili.com/9064402-->
+                <li><a href="https://www.zhihu.com/"><i class="fab fa-zhihu" aria-hidden="true"></i></a></li>
+                <li title="有道翻译" ><a href="http://fanyi.youdao.com/" style="font-size: 10px;"><i class="fab" aria-hidden="true"></i>译</a></li>
+                <li title="原必应每日一图，现小歪随机图片API，可改"><a href="#" style="font-size: 10px;" id="changeBackground"><i class="fab" aria-hidden="true"></i>皮肤</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="footer">
+        <footer class="mt-3">
+            <!--<p>Copyright 2020 - Now <a href="https://eas1.cn" target="_blank">千山鸟语</a>-->
+            <!--</p>-->
+        </footer>
+
+    </div>
+</div>
+<!--网易云音乐歌单  找到index.html大概59行的位置，修改data-id的值为你的歌单id    网页浏览器打开music.163.com，登陆你的账户，然后点击你的歌单，在地址栏可以看到id-->
+<div class="aplayer" data-id="20173709" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.8"></div>
+<!-- aplayer -->
+<script>
+    var meting_api = 'https://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+<!-- end_aplayer -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script defer src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kaygb/kaygb@master/js/main.js"></script>
+<script>
+    $(function () {
+        $("#changeBackground").click(function () {
+            // https://source.unsplash.com/random 随机图片           https://source.unsplash.com/random/1600x900
+            // https://source.unsplash.com/user/erondu/1600x900
+            // 必应每日一图   http://cn.bing.com/az/hprichbg/rb/ArcticFoxSibs_ZH-CN7417451993_1920x1080.jpg       1920x1208  1366x768  1024x768  480x800
+            // 小歪随机图片API  随机风景https://api.ixiaowai.cn/gqapi/gqapi.php   动漫壁纸 https://api.ixiaowai.cn/api/api.php     https://acg.sx/images 后宫学长的
+            //http://lorempixel.com/1600/900
+           // https://unsplash.it/1600/900?random（国内加载略慢）
+            //https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture【返回必应图片】​
+            //https://uploadbeta.com/api/pictures/random/?key=%E6%8E%A8%E5%A5%B3%E9%83%8E【随机美女图片
+           // <http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1>（必应返回JSON数据，具体百度
+            //     "https://cn01.img.twinkle222.cn/imgs/2020/03/f735a00354a
+            // var img = [3c282.jpg",
+            //     "https://gitee.com/hjh_698/pic/raw/c4fa77bc430db02404732ee45e462fd525225262/mmexport1597220429666.jpeg"
+            // ];
+            // 可以自给设计   待定   随机主键获取  int randNumber =rand.nextInt(MAX - MIN + 1) + MIN;   或者
+            // mysql  获取随机一条记录
+            // SELECT *
+            // FROM `table` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `table`)-(SELECT MIN(id) FROM `table`))+(SELECT MIN(id) FROM `table`)) AS id) AS t2
+            // WHERE t1.id >= t2.id
+            // ORDER BY t1.id LIMIT 1;
+            var image = "https://api.ixiaowai.cn/api/api.php";
+            // $.get(image+'?return=json',function(data){
+            //     // alert(data);
+            //     console.log(data.acgurl);
+            //     $("body").css("background-image","url("+data.acgurl+")");  //出现跨域的错误
+            // });
+            // $.get(image,function(data){
+            //      alert(data);
+            //     //console.log(data.acgurl);
+            //     $("body").css("background-image","url("+data+")");  //出现跨域的错误
+            // });
+             $("body").css("background-image","url("+image+")");
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+         /*background-image: url(https://cn01.img.twinkle222.cn/imgs/2020/04/773456bb175bfbaf.jpg);*/
+    }
+
+    .creds {
+        color: red;
+    }
+</style>
+
+<body>
+<h1>HELLO WORDLD!</h1>
+<p class="creds">这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字。</p>
+
+<p>这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字。</p> <img src="https://cn01.img.twinkle222.cn/imgs/2020/04/773456bb175bfbaf.jpg" style="width: 200px;"
+/>
+<p>这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字。</p>
+<p>这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字。</p>
+<p>这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字，这是一段文字。</p>
+
+
+<div id="date"></div>
+
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kaygb/kaygb@master/layer/layer.js"></script>
+<!-- <script src="js/layercopy.js"></script> -->
+<script>
+    $("p").removeClass("creds");
+    $(document).ready(function() {
+        $("body").bind('copy', function(e) {
+            hellolayer();
+        });
+
+    });
+
+    var sitesurl = window.location.href;
+
+    function hellolayer() {
+        layer.msg('复制成功，转载请注明出处！<br> ' + sitesurl)
+    };
+
+    // $(function() {
+    //     setInterval(ncov_gray, 1000);
+    //     ncov_gray();
+    // })
+    ncov_gray();
+
+    function ncov_gray() {
+        var date = new Date();
+        this.year = date.getFullYear();
+        this.month = date.getMonth() + 1;
+        this.date = date.getDate();
+
+        var currentTime = this.year + "." + this.month + "." + this.date;
+        if (currentTime == "2020.4.4") {
+            $("body").css("filter", "grayscale(1)");
+            $("body").css("background", "#eee");
+
+        }
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>SuiNav</title>
+		<link rel="stylesheet" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+		<link rel="stylesheet" type="text/css" href="./css/sui.nav.css" />
+		<!--<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>-->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="./js/sui.nav.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			.container {
+				margin: 10px auto;
+			}
+			
+			.container .body {
+				padding: 0px 10px;
+				position: relative;
+				padding-left: 220px;
+			}
+			.nav-second {
+				position: relative;
+				width: 210px;
+				float: left;
+			}
+			@media only screen and (max-width: 768px) {
+				.container .body {
+					padding: 0px;
+				}
+			}
+		</style>
+		<style>
+			.box{
+				display: none;
+				width: 100%;
+			}
+
+			a:hover + .box,.box:hover{
+				display: block;
+				position: relative;
+				z-index: 100;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="sui_nav" class="sui-nav horizontal" style="display: none;">
+			<div class="sui-nav-wrapper nav-border nav-line">
+				<ul>
+					<li><a class="text-primary"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-comment"></span> About</a>
+						<ul>
+							<li id="p1"><a href="http://www.baidu.com"><span class="glyphicon glyphicon-edit"></span> 百度</a>
+								<!--<div class="box">-->
+									<!--<iframe src="www.baidu.com" width = "500px" height = "500px"></iframe>-->
+								<!--</div>-->
+							</li>
+							<li id="p2"><a href="../index.html"><span class="glyphicon glyphicon-pencil"></span> 名片
+							</a>
+								<!--<div class="box">-->
+									<!--<iframe src="./index.html" width = "500px" height = "500px"></iframe>-->
+								<!--</div>-->
+							</li>
+							<li><a href="#"><span class="glyphicon glyphicon-saved"></span> Level23</a>
+								<span class="indicator">&gt;</span>
+								<ul>
+									<li><a href="#">Level31</a></li>
+									<li><a href="#">Level32</a></li>
+									<li class="hide-in-horizontal"><a href="#">Level33</a>
+										<ul>
+											<li><a href="#">Level331</a></li>
+											<li><a href="#">Level332</a></li>
+											<li><a href="#">Level333</a></li>
+											<li><a href="#">Level334</a></li>
+										</ul>
+										<span class="indicator">&gt;</span>
+									</li>
+									<li><a href="#">Level34</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><span class="glyphicon glyphicon-save"></span> Level24</a></li>
+						</ul>
+					</li>
+					<li><a class="text-danger"><span class="glyphicon glyphicon-fire"></span> Hello</a></li>
+				</ul>
+
+				<ul class="pull-right">
+					<li><a class="text-success">Sign in</a></li>
+					<li><a class="text-success">Sing up</a></li>
+					<li><a class="text-warning">Others</a>
+						<ul>
+							<li><a>Right</a></li>
+							<li><a>Right</a>
+								<ul>
+									<li><a>Right</a></li>
+									<li><a>Right</a></li>
+									<li><a>Right</a></li>
+								</ul>
+							</li>
+							<li><a>Others</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br />
+		<div class="container ">
+			<div class="nav-second">
+			<div id="sui_nav2" class="sui-nav">
+				<link href="http://codegena.com/assets/css/image-preview-for-link.css" rel="stylesheet">
+				<script src="http://codegena.com/assets/js/image-preview-for-link.js"></script>
+				<p>
+					<button class="MenuOpen btn btn-success">单击此处显示导航</button>
+				</p>
+				<script type="text/javascript">
+					//document.write(document.getElementById('sui_nav').innerHTML);
+					var topbar;
+					$(function() {
+						$('#p1 a').miniPreview({ prefetch: 'pageload' });
+						$('#p2 a').miniPreview({ prefetch: 'pageload' });
+						topbar = $('#sui_nav').SuiNav({});
+						var navbar = $('#sui_nav2').SuiNav({});
+						$('.MenuToggle').click(function() {
+							console.log("toggle");
+							topbar.toggle();
+						});
+						$('.MenuOpen').click(function() {
+							console.log("open");
+							topbar.show();
+						});
+
+						//var a = document.getElementById("testA");
+						// $("a").click(function (e) {
+						// 	if(e.preventDefault){
+						// 		e.preventDefault();
+						// 	}else{
+						// 		window.event.returnValue == false;
+						// 	}
+						// });
+						//为所有a标签添加onclick事件
+						$("a").attr("onclick","event.stopPropagation();");
+
+
+						//在本页面进行
+						$("#sui_nav a").click(function () {
+							var href = $(this).attr('href');
+							var contents = document.querySelector( '.body' );
+							contents.style.padding = '0px';
+							contents.innerHTML = '<div class="cover"></div><iframe src="'+ href +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+							return false;
+						});
+					});
+				</script>
+			</div>
+			</div>
+
+
+
+			<div class="body">
+				<p>
+					<button class="MenuToggle btn btn-default">单击此处显示/关闭导航</button>
+					<button class="MenuOpen btn btn-success">单击此处显示导航</button>
+				</p>
+				<p class="alert alert-info">
+					通过创建一个菜单，同步创建垂直导航、水平导航以及侧滑导航；<br />
+					<code>.sui-nav</code>默认为垂直导航，为<code>.sui-nav</code>添加<code>.horizontal</code>后转为水平导航；<br />
+					垂直导航、水平导航在分辨率&lt;=768px时自动隐藏，转为侧滑导航;<br />
+					<code>.hide-in-horizontal</code>仅在垂直导航中显示，包括侧滑导航<br />
+					<code>.show-in-horizontal</code>仅在水平导航中显示<br />
+					<code>.hide-in-mobile</code>仅在&gt;768px的屏幕显示<br />
+					<code>.show-in-mobile</code>仅在&lt;=768px的屏幕显示<br />
+				</p>
+				<p>问题1 ：  本插件来自http://www.jq22.com/jquery-info10268</p>
+				<p>问题2 ：  防止冒泡  因为父元素绑定的onclick事件与子元素a href 冲突 或 子元素绑定的onclick事件与父元素a href</p>
+				<p>         click事件优先href的跳转</p>
+				<p>介绍以及代码等待完善中，更多请查看源码</p>
+			</div>
+		</div>
+	</body>
+
+</html>
